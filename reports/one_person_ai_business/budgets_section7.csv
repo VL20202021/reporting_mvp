@@ -1,0 +1,105 @@
+option,scenario,category,usd,local_currency,local_amount,label,notes
+Bangalore + Indian Pvt Ltd,LEAN,One-time setup,500,INR,44000,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+Bangalore + Indian Pvt Ltd,LEAN,Fixed costs (12 mo),2000,INR,176000,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+Bangalore + Indian Pvt Ltd,LEAN,AI & tech (12 mo),1200,INR,105600,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+Bangalore + Indian Pvt Ltd,LEAN,Marketing (12 mo),1200,INR,105600,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+Bangalore + Indian Pvt Ltd,LEAN,Learning (12 mo),200,INR,17600,ESTIMATE,Courses/books/communities from learning_plan.md.
+Bangalore + Indian Pvt Ltd,LEAN,Founder living (12 mo),8400,INR,739200,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+Bangalore + Indian Pvt Ltd,LEAN,Cash buffer,2100,INR,184800,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+Bangalore + Indian Pvt Ltd,LEAN,TOTAL 12 MONTHS,15600,INR,1372800,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+Bangalore + Indian Pvt Ltd,RECOMMENDED,One-time setup,1500,INR,132000,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+Bangalore + Indian Pvt Ltd,RECOMMENDED,Fixed costs (12 mo),4000,INR,352000,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+Bangalore + Indian Pvt Ltd,RECOMMENDED,AI & tech (12 mo),3600,INR,316800,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+Bangalore + Indian Pvt Ltd,RECOMMENDED,Marketing (12 mo),6000,INR,528000,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+Bangalore + Indian Pvt Ltd,RECOMMENDED,Learning (12 mo),1000,INR,88000,ESTIMATE,Courses/books/communities from learning_plan.md.
+Bangalore + Indian Pvt Ltd,RECOMMENDED,Founder living (12 mo),14400,INR,1267200,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+Bangalore + Indian Pvt Ltd,RECOMMENDED,Cash buffer,4500,INR,396000,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+Bangalore + Indian Pvt Ltd,RECOMMENDED,TOTAL 12 MONTHS,35000,INR,3080000,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+Bangalore + Indian Pvt Ltd,COMFORTABLE,One-time setup,3000,INR,264000,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+Bangalore + Indian Pvt Ltd,COMFORTABLE,Fixed costs (12 mo),6000,INR,528000,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+Bangalore + Indian Pvt Ltd,COMFORTABLE,AI & tech (12 mo),9600,INR,844800,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+Bangalore + Indian Pvt Ltd,COMFORTABLE,Marketing (12 mo),15000,INR,1320000,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+Bangalore + Indian Pvt Ltd,COMFORTABLE,Learning (12 mo),3000,INR,264000,ESTIMATE,Courses/books/communities from learning_plan.md.
+Bangalore + Indian Pvt Ltd,COMFORTABLE,Founder living (12 mo),24000,INR,2112000,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+Bangalore + Indian Pvt Ltd,COMFORTABLE,Cash buffer,9400,INR,827200,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+Bangalore + Indian Pvt Ltd,COMFORTABLE,TOTAL 12 MONTHS,70000,INR,6160000,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+Bangalore + Delaware C-Corp (via ODI),LEAN,One-time setup,1050,INR,92400,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+Bangalore + Delaware C-Corp (via ODI),LEAN,Fixed costs (12 mo),3100,INR,272800,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+Bangalore + Delaware C-Corp (via ODI),LEAN,AI & tech (12 mo),1200,INR,105600,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+Bangalore + Delaware C-Corp (via ODI),LEAN,Marketing (12 mo),1200,INR,105600,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+Bangalore + Delaware C-Corp (via ODI),LEAN,Learning (12 mo),200,INR,17600,ESTIMATE,Courses/books/communities from learning_plan.md.
+Bangalore + Delaware C-Corp (via ODI),LEAN,Founder living (12 mo),8400,INR,739200,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+Bangalore + Delaware C-Corp (via ODI),LEAN,Cash buffer,2100,INR,184800,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+Bangalore + Delaware C-Corp (via ODI),LEAN,TOTAL 12 MONTHS,17250,INR,1518000,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+Bangalore + Delaware C-Corp (via ODI),RECOMMENDED,One-time setup,2000,INR,176000,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+Bangalore + Delaware C-Corp (via ODI),RECOMMENDED,Fixed costs (12 mo),4500,INR,396000,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+Bangalore + Delaware C-Corp (via ODI),RECOMMENDED,AI & tech (12 mo),3600,INR,316800,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+Bangalore + Delaware C-Corp (via ODI),RECOMMENDED,Marketing (12 mo),6000,INR,528000,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+Bangalore + Delaware C-Corp (via ODI),RECOMMENDED,Learning (12 mo),1000,INR,88000,ESTIMATE,Courses/books/communities from learning_plan.md.
+Bangalore + Delaware C-Corp (via ODI),RECOMMENDED,Founder living (12 mo),14400,INR,1267200,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+Bangalore + Delaware C-Corp (via ODI),RECOMMENDED,Cash buffer,6000,INR,528000,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+Bangalore + Delaware C-Corp (via ODI),RECOMMENDED,TOTAL 12 MONTHS,37500,INR,3300000,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+Bangalore + Delaware C-Corp (via ODI),COMFORTABLE,One-time setup,4000,INR,352000,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+Bangalore + Delaware C-Corp (via ODI),COMFORTABLE,Fixed costs (12 mo),6500,INR,572000,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+Bangalore + Delaware C-Corp (via ODI),COMFORTABLE,AI & tech (12 mo),9600,INR,844800,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+Bangalore + Delaware C-Corp (via ODI),COMFORTABLE,Marketing (12 mo),15000,INR,1320000,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+Bangalore + Delaware C-Corp (via ODI),COMFORTABLE,Learning (12 mo),3000,INR,264000,ESTIMATE,Courses/books/communities from learning_plan.md.
+Bangalore + Delaware C-Corp (via ODI),COMFORTABLE,Founder living (12 mo),24000,INR,2112000,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+Bangalore + Delaware C-Corp (via ODI),COMFORTABLE,Cash buffer,12000,INR,1056000,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+Bangalore + Delaware C-Corp (via ODI),COMFORTABLE,TOTAL 12 MONTHS,74100,INR,6520800,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+Bangalore + Wyoming/Delaware LLC (not recommended),LEAN,One-time setup,1000,INR,88000,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+Bangalore + Wyoming/Delaware LLC (not recommended),LEAN,Fixed costs (12 mo),2400,INR,211200,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+Bangalore + Wyoming/Delaware LLC (not recommended),LEAN,AI & tech (12 mo),1200,INR,105600,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+Bangalore + Wyoming/Delaware LLC (not recommended),LEAN,Marketing (12 mo),1200,INR,105600,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+Bangalore + Wyoming/Delaware LLC (not recommended),LEAN,Learning (12 mo),200,INR,17600,ESTIMATE,Courses/books/communities from learning_plan.md.
+Bangalore + Wyoming/Delaware LLC (not recommended),LEAN,Founder living (12 mo),8400,INR,739200,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+Bangalore + Wyoming/Delaware LLC (not recommended),LEAN,Cash buffer,2100,INR,184800,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+Bangalore + Wyoming/Delaware LLC (not recommended),LEAN,TOTAL 12 MONTHS,16500,INR,1452000,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+DIFC (live in Dubai),LEAN,One-time setup,3000,AED,11018,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+DIFC (live in Dubai),LEAN,Fixed costs (12 mo),10500,AED,38561,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+DIFC (live in Dubai),LEAN,AI & tech (12 mo),1200,AED,4407,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+DIFC (live in Dubai),LEAN,Marketing (12 mo),1200,AED,4407,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+DIFC (live in Dubai),LEAN,Learning (12 mo),200,AED,734,ESTIMATE,Courses/books/communities from learning_plan.md.
+DIFC (live in Dubai),LEAN,Founder living (12 mo),30000,AED,110175,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+DIFC (live in Dubai),LEAN,Cash buffer,7500,AED,27544,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+DIFC (live in Dubai),LEAN,TOTAL 12 MONTHS,53600,AED,196846,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+DIFC (live in Dubai),RECOMMENDED,One-time setup,5000,AED,18362,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+DIFC (live in Dubai),RECOMMENDED,Fixed costs (12 mo),14000,AED,51415,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+DIFC (live in Dubai),RECOMMENDED,AI & tech (12 mo),3600,AED,13221,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+DIFC (live in Dubai),RECOMMENDED,Marketing (12 mo),6000,AED,22035,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+DIFC (live in Dubai),RECOMMENDED,Learning (12 mo),1000,AED,3672,ESTIMATE,Courses/books/communities from learning_plan.md.
+DIFC (live in Dubai),RECOMMENDED,Founder living (12 mo),42000,AED,154245,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+DIFC (live in Dubai),RECOMMENDED,Cash buffer,10500,AED,38561,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+DIFC (live in Dubai),RECOMMENDED,TOTAL 12 MONTHS,82100,AED,301512,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+DIFC (live in Dubai),COMFORTABLE,One-time setup,25000,AED,91812,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+DIFC (live in Dubai),COMFORTABLE,Fixed costs (12 mo),25000,AED,91812,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+DIFC (live in Dubai),COMFORTABLE,AI & tech (12 mo),9600,AED,35256,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+DIFC (live in Dubai),COMFORTABLE,Marketing (12 mo),15000,AED,55088,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+DIFC (live in Dubai),COMFORTABLE,Learning (12 mo),3000,AED,11018,ESTIMATE,Courses/books/communities from learning_plan.md.
+DIFC (live in Dubai),COMFORTABLE,Founder living (12 mo),60000,AED,220350,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+DIFC (live in Dubai),COMFORTABLE,Cash buffer,15000,AED,55088,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+DIFC (live in Dubai),COMFORTABLE,TOTAL 12 MONTHS,152600,AED,560424,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+Paris SASU (live in Paris),LEAN,One-time setup,1500,EUR,1305,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+Paris SASU (live in Paris),LEAN,Fixed costs (12 mo),3500,EUR,3045,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+Paris SASU (live in Paris),LEAN,AI & tech (12 mo),1200,EUR,1044,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+Paris SASU (live in Paris),LEAN,Marketing (12 mo),1200,EUR,1044,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+Paris SASU (live in Paris),LEAN,Learning (12 mo),200,EUR,174,ESTIMATE,Courses/books/communities from learning_plan.md.
+Paris SASU (live in Paris),LEAN,Founder living (12 mo),27600,EUR,24012,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+Paris SASU (live in Paris),LEAN,Cash buffer,6900,EUR,6003,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+Paris SASU (live in Paris),LEAN,TOTAL 12 MONTHS,42100,EUR,36627,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+Paris SASU (live in Paris),RECOMMENDED,One-time setup,3000,EUR,2610,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+Paris SASU (live in Paris),RECOMMENDED,Fixed costs (12 mo),5000,EUR,4350,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+Paris SASU (live in Paris),RECOMMENDED,AI & tech (12 mo),3600,EUR,3132,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+Paris SASU (live in Paris),RECOMMENDED,Marketing (12 mo),6000,EUR,5220,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+Paris SASU (live in Paris),RECOMMENDED,Learning (12 mo),1000,EUR,870,ESTIMATE,Courses/books/communities from learning_plan.md.
+Paris SASU (live in Paris),RECOMMENDED,Founder living (12 mo),38400,EUR,33408,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+Paris SASU (live in Paris),RECOMMENDED,Cash buffer,9600,EUR,8352,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+Paris SASU (live in Paris),RECOMMENDED,TOTAL 12 MONTHS,66600,EUR,57942,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
+Paris SASU (live in Paris),COMFORTABLE,One-time setup,5000,EUR,4350,ESTIMATE,"Entity/licence, visa (DIFC/Paris), legal docs incl. IP assignment, bank, trademark, domain, branding. DIFC comfortable assumes AI & Coding licence path (consultant quote, unverified)."
+Paris SASU (live in Paris),COMFORTABLE,Fixed costs (12 mo),8000,EUR,6960,ESTIMATE,"Licence/state fees, workspace (DIFC Innovation Hub desk), accountant/CA/CPA, audit if required, insurance, software. Fees cited in report Section 2."
+Paris SASU (live in Paris),COMFORTABLE,AI & tech (12 mo),9600,EUR,8352,ESTIMATE,"Model APIs + hosting + DB + monitoring. Lean $100/mo, Rec $300/mo, Comf $800/mo; assumes ~2k-20k documents/month."
+Paris SASU (live in Paris),COMFORTABLE,Marketing (12 mo),15000,EUR,13050,ESTIMATE,"Events/associations, LinkedIn tools, travel to customers, small ads. Lean $100/mo, Rec $500/mo, Comf $1,250/mo."
+Paris SASU (live in Paris),COMFORTABLE,Learning (12 mo),3000,EUR,2610,ESTIMATE,Courses/books/communities from learning_plan.md.
+Paris SASU (live in Paris),COMFORTABLE,Founder living (12 mo),55200,EUR,48024,ESTIMATE,"Bangalore $700/$1,200/$2,000 per month; Dubai $2,500/$3,500/$5,000; Paris $2,300/$3,200/$4,600."
+Paris SASU (live in Paris),COMFORTABLE,Cash buffer,13800,EUR,12006,ESTIMATE,~3 months of living costs (lean) up to ~20% of total (comfortable).
+Paris SASU (live in Paris),COMFORTABLE,TOTAL 12 MONTHS,109600,EUR,95352,ESTIMATE,"Exchange rates assumed: 1 USD = 88 INR, 3.6725 AED, 0.87 EUR"
