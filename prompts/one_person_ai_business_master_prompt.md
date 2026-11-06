@@ -20,17 +20,42 @@ tax rate or programme, give the date of the source. If something may have change
 last 12 months, say so and say where to check.
 
 [FOUNDER PROFILE]
-- Citizenship(s) / passport(s): [ ]
+- Citizenship: Indian passport only. Apply every rule as it applies to an INDIAN
+  CITIZEN (UAE visa/Golden Visa eligibility, French visa/Talent Passport, US ITIN/EIN,
+  and Indian FEMA/LRS/ODI and tax rules while I am an Indian tax resident; also explain
+  what changes if I become non-resident (NRI) by moving to Dubai or Paris).
 - Current tax residency, and where I will actually live and work: [ ]
 - Can I relocate? To where? [ ]
 - Skills (engineering / sales / domain expertise): [ ]
-- AI business idea(s) or sector I'm considering: [ ]  (if blank, recommend ideas)
-- Target customers (B2B / B2C, countries, company size): [ ]
-- Capital I can invest without outside money: [ ]
+- AI business idea: NONE YET. Recommend the idea (Section 5) based on what is
+  working for solo founders right now AND what investors are funding.
+- Target customers (B2B / B2C, countries, company size): open — recommend.
+- Capital I can invest: NOT DECIDED. Tell me exactly how much is needed to (a) launch,
+  (b) reach traction that investors will fund, and (c) survive 18 months — per option.
 - Monthly personal living costs: [ ]
 - Hours per week available: [ ]
-- Goal (lifestyle income / sell the company / raise VC later): [ ]
-- 12-month revenue target: [ ]
+- Goal: start solo, prove traction, then RAISE VENTURE CAPITAL (pre-seed / seed).
+  Every recommendation must keep the company investor-ready from day one.
+- 12-month revenue target: recommend the number investors expect at pre-seed/seed.
+
+FUNDRAISING REQUIREMENTS (because I plan to raise)
+- For each option, say whether the structure is acceptable to VCs as-is. Compare a US
+  LLC with a Delaware C-Corp directly; if the LLC is a poor fit for fundraising, say so
+  plainly and give the cost and timing of converting it later.
+- Explain the "flip" question for an Indian founder: Indian company first then a
+  Delaware/DIFC/ADGM holding company, or the reverse; the tax and FEMA costs of each;
+  and what Indian, UAE, US and French investors each prefer.
+- Cover founder equity and investor documents: SAFE, convertible notes, priced
+  rounds, ESOP (US), BSPCE (France), ESOP rules in DIFC; cap table hygiene; IP
+  assignment from me to the company.
+- List current accelerators, programmes and pre-seed investors active in each market
+  (e.g., DIFC Innovation Hub programmes, Hub71, Antler, Y Combinator, Peak XV Surge,
+  Station F, Bpifrance, and others you find), with cheque sizes, equity taken, and how
+  open they are to solo founders. Mark anything you cannot verify.
+- Give typical pre-seed and seed round sizes, valuations and traction expected
+  (MRR, growth rate, users) in the UAE, India, the US and France, with sources.
+- Be honest about how investors view SOLO founders, and what solo founders who raised
+  did to get past it (e.g., adding a co-founder later, strong traction, advisors).
 
 OBJECTIVE
 Produce a complete, decision-ready report on how I can build and run a ONE-PERSON
@@ -184,6 +209,11 @@ SECTION 5 — WHAT I SHOULD BUILD
  - Give me 5 business ideas ranked for my profile, each with: target customer, problem,
    offer, price, first channel, why it suits the chosen jurisdiction, defensibility,
    time to first revenue, and a simple 12-month revenue model (conservative / base / upside).
+ - Every idea must be capable of venture scale (a large market and a credible path to
+   USD 1M+ ARR), while still being something one person can build and sell first.
+ - For each idea, add: market size with source, competitors and their funding, why
+   an Indian founder has an edge (cost, talent, India/Gulf market access), and what
+   an investor would ask before funding it.
  - Recommend one and explain why the others lose.
 
 =====================================================================
@@ -200,6 +230,10 @@ currency (AED / INR / EUR):
 Give three scenarios: LEAN (absolute minimum), RECOMMENDED, and COMFORTABLE.
 Show the month I break even under the base revenue model and the runway in months.
 State the minimum capital to start for each option in one line.
+Then answer "How much do I need to SUCCEED?" directly: the total self-funded amount
+needed to reach the traction milestone that gets a pre-seed round, the number of months
+that usually takes, and the round size I should then raise, for each option. Include
+the costs of converting or restructuring the entity before the raise.
 
 =====================================================================
 SECTION 7 — SOLO-FOUNDER OPERATING SYSTEM
