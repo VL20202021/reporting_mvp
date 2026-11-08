@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Robotics Pilot Calls</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --ink:#1b2430; --muted:#5b6675; --line:#d9dee5;
+    --blue:#1f5fa8; --blue-bg:#eaf2fb; --green:#237a4b; --green-bg:#e8f5ee;
+    --orange:#b5630e; --orange-bg:#fdf1e3; --red:#b3261e; --red-bg:#fbeaea;
+    --violet:#5b3fa0; --violet-bg:#f0ecfa; --grey-bg:#f1f3f6;
+  }
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; background:#fff; color:var(--ink);
+    font-family:"Inter","Helvetica Neue",Arial,sans-serif; }
+  .page { width:210mm; height:297mm; padding:9mm 10mm 7mm; overflow:hidden;
+    page-break-after:always; display:flex; flex-direction:column; gap:2mm; }
+  .page:last-child { page-break-after:auto; }
+  header { display:flex; justify-content:space-between; align-items:flex-end;
+    border-bottom:2px solid var(--blue); padding-bottom:1.6mm; }
+  h1 { font-size:15pt; margin:0; line-height:1.1; }
+  .sub { font-size:7.4pt; color:var(--muted); margin-top:1mm; }
+  .tag { font-size:7pt; color:#fff; background:var(--blue); padding:1mm 2.2mm; border-radius:2mm; font-weight:600; white-space:nowrap; }
+  .lang { font-size:7pt; color:var(--muted); text-align:right; margin-top:1mm; }
+  h2 { font-size:8.4pt; margin:0 0 1mm; text-transform:uppercase; letter-spacing:.4px; color:var(--blue); }
+  p,li,td,th { font-size:7.1pt; line-height:1.3; }
+  p { margin:0 0 1mm; } ul,ol { margin:0; padding-left:3.8mm; } li { margin-bottom:.4mm; }
+  b { font-weight:650; }
+  .box { border:1px solid var(--line); border-radius:1.6mm; padding:1.8mm 2.2mm; }
+  .blue { background:var(--blue-bg); border-color:#bcd3ee; }
+  .green { background:var(--green-bg); border-color:#bfe0cd; } .green h2 { color:var(--green); }
+  .violet { background:var(--violet-bg); border-color:#d3c8ee; } .violet h2 { color:var(--violet); }
+  .orange { background:var(--orange-bg); border-color:#f1d2ac; } .orange h2 { color:var(--orange); }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:2.4mm; }
+  table { width:100%; border-collapse:collapse; }
+  th { text-align:left; font-weight:650; color:var(--muted); border-bottom:1px solid var(--line); padding:.6mm 1.2mm .6mm 0; }
+  td { border-bottom:1px solid #eceff3; padding:.8mm 1.2mm .8mm 0; vertical-align:top; }
+  tr:last-child td { border-bottom:0; }
+  .sec td { background:var(--grey-bg); font-weight:700; color:var(--blue); font-size:7.2pt; padding:.7mm 1mm; }
+  .pill { display:inline-block; font-size:6.3pt; font-weight:700; padding:.2mm 1.2mm; border-radius:1.2mm; white-space:nowrap; }
+  .p-open { background:var(--green-bg); color:var(--green); border:1px solid #9fd0b4; }
+  .p-soon { background:var(--blue-bg); color:var(--blue); border:1px solid #9fc0e6; }
+  .p-roll { background:var(--violet-bg); color:var(--violet); border:1px solid #c3b4e6; }
+  .p-next { background:var(--orange-bg); color:var(--orange); border:1px solid #ecc493; }
+  .p-watch { background:var(--grey-bg); color:var(--muted); border:1px solid #cfd5dd; }
+  .fit { font-weight:700; white-space:nowrap; }
+  .f3 { color:var(--green); } .f2 { color:var(--orange); } .f1 { color:var(--muted); }
+  .note { font-size:6.4pt; color:var(--muted); }
+  .src { font-size:6pt; color:var(--muted); line-height:1.35; word-break:break-word; }
+  footer { margin-top:auto; border-top:1px solid var(--line); padding-top:1.2mm; font-size:6.1pt; color:var(--muted); line-height:1.35; }
+  col.c1 { width:23%; } col.c2 { width:15%; } col.c3 { width:14%; } col.c4 { width:6%; } col.c5 { width:42%; }
+</style>
+</head>
+<body>
+
+<!-- ======================= EN · PAGE 1 ======================= -->
+<section class="page" lang="en">
+  <header>
+    <div>
+      <h1>Robotics Pilot Calls We Can Join — World Scan</h1>
+      <div class="sub">Internal brief · Founders A &amp; B · status checked 8 Nov 2026 · Companion to the La Défense cleaning &amp; hotels proposal</div>
+    </div>
+    <div><span class="tag">Ranked for a neutral advisor in Île-de-France</span><div class="lang">EN · pages 1–2 / 4 · FR p. 3–4</div></div>
+  </header>
+
+  <div class="box blue">
+    <p style="margin:0"><b>Read this first.</b> No complete list of robotics pilots exists: most corporate pilots are private and only appear in press releases. This brief lists <b>open calls and recurring programmes that a company can actually apply to</b>, verified by web search on 8 Nov 2026. Many hosts do not publish dates; those are marked <i>rolling</i> or <i>watch</i> and must be checked on the host's site before we spend time on them. We do not own robots, so in most programmes we take part <b>with a vendor partner or as the end-user / adoption partner</b>, never as the technology applicant alone.</p>
+  </div>
+
+  <div class="box" style="padding-top:1.4mm">
+    <p class="note" style="margin-bottom:.8mm">
+      Status: <span class="pill p-open">OPEN</span> dated &amp; accepting · <span class="pill p-soon">OPENS SOON</span> · <span class="pill p-roll">ROLLING</span> no fixed deadline · <span class="pill p-next">NEXT ROUND</span> just closed, recurs · <span class="pill p-watch">WATCH</span> no live call found.
+      Fit for us: <span class="fit f3">●●●</span> high · <span class="fit f2">●●</span> medium · <span class="fit f1">●</span> low.
+    </p>
+    <table>
+      <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup>
+      <tr><th>Programme</th><th>Host · where</th><th>Status · date</th><th>Fit</th><th>How we take part</th></tr>
+
+      <tr class="sec"><td colspan="5">1 · France / Île-de-France: closest to our clients</td></tr>
+      <tr><td><b>Innovation Hub</b> (robotics is one of 3 verticals; 120+ experiments since 2022); Airport Innovation Days POC up to €50k</td><td>Groupe ADP · CDG / Orly</td><td><span class="pill p-watch">WATCH</span> no 2026 robotics call found</td><td class="fit f3">●●●</td><td>Pitch a <b>terminal-cleaning robot pilot</b> jointly with a distributor (Pudu / Gausium / Avidbots). We bring KPIs, ROI and change management; the vendor brings the machines.</td></tr>
+      <tr><td><b>Station innovation &amp; startup challenges</b> (has already tested cleaning machines and the Baryl bin robot)</td><td>SNCF Gares &amp; Connexions · Paris stations</td><td><span class="pill p-watch">WATCH</span> no 2026 call found</td><td class="fit f3">●●●</td><td>Same offer as for ADP; stations are high-traffic, night-cleaned public spaces. Ask the innovation team when the next challenge opens.</td></tr>
+      <tr><td><b>Welcome City Lab</b>: Paris&amp;Co tourism incubator (RATP, Paris tourism office among members)</td><td>Paris&amp;Co · Paris</td><td><span class="pill p-next">NEXT ROUND</span> annual call, historically autumn–Dec</td><td class="fit f3">●●●</td><td>Apply with the <b>hotel track</b> (neutral robot selection + ROI for hotels). The members are pilot hosts and it adds credibility in hospitality.</td></tr>
+      <tr><td><b>Innov'up Expérimentation</b> (€14M fund top-up, Apr 2026)</td><td>Région IDF + Bpifrance</td><td><span class="pill p-roll">ROLLING</span> historically open all year; 4–6 months to decide ⚠</td><td class="fit f3">●●●</td><td>Co-fund a <b>La Défense cleaning-robot living lab</b> (see “Our own pilot”); also file for clients as a paid subsidy-file service.</td></tr>
+      <tr><td><b>Urban Lab: Quartiers d'Innovation Urbaine</b> (calls to test innovations in public space)</td><td>Paris&amp;Co · Paris districts</td><td><span class="pill p-next">NEXT ROUND</span> QIU #4 (Chapelle-S) closed late Oct ⚠</td><td class="fit f2">●●</td><td>Test outdoor or public-space cleaning robots with a vendor; good visibility with the City of Paris.</td></tr>
+      <tr><td><b>Leonard SEED / CATALYST</b> (CATALYST 2026 included AI &amp; robotics)</td><td>VINCI · Paris</td><td><span class="pill p-next">NEXT ROUND</span> SEED 2027 closed 4 Oct 2026; next ~June 2027</td><td class="fit f2">●●</td><td>Route to VINCI Facilities sites. Apply in 2027 once we have 2–3 references.</td></tr>
+      <tr><td><b>Défi Flagships</b>: innovative subsystems for robotics (France 2030)</td><td>State / Bpifrance</td><td><span class="pill p-open">OPEN</span> to 6 Apr 2027, noon</td><td class="fit f1">●</td><td>For robot-part makers, not us. At most: end-user / market advisor inside a maker's consortium.</td></tr>
+
+      <tr class="sec"><td colspan="5">2 · EU-funded calls (consortia and “cascade” grants that fund pilots)</td></tr>
+      <tr><td><b>Apply AI: AI-driven robotics for industry, system integration &amp; adoption</b> (HORIZON-CL4-2027-04-DIGITAL-EMERGING-05; €18M, 1 project)</td><td>European Commission</td><td><span class="pill p-soon">OPENS</span> 17 Nov 2026 · deadline <b>18 Mar 2027</b></td><td class="fit f2">●●</td><td>Join a consortium as the <b>adoption / SME pilot-site partner</b>: we bring Île-de-France end-users, ROI method and social-acceptance work. Find consortia via the French NCP and brokerage events.</td></tr>
+      <tr><td><b>Pilot access to technology infrastructures</b> for start-ups &amp; SMEs (HORIZON-CL4-2027-01-MAT-PROD-47, coordination action)</td><td>European Commission</td><td><span class="pill p-open">OPEN</span> deadline <b>2 Feb 2027</b></td><td class="fit f1">●</td><td>Low priority: only as a partner that brokers SME access to test facilities.</td></tr>
+      <tr><td><b>Cascade calls</b> (EU projects re-granting €60–300k per pilot): FORTIS OC2, JARVIS OC2, ARISE, ROB4GREEN, AID4SME, euROBIN</td><td>EU projects via FundingBox etc.</td><td><span class="pill p-next">NEXT ROUND</span> FORTIS closed 4 Nov (results 14 Dec); ROB4GREEN OC2 planned Q2 2027</td><td class="fit f3">●●●</td><td>Calls usually require an <b>end-user site</b>. Offer vendors applying (or winning) a <b>ready Île-de-France pilot host</b> + our coordination, paid from the grant.</td></tr>
+      <tr><td><b>EIC Accelerator</b> (grant + equity for deep-tech scale-ups)</td><td>European Innovation Council</td><td><span class="pill p-roll">ROLLING</span> short application any time; 2027 cut-offs not yet published</td><td class="fit f1">●</td><td>Not now. Only in Phase 3, if our data / matching platform becomes real innovation.</td></tr>
+    </table>
+  </div>
+
+  <footer>Continued on page 2: rest of world, events, our own pilot programme, 60-day plan. ⚠ = to verify on the host's site. “No 2026 call found” means our search found none, not that none exists.</footer>
+</section>
+
+<!-- ======================= EN · PAGE 2 ======================= -->
+<section class="page" lang="en">
+  <header>
+    <div>
+      <h1>Robotics Pilot Calls — World Scan (2/2)</h1>
+      <div class="sub">Rest of world · events · how we take part · next 60 days</div>
+    </div>
+    <div><div class="lang">EN · page 2 / 4</div></div>
+  </header>
+
+  <div class="box">
+    <table>
+      <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup>
+      <tr><th>Programme</th><th>Host · where</th><th>Status · date</th><th>Fit</th><th>How we take part</th></tr>
+      <tr class="sec"><td colspan="5">3 · Rest of world: learn, partner, follow EU vendors abroad</td></tr>
+      <tr><td><b>Pilots at BAT</b>: 6–12-month live tests on a 59-acre Brooklyn site (with LACI); also a Tokyo-linked track</td><td>NYCEDC · New York</td><td><span class="pill p-next">NEXT ROUND</span> last deadline 28 Aug 2026; windows roughly quarterly</td><td class="fit f1">●</td><td>For technology vendors. Use as a template for our own living lab; could support a European vendor entering the US.</td></tr>
+      <tr><td><b>Dubai Future Accelerators</b>: challenge-based, 0% equity, pilots with RTA, DEWA, Dubai Police</td><td>Dubai Future Foundation · UAE</td><td><span class="pill p-watch">WATCH</span> no 2026 robotics challenge found; Dubai Future Week 18–21 Nov 2026</td><td class="fit f1">●</td><td>Monitor challenge briefs. Hotels and malls in the Gulf welcome service robots, which is useful for vendor partners later.</td></tr>
+      <tr><td><b>INCUBATE for Environmental Services</b> (cleaning &amp; disinfection robot trials with Changi Airport Group and a hospital)</td><td>Singapore government</td><td><span class="pill p-watch">WATCH</span> factsheet undated ⚠</td><td class="fit f1">●</td><td>The best public model of “cleaning-robot trials paid by the buyer side”. Copy its structure for La Défense.</td></tr>
+      <tr><td><b>Punggol Digital District physical-AI testbed</b>: multi-operator robots on public paths</td><td>IMDA, JTC, SIT · Singapore</td><td><span class="pill p-watch">WATCH</span> launching late 2026; partners already chosen</td><td class="fit f1">●</td><td>Learn: one exemption for the whole district instead of one permit per robot. A strong argument for a La Défense testbed.</td></tr>
+      <tr><td><b>Tokyo Bay Innovation Field</b>; Nishi-Shinjuku smart-service deployment</td><td>Tokyo Metropolitan Govt</td><td><span class="pill p-watch">WATCH</span> 2026 calls, robot scope unclear</td><td class="fit f1">●</td><td>Low priority; watch for a robot track.</td></tr>
+      <tr><td><b>Regulatory sandbox</b> (Oct 2026: humanoids in factories, quadrupeds on sidewalks)</td><td>Korea (trade &amp; ICT ministries)</td><td><span class="pill p-roll">ROLLING</span> mainly Korean companies</td><td class="fit f1">●</td><td>Not for us; useful regulatory benchmark.</td></tr>
+      <tr><td><b>Hospitality Open Innovation</b> (Pestana group, Turismo de Portugal) · <b>OpenStay Lab</b> (Sercotel, Spain)</td><td>Lisbon · Spain</td><td><span class="pill p-next">NEXT ROUND</span> 2026 cycles closed (13 Sep / Apr)</td><td class="fit f2">●●</td><td>2027 rounds for the hotel track, with a delivery-robot vendor.</td></tr>
+      <tr><td><b>ARIA Robot Locomotion</b> (£60m, hardware advances)</td><td>ARIA · UK</td><td><span class="pill p-open">OPEN</span> concept 4 Dec 2026 · full 1 Feb 2027</td><td class="fit f1">●</td><td>Not a fit: requires new robot hardware.</td></tr>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="box violet">
+      <h2>Five ways to take part without owning a robot</h2>
+      <ol>
+        <li><b>Pilot-host broker.</b> Grant calls and vendors need real sites. We line up cleaning firms, hotels and towers in Île-de-France and get paid for pilot coordination (from the grant or the vendor).</li>
+        <li><b>Joint applicant with a vendor</b> for corporate challenges (ADP, SNCF, Paris&amp;Co, Leonard): the vendor supplies the machines; we supply pilot design, KPIs, ROI, CSE / staff engagement and the final report.</li>
+        <li><b>Consortium partner</b> in Horizon Europe calls: we lead the adoption, ROI and social-acceptance work package, alongside a lab (CEA-List, Inria) and integrators.</li>
+        <li><b>Subsidy-file service</b> for clients (Innov'up, Bpifrance Diagnostic Data &amp; IA); this is a paid offer in our price list.</li>
+        <li><b>Run our own pilot programme</b> (below), so programme owners come to us.</li>
+      </ol>
+    </div>
+    <div class="box orange">
+      <h2>Our own pilot: “La Défense Cleaning-Robot Lab”</h2>
+      <p>Bring together 3–4 cleaning firms, 1 tower or hotel operator and 2–3 robot vendors for a 6-month multi-brand pilot, with the same KPIs on every site (m²/h, coverage, uptime, complaints, hours moved to detail work).</p>
+      <p><b>Ask</b> Paris La Défense (the public body managing the district) to host it or let it use common areas; <b>co-fund</b> it through Innov'up Expérimentation; <b>publish</b> a neutral results report.</p>
+      <p>Why it matters: it turns us from applicants into the <b>programme owner</b>, generates the multi-brand data that is our moat, and copies the Singapore and New York testbed models.</p>
+    </div>
+  </div>
+
+  <div class="box green">
+    <h2>Next 60 days</h2>
+    <div class="grid2" style="gap:3mm">
+      <ul>
+        <li><b>Week 1–2:</b> email the innovation teams at Groupe ADP, SNCF Gares &amp; Connexions and Welcome City Lab: ask for next call dates and pitch a joint pilot with a distributor.</li>
+        <li><b>Week 1–3:</b> sign the cleaning-robot distributor already planned in the La Défense proposal; agree on joint applications.</li>
+        <li><b>From 17 Nov:</b> read the Horizon “AI-driven robotics” topic text; contact the French NCP; join the call's brokerage events to find a consortium (deadline 18 Mar 2027).</li>
+      </ul>
+      <ul>
+        <li><b>14 Dec:</b> FORTIS results; offer winners an Île-de-France pilot site. Set alerts for ROB4GREEN OC2 (Q2 2027) and the next euROBIN call.</li>
+        <li><b>December:</b> meet Paris La Défense about the Cleaning-Robot Lab; prepare an Innov'up Expérimentation file.</li>
+        <li><b>Events:</b> European Robotics Forum, Birmingham, 2–4 Mar 2027; VivaTech (June); SITL (spring). EquipHotel (2–5 Nov 2026) has passed; it is held every two years.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="src">
+    Sources (checked 8 Nov 2026): EU Funding &amp; Tenders / horizon-europe.gouv.fr (DIGITAL-EMERGING-05; MAT-PROD-47); c-robotique-france2030.org (Défi Flagships); cascadefunding.eu (FORTIS, JARVIS, ARISE, ROB4GREEN, MAGICIAN); aid4sme.eu; eic.ec.europa.eu FAQ; iledefrance.fr (Innov'up, Apr 2026); parisandco.com / paris.fr (Urban Lab, Welcome City Lab); leonard.vinci.com (SEED 2027); deplacementspros.com, marketscreener (Groupe ADP Innovation Hub, Airport Innovation Days); railwaygazette.com, garesetconnexions.sncf (station robots); edc.nyc, batworks.nyc (Pilots at BAT); dubaifuture.ae; mti.gov.sg (INCUBATE); imda.gov.sg, jtc.gov.sg (Punggol); metro.tokyo.lg.jp; mlex.com (Korea sandbox); business.turismodeportugal.pt; sercotelhoteles.com; sovereignsignal.substack.com (ARIA); ifr.org / birmingham.ac.uk (ERF 2027); viparis.com (EquipHotel). Uploaded B2B AI Robotics GTM Playbook and Master Playbook for programme models and fit.
+  </footer>
+</section>
+
+<!-- ======================= FR · PAGE 3 ======================= -->
+<section class="page" lang="fr">
+  <header>
+    <div>
+      <h1>Appels à pilotes robotiques accessibles — Panorama mondial</h1>
+      <div class="sub">Note interne · Fondateurs A &amp; B · statut vérifié le 8 nov. 2026 · Complément de la proposition propreté &amp; hôtels La Défense</div>
+    </div>
+    <div><span class="tag">Classé pour un conseil neutre en Île-de-France</span><div class="lang">FR · pages 3–4 / 4 · EN p. 1–2</div></div>
+  </header>
+
+  <div class="box blue">
+    <p style="margin:0"><b>À lire d'abord.</b> Il n'existe aucune liste complète des pilotes robotiques : la plupart des pilotes d'entreprise sont privés et n'apparaissent que dans des communiqués. Cette note recense les <b>appels ouverts et programmes récurrents auxquels une entreprise peut réellement candidater</b>, vérifiés par recherche web le 8 nov. 2026. Beaucoup d'organisateurs ne publient pas de dates : ils sont marqués <i>au fil de l'eau</i> ou <i>à surveiller</i> et doivent être vérifiés sur leur site. N'ayant pas de robots, nous participons le plus souvent <b>avec un fournisseur partenaire ou comme partenaire utilisateur / adoption</b>, jamais seuls comme porteur technologique.</p>
+  </div>
+
+  <div class="box" style="padding-top:1.4mm">
+    <p class="note" style="margin-bottom:.8mm">
+      Statut : <span class="pill p-open">OUVERT</span> daté · <span class="pill p-soon">OUVRE BIENTÔT</span> · <span class="pill p-roll">AU FIL DE L'EAU</span> · <span class="pill p-next">PROCHAINE SESSION</span> clos, récurrent · <span class="pill p-watch">À SURVEILLER</span> aucun appel actif trouvé.
+      Adéquation : <span class="fit f3">●●●</span> forte · <span class="fit f2">●●</span> moyenne · <span class="fit f1">●</span> faible.
+    </p>
+    <table>
+      <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup>
+      <tr><th>Programme</th><th>Organisateur · lieu</th><th>Statut · date</th><th>Adéq.</th><th>Comment nous participons</th></tr>
+
+      <tr class="sec"><td colspan="5">1 · France / Île-de-France : au plus près de nos clients</td></tr>
+      <tr><td><b>Innovation Hub</b> (la robotique est l'une des 3 verticales ; 120+ expérimentations depuis 2022) ; Airport Innovation Days, POC jusqu'à 50 k€</td><td>Groupe ADP · CDG / Orly</td><td><span class="pill p-watch">À SURVEILLER</span> pas d'appel robotique 2026 trouvé</td><td class="fit f3">●●●</td><td>Proposer un <b>pilote de robots de nettoyage en aérogare</b> avec un distributeur (Pudu / Gausium / Avidbots). Nous apportons KPI, ROI et conduite du changement ; le fournisseur, les machines.</td></tr>
+      <tr><td><b>Innovation en gare &amp; challenges startups</b> (a déjà testé des machines de nettoyage et le robot-poubelle Baryl)</td><td>SNCF Gares &amp; Connexions · gares parisiennes</td><td><span class="pill p-watch">À SURVEILLER</span> pas d'appel 2026 trouvé</td><td class="fit f3">●●●</td><td>Même offre qu'ADP : gares très fréquentées, nettoyées de nuit. Demander la date du prochain challenge.</td></tr>
+      <tr><td><b>Welcome City Lab</b> : incubateur tourisme de Paris&amp;Co (RATP, Office du tourisme parmi les membres)</td><td>Paris&amp;Co · Paris</td><td><span class="pill p-next">PROCHAINE SESSION</span> appel annuel, historiquement automne–déc.</td><td class="fit f3">●●●</td><td>Candidater avec la <b>piste hôtels</b> (choix neutre de robots + ROI hôtelier). Les membres sont des sites pilotes et cela crédibilise dans l'hôtellerie.</td></tr>
+      <tr><td><b>Innov'up Expérimentation</b> (abondement de 14 M€, avril 2026)</td><td>Région IDF + Bpifrance</td><td><span class="pill p-roll">AU FIL DE L'EAU</span> historiquement sans date limite ; réponse en 4–6 mois ⚠</td><td class="fit f3">●●●</td><td>Cofinancer un <b>living lab de robots de nettoyage à La Défense</b> (voir « Notre propre pilote ») ; monter aussi des dossiers payants pour nos clients.</td></tr>
+      <tr><td><b>Urban Lab : Quartiers d'Innovation Urbaine</b> (appels à expérimenter dans l'espace public)</td><td>Paris&amp;Co · quartiers de Paris</td><td><span class="pill p-next">PROCHAINE SESSION</span> QIU #4 (Chapelle-S) clos fin oct. ⚠</td><td class="fit f2">●●</td><td>Tester des robots de nettoyage d'espace public avec un fournisseur ; bonne visibilité auprès de la Ville.</td></tr>
+      <tr><td><b>Leonard SEED / CATALYST</b> (CATALYST 2026 incluait IA &amp; robotique)</td><td>VINCI · Paris</td><td><span class="pill p-next">PROCHAINE SESSION</span> SEED 2027 clos le 4 oct. 2026 ; suivant ~juin 2027</td><td class="fit f2">●●</td><td>Accès aux sites de VINCI Facilities. Candidater en 2027 avec 2–3 références.</td></tr>
+      <tr><td><b>Défi Flagships</b> : sous-systèmes innovants pour la robotique (France 2030)</td><td>État / Bpifrance</td><td><span class="pill p-open">OUVERT</span> jusqu'au 6 avril 2027, midi</td><td class="fit f1">●</td><td>Pour les fabricants de composants, pas pour nous. Au mieux : conseil marché / utilisateurs dans le consortium d'un fabricant.</td></tr>
+
+      <tr class="sec"><td colspan="5">2 · Financements européens (consortiums et appels « en cascade » qui financent des pilotes)</td></tr>
+      <tr><td><b>Apply AI : robotique pilotée par l'IA pour l'industrie, intégration &amp; adoption</b> (HORIZON-CL4-2027-04-DIGITAL-EMERGING-05 ; 18 M€, 1 projet)</td><td>Commission européenne</td><td><span class="pill p-soon">OUVRE</span> le 17 nov. 2026 · clôture <b>18 mars 2027</b></td><td class="fit f2">●●</td><td>Rejoindre un consortium comme <b>partenaire adoption / sites pilotes PME</b> : utilisateurs franciliens, méthode ROI, acceptation sociale. Trouver un consortium via le PCN français et les rencontres de partenariat.</td></tr>
+      <tr><td><b>Accès pilote aux infrastructures technologiques</b> pour startups &amp; PME (HORIZON-CL4-2027-01-MAT-PROD-47, action de coordination)</td><td>Commission européenne</td><td><span class="pill p-open">OUVERT</span> clôture <b>2 févr. 2027</b></td><td class="fit f1">●</td><td>Priorité faible : seulement comme partenaire facilitant l'accès des PME aux plateformes d'essai.</td></tr>
+      <tr><td><b>Appels en cascade</b> (projets UE redistribuant 60–300 k€ par pilote) : FORTIS OC2, JARVIS OC2, ARISE, ROB4GREEN, AID4SME, euROBIN</td><td>Projets UE via FundingBox, etc.</td><td><span class="pill p-next">PROCHAINE SESSION</span> FORTIS clos le 4 nov. (résultats 14 déc.) ; ROB4GREEN OC2 prévu T2 2027</td><td class="fit f3">●●●</td><td>Ces appels exigent souvent un <b>site utilisateur</b>. Proposer aux fournisseurs candidats ou lauréats un <b>site pilote francilien prêt</b> + notre coordination, payée par la subvention.</td></tr>
+      <tr><td><b>EIC Accelerator</b> (subvention + fonds propres, deep tech)</td><td>Conseil européen de l'innovation</td><td><span class="pill p-roll">AU FIL DE L'EAU</span> dossier court à tout moment ; dates 2027 non publiées</td><td class="fit f1">●</td><td>Pas maintenant. Seulement en phase 3, si notre plateforme de données / matching devient une vraie innovation.</td></tr>
+    </table>
+  </div>
+
+  <footer>Suite page 4 : reste du monde, événements, notre propre pilote, plan à 60 jours. ⚠ = à vérifier sur le site de l'organisateur. « Pas d'appel 2026 trouvé » signifie que notre recherche n'en a pas trouvé, pas qu'il n'en existe aucun.</footer>
+</section>
+
+<!-- ======================= FR · PAGE 4 ======================= -->
+<section class="page" lang="fr">
+  <header>
+    <div>
+      <h1>Appels à pilotes robotiques — Panorama mondial (2/2)</h1>
+      <div class="sub">Reste du monde · événements · comment participer · 60 prochains jours</div>
+    </div>
+    <div><div class="lang">FR · page 4 / 4</div></div>
+  </header>
+
+  <div class="box">
+    <table>
+      <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup>
+      <tr><th>Programme</th><th>Organisateur · lieu</th><th>Statut · date</th><th>Adéq.</th><th>Comment nous participons</th></tr>
+      <tr class="sec"><td colspan="5">3 · Reste du monde : apprendre, nouer des partenariats, suivre nos fournisseurs européens</td></tr>
+      <tr><td><b>Pilots at BAT</b> : tests réels de 6–12 mois sur un site de 24 ha à Brooklyn (avec LACI) ; aussi une piste liée à Tokyo</td><td>NYCEDC · New York</td><td><span class="pill p-next">PROCHAINE SESSION</span> dernière clôture le 28 août 2026 ; fenêtres environ trimestrielles</td><td class="fit f1">●</td><td>Pour les fournisseurs de technologie. Modèle pour notre living lab ; possible accompagnement d'un fournisseur européen aux États-Unis.</td></tr>
+      <tr><td><b>Dubai Future Accelerators</b> : par défis, 0 % de capital, pilotes avec RTA, DEWA, Police de Dubaï</td><td>Dubai Future Foundation · EAU</td><td><span class="pill p-watch">À SURVEILLER</span> pas de défi robotique 2026 trouvé ; Dubai Future Week 18–21 nov. 2026</td><td class="fit f1">●</td><td>Suivre les défis. Hôtels et centres commerciaux du Golfe accueillent bien les robots de service : utile plus tard pour nos fournisseurs.</td></tr>
+      <tr><td><b>INCUBATE for Environmental Services</b> (essais de robots de nettoyage et désinfection avec Changi Airport Group et un hôpital)</td><td>Gouvernement de Singapour</td><td><span class="pill p-watch">À SURVEILLER</span> fiche non datée ⚠</td><td class="fit f1">●</td><td>Meilleur modèle public d'« essais de robots de nettoyage portés par l'acheteur ». À reproduire à La Défense.</td></tr>
+      <tr><td><b>Banc d'essai IA physique de Punggol</b> : robots multi-opérateurs dans l'espace public</td><td>IMDA, JTC, SIT · Singapour</td><td><span class="pill p-watch">À SURVEILLER</span> lancement fin 2026 ; partenaires déjà choisis</td><td class="fit f1">●</td><td>À retenir : une seule dérogation pour tout le quartier au lieu d'un permis par robot. Argument fort pour un banc d'essai à La Défense.</td></tr>
+      <tr><td><b>Tokyo Bay Innovation Field</b> ; déploiement de services intelligents à Nishi-Shinjuku</td><td>Gouvernement métropolitain de Tokyo</td><td><span class="pill p-watch">À SURVEILLER</span> appels 2026, périmètre robots incertain</td><td class="fit f1">●</td><td>Priorité faible ; guetter une piste robotique.</td></tr>
+      <tr><td><b>Bac à sable réglementaire</b> (oct. 2026 : humanoïdes en usine, quadrupèdes sur trottoirs)</td><td>Corée (ministères industrie &amp; TIC)</td><td><span class="pill p-roll">AU FIL DE L'EAU</span> surtout entreprises coréennes</td><td class="fit f1">●</td><td>Pas pour nous ; référence réglementaire utile.</td></tr>
+      <tr><td><b>Hospitality Open Innovation</b> (groupe Pestana, Turismo de Portugal) · <b>OpenStay Lab</b> (Sercotel, Espagne)</td><td>Lisbonne · Espagne</td><td><span class="pill p-next">PROCHAINE SESSION</span> cycles 2026 clos (13 sept. / avril)</td><td class="fit f2">●●</td><td>Sessions 2027 pour la piste hôtels, avec un fournisseur de robots de livraison.</td></tr>
+      <tr><td><b>ARIA Robot Locomotion</b> (60 M£, avancées matérielles)</td><td>ARIA · Royaume-Uni</td><td><span class="pill p-open">OUVERT</span> note de concept 4 déc. 2026 · dossier 1er févr. 2027</td><td class="fit f1">●</td><td>Hors cible : exige un nouveau matériel robotique.</td></tr>
+    </table>
+  </div>
+
+  <div class="grid2">
+    <div class="box violet">
+      <h2>Cinq façons de participer sans posséder de robot</h2>
+      <ol>
+        <li><b>Courtier de sites pilotes.</b> Appels et fournisseurs ont besoin de vrais sites. Nous mobilisons entreprises de propreté, hôtels et tours franciliens, et sommes payés pour coordonner le pilote (par la subvention ou le fournisseur).</li>
+        <li><b>Candidature conjointe avec un fournisseur</b> aux challenges d'entreprises (ADP, SNCF, Paris&amp;Co, Leonard) : le fournisseur apporte les machines ; nous apportons conception du pilote, KPI, ROI, dialogue avec le CSE et le personnel, rapport final.</li>
+        <li><b>Partenaire de consortium</b> Horizon Europe : nous pilotons le lot adoption, ROI et acceptation sociale, avec un laboratoire (CEA-List, Inria) et des intégrateurs.</li>
+        <li><b>Montage de dossiers d'aides</b> pour nos clients (Innov'up, Diagnostic Data &amp; IA de Bpifrance) : offre payante de notre grille.</li>
+        <li><b>Lancer notre propre programme pilote</b> (ci-contre) pour que les organisateurs viennent à nous.</li>
+      </ol>
+    </div>
+    <div class="box orange">
+      <h2>Notre propre pilote : « La Défense Cleaning-Robot Lab »</h2>
+      <p>Réunir 3–4 entreprises de propreté, 1 gestionnaire de tour ou d'hôtel et 2–3 fournisseurs de robots pour un pilote multi-marques de 6 mois, avec les mêmes KPI sur chaque site (m²/h, couverture, disponibilité, réclamations, heures basculées vers les finitions).</p>
+      <p><b>Demander</b> à Paris La Défense (l'établissement public gestionnaire du quartier) d'accueillir le pilote ou d'ouvrir des espaces communs ; <b>cofinancer</b> via Innov'up Expérimentation ; <b>publier</b> un rapport de résultats neutre.</p>
+      <p>Intérêt : nous passons de candidats à <b>organisateurs du programme</b>, nous constituons les données multi-marques qui font notre avantage, et nous reprenons les modèles de Singapour et New York.</p>
+    </div>
+  </div>
+
+  <div class="box green">
+    <h2>60 prochains jours</h2>
+    <div class="grid2" style="gap:3mm">
+      <ul>
+        <li><b>Sem. 1–2 :</b> écrire aux équipes innovation de Groupe ADP, SNCF Gares &amp; Connexions et Welcome City Lab : demander les dates des prochains appels et proposer un pilote conjoint avec un distributeur.</li>
+        <li><b>Sem. 1–3 :</b> signer le distributeur de robots de nettoyage prévu dans la proposition La Défense ; convenir de candidatures communes.</li>
+        <li><b>Dès le 17 nov. :</b> lire le texte du sujet Horizon « robotique pilotée par l'IA » ; contacter le PCN ; participer aux rencontres de partenariat pour trouver un consortium (clôture 18 mars 2027).</li>
+      </ul>
+      <ul>
+        <li><b>14 déc. :</b> résultats FORTIS ; proposer aux lauréats un site pilote francilien. Alertes sur ROB4GREEN OC2 (T2 2027) et le prochain appel euROBIN.</li>
+        <li><b>Décembre :</b> rencontrer Paris La Défense au sujet du Cleaning-Robot Lab ; préparer un dossier Innov'up Expérimentation.</li>
+        <li><b>Événements :</b> European Robotics Forum, Birmingham, 2–4 mars 2027 ; VivaTech (juin) ; SITL (printemps). EquipHotel (2–5 nov. 2026) est passé ; il a lieu tous les deux ans.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="src">
+    Sources (vérifiées le 8 nov. 2026) : EU Funding &amp; Tenders / horizon-europe.gouv.fr (DIGITAL-EMERGING-05 ; MAT-PROD-47) ; c-robotique-france2030.org (Défi Flagships) ; cascadefunding.eu (FORTIS, JARVIS, ARISE, ROB4GREEN, MAGICIAN) ; aid4sme.eu ; FAQ eic.ec.europa.eu ; iledefrance.fr (Innov'up, avril 2026) ; parisandco.com / paris.fr (Urban Lab, Welcome City Lab) ; leonard.vinci.com (SEED 2027) ; deplacementspros.com, marketscreener (Innovation Hub et Airport Innovation Days du Groupe ADP) ; railwaygazette.com, garesetconnexions.sncf (robots en gare) ; edc.nyc, batworks.nyc (Pilots at BAT) ; dubaifuture.ae ; mti.gov.sg (INCUBATE) ; imda.gov.sg, jtc.gov.sg (Punggol) ; metro.tokyo.lg.jp ; mlex.com (bac à sable coréen) ; business.turismodeportugal.pt ; sercotelhoteles.com ; sovereignsignal.substack.com (ARIA) ; ifr.org / birmingham.ac.uk (ERF 2027) ; viparis.com (EquipHotel). Documents fournis : B2B AI Robotics GTM Playbook et Master Playbook (modèles de programmes, adéquation).
+  </footer>
+</section>
+
+</body>
+</html>
