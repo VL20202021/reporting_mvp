@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>La Défense Robotics Pilot</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --ink: #1b2430; --muted: #5b6675; --line: #d9dee5;
+    --blue: #1f5fa8; --blue-bg: #eaf2fb;
+    --green: #237a4b; --green-bg: #e8f5ee;
+    --orange: #b5630e; --orange-bg: #fdf1e3;
+    --red: #b3261e; --red-bg: #fbeaea;
+    --violet: #5b3fa0; --violet-bg: #f0ecfa;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; color: var(--ink);
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .page { width: 210mm; height: 297mm; padding: 9mm 10mm 7mm; overflow: hidden;
+    page-break-after: always; display: flex; flex-direction: column; gap: 1.9mm; }
+  .page:last-child { page-break-after: auto; }
+  header { display: flex; justify-content: space-between; align-items: flex-end;
+    border-bottom: 2px solid var(--blue); padding-bottom: 1.8mm; }
+  h1 { font-size: 15pt; margin: 0; letter-spacing: -0.2px; line-height: 1.1; }
+  .sub { font-size: 7.6pt; color: var(--muted); margin-top: 1mm; }
+  .tag { font-size: 7pt; color: #fff; background: var(--blue); padding: 1mm 2.2mm;
+    border-radius: 2mm; white-space: nowrap; font-weight: 600; }
+  .lang { font-size: 7pt; color: var(--muted); text-align: right; margin-top: 1mm; }
+  h2 { font-size: 8.6pt; margin: 0 0 1mm; text-transform: uppercase; letter-spacing: .4px;
+    color: var(--blue); }
+  p, li, td, th { font-size: 7.3pt; line-height: 1.3; }
+  p { margin: 0 0 1mm; }
+  ul { margin: 0; padding-left: 3.6mm; }
+  li { margin-bottom: .35mm; }
+  b { font-weight: 650; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4mm; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.4mm; }
+  .box { border: 1px solid var(--line); border-radius: 1.6mm; padding: 1.7mm 2.2mm; }
+  .box.blue { background: var(--blue-bg); border-color: #bcd3ee; }
+  .box.green { background: var(--green-bg); border-color: #bfe0cd; }
+  .box.orange { background: var(--orange-bg); border-color: #f1d2ac; }
+  .box.red { background: var(--red-bg); border-color: #efc4c1; }
+  .box.violet { background: var(--violet-bg); border-color: #d3c8ee; }
+  .box.blue h2 { color: var(--blue); } .box.green h2 { color: var(--green); }
+  .box.orange h2 { color: var(--orange); } .box.red h2 { color: var(--red); }
+  .box.violet h2 { color: var(--violet); }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-weight: 650; color: var(--muted); border-bottom: 1px solid var(--line);
+    padding: .5mm 1mm .6mm 0; vertical-align: bottom; }
+  td { border-bottom: 1px solid #eceff3; padding: .55mm 1mm .55mm 0; vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  .num { text-align: right; white-space: nowrap; }
+  .neg { color: var(--red); font-weight: 600; } .pos { color: var(--green); font-weight: 600; }
+  .h { font-size: 7.4pt; font-weight: 700; color: var(--violet); display: block; margin-bottom: .4mm; }
+  .when { font-weight: 500; color: var(--muted); }
+  .ai-col { border-left: 2px solid #cbbfe9; padding-left: 2mm; }
+  .note { font-size: 6.5pt; color: var(--muted); }
+  .verdict p { font-size: 7.3pt; }
+  footer { margin-top: auto; border-top: 1px solid var(--line); padding-top: 1.4mm;
+    font-size: 6.2pt; color: var(--muted); line-height: 1.35; }
+  .k { white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<!-- ============================ ENGLISH ============================ -->
+<section class="page" lang="en">
+  <header>
+    <div>
+      <h1>Robots for Cleaning Firms &amp; Hotels — La Défense</h1>
+      <div class="sub">Internal brief · Founders A &amp; B · 8 Nov 2026 · Fast-cycle test track alongside our core logistics offer</div>
+    </div>
+    <div><span class="tag">Decision: go / no-go on a 90-day test</span><div class="lang">EN · page 1 / 2 · FR au verso</div></div>
+  </header>
+
+  <div class="box blue verdict">
+    <p style="margin:0"><b>Proposal.</b> Test whether cleaning contractors and hotels in La Défense (Puteaux, Courbevoie, Nanterre) will <b>pay us as neutral advisor and project lead</b> to choose, finance and run fleets of cleaning and delivery robots. We never own, import or assemble robots; certified distributors supply them, mostly on monthly rental (RaaS). Every pilot also builds an <b>operating-data layer</b> that gains value as AI, reinforcement learning (RL) and, later, more general AI widen what robots can do.</p>
+  </div>
+
+  <div class="grid3">
+    <div class="box">
+      <h2>Why here, why now</h2>
+      <ul>
+        <li>Dense <b>offices, hotels, malls and facility managers</b>: visits fit in one day.</li>
+        <li>Cleaning firms: <b>night-shift hiring, thin margins</b>. Hotels: short of room-service and housekeeping staff.</li>
+        <li>Mature tech: cleaning robots <b>€15–70k or €0.5–2.5k/mo</b>, live in 1–4 weeks; delivery robots <b>€10–25k or €0.4–1k/mo</b>; payback 1–2 yrs. <span class="k">≈</span></li>
+        <li>Shortest buying cycles we track: <b>1–3 months</b> (cleaning), <b>2–8 weeks</b> (hotels) vs 3–9 in logistics.</li>
+        <li>IFR: professional cleaning robots <b>+34%</b>, RaaS fleets <b>+31%</b> (2024). <span class="k">⚠</span></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h2>Targets &amp; offer</h2>
+      <p><b>Who:</b> cleaning contractors with 20–500 staff (NAF 81.21Z/22Z) serving towers, facility managers, hotels with 80+ rooms. Large groups come later.</p>
+      <table>
+        <tr><th>Offer</th><th class="num">Price HT ≈</th></tr>
+        <tr><td>Flash diagnostic (½–1 day + ROI)</td><td class="num">€1,500</td></tr>
+        <tr><td>Second opinion on an existing quote</td><td class="num">€500–1,500</td></tr>
+        <tr><td>Feasibility &amp; sourcing (3–5 vendors)</td><td class="num">€4–8k</td></tr>
+        <tr><td>Project lead to acceptance (AMO)</td><td class="num">€8–20k</td></tr>
+        <tr><td>Fleet monitoring + service report</td><td class="num">€300–800/site/mo</td></tr>
+      </table>
+      <p class="note">Any supplier commission (2–5%) is disclosed in writing and credited against our fee.</p>
+    </div>
+    <div class="box">
+      <h2>Two pilot templates</h2>
+      <p><b>C · Cleaning firm, La Défense offices.</b> Can't staff night shifts → <b>4 scrubber/vacuum robots on RaaS, ≈€1.2k/month each</b>; staff move to detail work.</p>
+      <p><b>F · Hotel, 200 rooms.</b> Room-service and linen runs → <b>2 delivery robots with lift integration ≈€700/month each</b>.</p>
+      <p class="note">Templates, not clients. Partners to sign: a cleaning-robot distributor (Pudu, Gausium, Avidbots or Brain Corp-based) and a delivery-robot one (Pudu, Keenon).</p>
+      <p><b>Pilot KPIs (60–90 days):</b> m²/hour, coverage %, uptime, complaints, hours moved to detail work, staff feedback.</p>
+    </div>
+  </div>
+
+  <div class="grid2" style="grid-template-columns: 1.05fr .95fr;">
+    <div class="box">
+      <h2>Template C economics — 4 robots on RaaS (≈ estimate)</h2>
+      <table>
+        <tr><th></th><th class="num">Low</th><th class="num">Base</th><th class="num">High</th></tr>
+        <tr><td>Robot rental (4 × €1.2k × 12)</td><td class="num">€57.6k</td><td class="num">€57.6k</td><td class="num">€57.6k</td></tr>
+        <tr><td>Hours freed, in FTE (loaded €32k)</td><td class="num">1.5</td><td class="num">2.5</td><td class="num">3.5</td></tr>
+        <tr><td>Labour value freed</td><td class="num">€48k</td><td class="num">€80k</td><td class="num">€112k</td></tr>
+        <tr><td><b>Net for the client / year</b></td><td class="num neg">−€9.6k</td><td class="num pos">+€22k</td><td class="num pos">+€54k</td></tr>
+        <tr><td>Our revenue</td><td class="num" colspan="3">≈ €14–30k one-off + €3.6–9.6k/year monitoring</td></tr>
+      </table>
+      <p class="note">Freed hours are cash only if posts are not refilled; otherwise the gain is capacity and fewer unfilled night shifts. RaaS equipment is <b>not</b> eligible for the CRAMIF subsidy (new owned equipment only, ≤€25k), so we always show buy + leasing too.</p>
+    </div>
+    <div class="box red">
+      <h2>Risks &amp; how we handle them</h2>
+      <ul>
+        <li><b>Social acceptance</b> (NYC unions blocked office-cleaning robots): pitch “less painful night work, staff redeployed”; consult the CSE (≥50 staff) early.</li>
+        <li><b>Liability</b>: we advise, partners build and certify. RaaS contracts must cover uptime, penalties, injury, data and exit. RC Pro insurance from day 1.</li>
+        <li><b>Buildings</b>: lift/door integration, IT security, tower rules on battery charging. <span class="k">⚠</span></li>
+        <li><b>GDPR</b>: robot cameras film staff and guests → on-robot processing, blurring, client DPO involved.</li>
+        <li><b>Small tickets</b> (&lt;≈€30k won't carry a fee) → sell multi-site fleets.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box violet">
+    <h2>Downstream value: what AI, RL and AGI add on top of the robots</h2>
+    <div class="grid3" style="gap:3mm">
+      <div>
+        <span class="h">AI today <span class="when">· 2026–28</span></span>
+        <ul>
+          <li><b>Perception &amp; navigation</b> (vision, LiDAR): robots work in busy lobbies without fixed routes.</li>
+          <li><b>Proof of service</b>: coverage maps make cleaning contracts verifiable → <b>pay-per-m² or performance pricing</b>.</li>
+          <li><b>Occupancy-based cleaning</b>: clean where people actually were (hybrid-work towers); hotel runs follow check-outs.</li>
+          <li><b>Predictive maintenance &amp; energy</b> (Power BI); the EU Data Act (Sept 2025) opens machine data → one <b>multi-brand dashboard</b>.</li>
+        </ul>
+      </div>
+      <div class="ai-col">
+        <span class="h">RL + simulation + VLA <span class="when">· 2028–31</span></span>
+        <ul>
+          <li><b>RL in simulation</b> (NVIDIA Isaac, DELMIA) + <b>fleet learning</b>: a new floor or task learned in days.</li>
+          <li><b>Vision-language-action (VLA) models</b>: staff brief robots by voice (“redo the 12th-floor lobby”); no engineer on site.</li>
+          <li><b>Mobile manipulators</b>: restrooms, bins, surface wiping, room restocking. <span class="k">⚠</span></li>
+          <li>RL also optimises <b>multi-robot routing</b> via lifts and <b>energy-aware charging</b>.</li>
+          <li>Our layer: <b>fleet services + compliance-as-a-service</b> (Machinery Reg. 20 Jan 2027; AI Act, AI in products, 2 Aug 2028).</li>
+        </ul>
+      </div>
+      <div class="ai-col">
+        <span class="h">AGI-like scenarios <span class="when">· 2031–36+</span></span>
+        <ul>
+          <li>Scenario, not forecast: robot labour <b>rented like temp work</b>; one general robot does cleaning, linen and security rounds.</li>
+          <li>AGI does <b>not</b> remove hardware cost, 99%+ uptime, safety law, insurance, CSE or maintenance. Those jobs <b>grow</b> with AI, and they are ours.</li>
+          <li>End state: a <b>robot-staffing &amp; maintenance network</b> for Paris, then Europe.</li>
+          <li><b>Moat throughout</b>: real task data from towers and hotels, valuable to clients, vendors and AI model makers (with consent).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="box green">
+    <h2>90-day plan, gate and ask</h2>
+    <div class="grid3" style="gap:3mm">
+      <p><b>Days 1–14:</b> list 50 cleaning firms + 30 hotels (SIRENE); sign 2 distributors + 1 freelance engineer; RC Pro; ROI calculator v1.</p>
+      <p><b>Days 15–45:</b> ≈150 dials/week → 3–5 site visits; <b>2 paid flash diagnostics</b>; 1 quote review.</p>
+      <p><b>Days 46–90:</b> <b>1 paid RaaS pilot</b> (2–4 robots). <b>Gate:</b> ≥€5–10k cash by day 90, else fold into core offer. <b>Ask:</b> ≈€1.5–3k/month fixed costs.</p>
+    </div>
+  </div>
+
+  <footer>
+    Sources: Master Playbook, Île-de-France (Nov 2026: §3, §4.3–4.5, §5, §6, §7.6 templates C &amp; F, §9, §10); ChatGPT “Robotics Opportunity Engine” (IFR data, AGI scenarios); Gemini report; B2B AI Robotics GTM Playbook (NYC union case). ≈ our estimate · ⚠ verify before client use. Template C labour inputs are assumptions: replace with the client's real hours and costs.
+  </footer>
+</section>
+
+<!-- ============================ FRANÇAIS ============================ -->
+<section class="page" lang="fr">
+  <header>
+    <div>
+      <h1>Robots pour la propreté &amp; l'hôtellerie — La Défense</h1>
+      <div class="sub">Note interne · Fondateurs A &amp; B · 8 nov. 2026 · Piste test à cycle court, à côté de l'offre cœur logistique</div>
+    </div>
+    <div><span class="tag">Décision : go / no-go, test de 90 jours</span><div class="lang">FR · page 2 / 2 · EN au recto</div></div>
+  </header>
+
+  <div class="box blue verdict">
+    <p style="margin:0"><b>Proposition.</b> Tester si les entreprises de propreté et les hôtels de La Défense (Puteaux, Courbevoie, Nanterre) <b>nous paient comme conseil neutre et AMO</b> pour choisir, financer et piloter des flottes de robots de nettoyage et de livraison. Nous ne possédons, n'importons ni n'assemblons aucun robot ; des distributeurs certifiés les fournissent, surtout en location (RaaS). Chaque pilote construit aussi une <b>couche de données d'exploitation</b> dont la valeur croît avec l'IA, l'apprentissage par renforcement (RL) puis une IA plus générale.</p>
+  </div>
+
+  <div class="grid3">
+    <div class="box">
+      <h2>Pourquoi ici, maintenant</h2>
+      <ul>
+        <li>Densité de <b>bureaux, hôtels, centres commerciaux, facility managers</b> : visites groupées sur une journée.</li>
+        <li>Propreté : <b>recrutement de nuit difficile, marges faibles</b>. Hôtels : pénurie en room service et en étages.</li>
+        <li>Technologie mature : nettoyage <b>15–70 k€ ou 0,5–2,5 k€/mois</b>, en service en 1–4 sem. ; livraison <b>10–25 k€ ou 0,4–1 k€/mois</b> ; retour 1–2 ans. <span class="k">≈</span></li>
+        <li>Cycles d'achat les plus courts : <b>1–3 mois</b> (propreté), <b>2–8 sem.</b> (hôtels) contre 3–9 mois en logistique.</li>
+        <li>IFR : robots de nettoyage professionnels <b>+34 %</b>, flottes RaaS <b>+31 %</b> (2024). <span class="k">⚠</span></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h2>Cibles &amp; offre</h2>
+      <p><b>Qui :</b> entreprises de propreté de 20–500 salariés (NAF 81.21Z/22Z) présentes dans les tours, facility managers, hôtels de 80+ chambres. Grands groupes plus tard.</p>
+      <table>
+        <tr><th>Offre</th><th class="num">Prix HT ≈</th></tr>
+        <tr><td>Diagnostic flash (½–1 j + ROI)</td><td class="num">1 500 €</td></tr>
+        <tr><td>Second avis sur un devis existant</td><td class="num">500–1 500 €</td></tr>
+        <tr><td>Faisabilité &amp; sourcing (3–5 fournisseurs)</td><td class="num">4–8 k€</td></tr>
+        <tr><td>AMO jusqu'à la réception</td><td class="num">8–20 k€</td></tr>
+        <tr><td>Suivi de flotte + rapport</td><td class="num">300–800 €/site/mois</td></tr>
+      </table>
+      <p class="note">Toute commission fournisseur (2–5 %) est déclarée et déduite de nos honoraires.</p>
+    </div>
+    <div class="box">
+      <h2>Deux modèles de pilote</h2>
+      <p><b>C · Propreté, bureaux de La Défense.</b> Postes de nuit non pourvus → <b>4 robots autolaveuses / aspirateurs en RaaS, ≈1,2 k€/mois chacun</b> ; le personnel passe aux finitions.</p>
+      <p><b>F · Hôtel, 200 chambres.</b> Room service et linge → <b>2 robots de livraison avec ascenseur, ≈700 €/mois chacun</b>.</p>
+      <p class="note">Modèles, pas des clients. À signer : un distributeur de robots de nettoyage (Pudu, Gausium, Avidbots ou Brain Corp) et un de robots de livraison (Pudu, Keenon).</p>
+      <p><b>KPI du pilote (60–90 j) :</b> m²/heure, couverture, disponibilité, réclamations, heures basculées vers les finitions, avis du personnel.</p>
+    </div>
+  </div>
+
+  <div class="grid2" style="grid-template-columns: 1.05fr .95fr;">
+    <div class="box">
+      <h2>Économie du modèle C — 4 robots en RaaS (≈)</h2>
+      <table>
+        <tr><th></th><th class="num">Bas</th><th class="num">Base</th><th class="num">Haut</th></tr>
+        <tr><td>Location robots (4 × 1,2 k€ × 12)</td><td class="num">57,6 k€</td><td class="num">57,6 k€</td><td class="num">57,6 k€</td></tr>
+        <tr><td>Heures libérées en ETP (chargé 32 k€)</td><td class="num">1,5</td><td class="num">2,5</td><td class="num">3,5</td></tr>
+        <tr><td>Valeur du travail libéré</td><td class="num">48 k€</td><td class="num">80 k€</td><td class="num">112 k€</td></tr>
+        <tr><td><b>Gain net client / an</b></td><td class="num neg">−9,6 k€</td><td class="num pos">+22 k€</td><td class="num pos">+54 k€</td></tr>
+        <tr><td>Notre CA</td><td class="num" colspan="3">≈ 14–30 k€ ponctuel + 3,6–9,6 k€/an de suivi</td></tr>
+      </table>
+      <p class="note">Les heures libérées ne sont du cash que si les postes ne sont pas remplacés ; sinon le gain est de la capacité et moins de postes de nuit vacants. Le RaaS n'est <b>pas</b> éligible à l'aide CRAMIF (matériel neuf acheté uniquement, ≤25 k€) : on présente toujours aussi achat + crédit-bail.</p>
+    </div>
+    <div class="box red">
+      <h2>Risques &amp; réponses</h2>
+      <ul>
+        <li><b>Acceptation sociale</b> (à New York, les syndicats ont bloqué ces robots) : « travail de nuit moins pénible, personnel redéployé » ; CSE (≥50 salariés) consulté tôt.</li>
+        <li><b>Responsabilité</b> : nous conseillons, les partenaires construisent et certifient. Contrats RaaS : disponibilité, pénalités, blessures, données, sortie. RC Pro dès J1.</li>
+        <li><b>Bâtiments</b> : ascenseurs/portes, sécurité IT, règles de recharge des batteries dans les tours. <span class="k">⚠</span></li>
+        <li><b>RGPD</b> : les caméras filment personnel et clients → traitement embarqué, floutage, DPO du client.</li>
+        <li><b>Petits tickets</b> (&lt;≈30 k€, pas d'honoraires possibles) → flottes multi-sites.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box violet">
+    <h2>Valeur en aval : ce que l'IA, le RL et l'AGI ajoutent</h2>
+    <div class="grid3" style="gap:3mm">
+      <div>
+        <span class="h">IA aujourd'hui <span class="when">· 2026–28</span></span>
+        <ul>
+          <li><b>Perception &amp; navigation</b> (vision, LiDAR) : halls fréquentés, sans parcours fixe.</li>
+          <li><b>Preuve de service</b> : les cartes de couverture rendent les contrats vérifiables → <b>tarif au m² ou à la performance</b>.</li>
+          <li><b>Nettoyage selon l'occupation</b> : là où les gens sont passés (travail hybride) ; à l'hôtel, selon les départs.</li>
+          <li><b>Maintenance prédictive &amp; énergie</b> (Power BI) ; le Data Act (sept. 2025) ouvre les données → <b>tableau de bord multi-marques</b>.</li>
+        </ul>
+      </div>
+      <div class="ai-col">
+        <span class="h">RL + simulation + VLA <span class="when">· 2028–31</span></span>
+        <ul>
+          <li><b>RL en simulation</b> (NVIDIA Isaac, DELMIA) + <b>apprentissage de flotte</b> : un nouvel étage ou une tâche appris en jours.</li>
+          <li><b>Modèles vision-langage-action (VLA)</b> : consignes à la voix (« refais le hall du 12e »), sans ingénieur.</li>
+          <li><b>Manipulateurs mobiles</b> : sanitaires, corbeilles, surfaces, réassort des chambres. <span class="k">⚠</span></li>
+          <li>Le RL optimise aussi le <b>routage multi-robots</b> par ascenseur et la <b>recharge</b>.</li>
+          <li>Notre couche : <b>services de flotte + conformité as-a-service</b> (Règl. Machines 20 janv. 2027 ; AI Act produits 2 août 2028).</li>
+        </ul>
+      </div>
+      <div class="ai-col">
+        <span class="h">Scénarios « type AGI » <span class="when">· 2031–36+</span></span>
+        <ul>
+          <li>Scénario, pas prévision : le travail robotique <b>se loue comme de l'intérim</b> ; un robot généraliste fait nettoyage, linge et rondes.</li>
+          <li>L'AGI ne supprime <b>pas</b> coût matériel, disponibilité 99 %+, sécurité, assurance, CSE ni maintenance. Ces métiers <b>grandissent</b> avec l'IA : ce sont les nôtres.</li>
+          <li>Cible : un <b>réseau d'intérim robotique &amp; de maintenance</b> en IDF, puis en Europe.</li>
+          <li><b>Avantage durable</b> : des données réelles de tâches (tours, hôtels), utiles aux clients, fournisseurs et concepteurs d'IA (avec accord).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="box green">
+    <h2>Plan à 90 jours, critère et demande</h2>
+    <div class="grid3" style="gap:3mm">
+      <p><b>J1–14 :</b> lister 50 entreprises de propreté + 30 hôtels (SIRENE) ; signer 2 distributeurs + 1 ingénieur freelance ; RC Pro ; calculateur ROI v1.</p>
+      <p><b>J15–45 :</b> ≈150 appels/sem. → 3–5 visites ; <b>2 diagnostics flash payés</b> ; 1 second avis sur devis.</p>
+      <p><b>J46–90 :</b> <b>1 pilote RaaS payant</b> (2–4 robots). <b>Critère :</b> ≥5–10 k€ encaissés à J90, sinon retour à l'offre cœur. <b>Demande :</b> ≈1,5–3 k€/mois de frais fixes.</p>
+    </div>
+  </div>
+
+  <footer>
+    Sources : Master Playbook Île-de-France (nov. 2026 : §3, §4.3–4.5, §5, §6, §7.6 modèles C &amp; F, §9, §10) ; ChatGPT « Robotics Opportunity Engine » (IFR, scénarios AGI) ; rapport Gemini ; B2B AI Robotics GTM Playbook (cas syndical new-yorkais). ≈ notre estimation · ⚠ à vérifier avant usage client. Hypothèses de main-d'œuvre du modèle C à remplacer par les heures et coûts réels du client.
+  </footer>
+</section>
+
+</body>
+</html>
