@@ -1,0 +1,219 @@
+<title>Robot Sourcing Catalogue</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: working catalogue — sticky toolbar, three tabbed tables (services, robot families, partner bench), each scrollable sideways on its own */
+:root{
+  --bg:#f6f6f2; --surface:#ffffff; --fg:#1d232b; --muted:#5d6672; --line:#dcdfd8;
+  --accent:#e2b007; --accent-ink:#2a2200; --ink:#22303d;
+  --good:#1f7a4a; --good-bg:#e5f3ea; --warn:#a85b06; --warn-bg:#fbefdc; --info:#2d5d93; --info-bg:#e6eef8; --mute-bg:#eceeea;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif; --body:"IBM Plex Sans","Segoe UI",Arial,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#14181d; --surface:#1b2027; --fg:#e7e9e4; --muted:#9aa3ad; --line:#2c333c;
+  --accent:#f0c22b; --accent-ink:#1d1700; --ink:#e7e9e4;
+  --good:#6fcf97; --good-bg:#183326; --warn:#f2b46b; --warn-bg:#3a2a14; --info:#8ab4e8; --info-bg:#1b2a3d; --mute-bg:#232931; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#14181d; --surface:#1b2027; --fg:#e7e9e4; --muted:#9aa3ad; --line:#2c333c;
+  --accent:#f0c22b; --accent-ink:#1d1700; --ink:#e7e9e4;
+  --good:#6fcf97; --good-bg:#183326; --warn:#f2b46b; --warn-bg:#3a2a14; --info:#8ab4e8; --info-bg:#1b2a3d; --mute-bg:#232931; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;line-height:1.5}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+header.top{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between;border-bottom:3px solid var(--fg);padding-bottom:12px}
+.stripe{height:8px;background:repeating-linear-gradient(-45deg,var(--accent) 0 10px,var(--fg) 10px 20px);margin-bottom:14px;border-radius:1px}
+h1{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:clamp(26px,4vw,38px);line-height:1;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.lede{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.badge{font-family:var(--mono);font-size:12px;background:var(--accent);color:var(--accent-ink);padding:3px 8px;border-radius:3px;font-weight:500}
+.toolbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.tabs{display:flex;gap:4px;flex-wrap:wrap}
+button,select,input{font:inherit;color:inherit}
+.tab{border:1px solid var(--line);background:var(--surface);padding:7px 12px;border-radius:4px;cursor:pointer;font-weight:600}
+.tab[aria-selected="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.tab:focus-visible,.lang:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.spacer{flex:1}
+input[type=search],select{border:1px solid var(--line);background:var(--surface);padding:7px 10px;border-radius:4px;min-width:0}
+input[type=search]{width:min(260px,100%)}
+.lang{border:1px solid var(--fg);background:transparent;padding:6px 10px;border-radius:4px;cursor:pointer;font-family:var(--mono);font-size:12px}
+.lang b{background:var(--fg);color:var(--bg);padding:1px 4px;border-radius:2px}
+.notice{display:flex;gap:10px;align-items:flex-start;background:var(--warn-bg);color:var(--fg);border:1px solid var(--line);border-left:6px solid var(--warn);padding:10px 12px;border-radius:4px;margin:14px 0 6px}
+.notice strong{color:var(--warn)}
+.panel{margin-top:14px}
+.panel h2{font-family:var(--display);font-stretch:85%;font-size:20px;margin:0 0 4px}
+.panel p.sub{color:var(--muted);margin:0 0 10px;max-width:80ch}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:980px}
+th,td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{font-family:var(--display);font-stretch:85%;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--surface);position:sticky;top:0}
+tbody tr:hover{background:var(--mute-bg)}
+td.name{font-weight:600;min-width:150px}
+td.name small{display:block;font-weight:400;color:var(--muted)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:13px}
+.makers{display:flex;flex-wrap:wrap;gap:4px}
+.chip{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:3px;padding:1px 6px;background:var(--bg);white-space:nowrap}
+.chip.fr{border-color:var(--info);color:var(--info)}
+.pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:3px;white-space:nowrap}
+.p-now{background:var(--good-bg);color:var(--good)} .p-test{background:var(--info-bg);color:var(--info)}
+.p-later{background:var(--mute-bg);color:var(--muted)} .p-track{background:var(--warn-bg);color:var(--warn)} .p-niche{background:var(--info-bg);color:var(--info)}
+.status{font-size:12px;color:var(--warn);font-weight:600;white-space:nowrap}
+.empty{padding:20px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;color:var(--muted);font-size:12px;margin-top:8px}
+footer{margin-top:24px;color:var(--muted);font-size:12px;max-width:90ch}
+@media (max-width:640px){.spacer{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <div class="stripe" aria-hidden="true"></div>
+  <header class="top">
+    <div>
+      <h1 data-i18n="title">Robot sourcing catalogue</h1>
+      <p class="lede" data-i18n="lede">What we sell in France, which robots we advise on, and through which French channel each is bought. Internal: makers named here are targets, not partners.</p>
+    </div>
+    <span class="badge" data-i18n="badge">Internal · Founders A &amp; B · Nov 2026</span>
+  </header>
+
+  <div class="toolbar">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tab-services" aria-selected="true" data-tab="services" data-i18n="tServices">Our services</button>
+      <button class="tab" role="tab" id="tab-families" aria-selected="false" data-tab="families" data-i18n="tFamilies">Robot families &amp; sourcing</button>
+      <button class="tab" role="tab" id="tab-bench" aria-selected="false" data-tab="bench" data-i18n="tBench">Partner bench</button>
+    </div>
+    <span class="spacer"></span>
+    <label for="q" class="sr" hidden>Search</label>
+    <input type="search" id="q" placeholder="Search…" data-i18n-ph="search">
+    <select id="prio" aria-label="Priority">
+      <option value="" data-i18n="allPrio">All priorities</option>
+      <option value="now" data-i18n="pNow">Now</option>
+      <option value="test" data-i18n="pTest">Test</option>
+      <option value="niche" data-i18n="pNiche">Founder A niche</option>
+      <option value="later" data-i18n="pLater">Later</option>
+      <option value="track" data-i18n="pTrack">Track only</option>
+    </select>
+    <button class="lang" id="lang" aria-label="Switch language"><b>EN</b> / FR</button>
+  </div>
+
+  <div class="notice"><strong>!</strong><span data-i18n="notice">No partner agreement is signed yet. Never name a maker or distributor to a client as “our partner” before the agreement is signed (Master Playbook §8). Prices are launch prices to test, excl. VAT.</span></div>
+
+  <section class="panel" id="panel-services">
+    <h2 data-i18n="hServices">Services we can offer in France</h2>
+    <p class="sub" data-i18n="sServices">Client-paid offers in the order a client meets them. “Who we work with” is who delivers alongside us; we advise, qualified partners build and certify.</p>
+    <div class="tablebox"><table><thead><tr>
+      <th data-i18n="cService">Service</th><th data-i18n="cPrice">Price (HT)</th><th data-i18n="cWhen">When</th><th data-i18n="cDeliv">What the client gets</th><th data-i18n="cWith">Who we work with / source from</th><th data-i18n="cPhase">Phase</th>
+    </tr></thead><tbody id="tb-services"></tbody></table></div>
+  </section>
+
+  <section class="panel" id="panel-families" hidden>
+    <h2 data-i18n="hFamilies">Robot families we advise on, and where we source them</h2>
+    <p class="sub" data-i18n="sFamilies">Figures are indicative ranges from the Master Playbook; always get quotes. In France most brands sell through a French subsidiary, an appointed distributor or a certified integrator: we buy through that channel, never import ourselves.</p>
+    <div class="tablebox"><table><thead><tr>
+      <th data-i18n="cFamily">Family</th><th data-i18n="cPrio">Priority</th><th data-i18n="cBuy">Purchase ≈</th><th data-i18n="cRaas">RaaS / month ≈</th><th data-i18n="cDeploy">Deploy</th><th data-i18n="cPayback">Payback ≈</th><th data-i18n="cMakers">Makers (French in blue)</th><th data-i18n="cChannel">How we source it in France</th><th data-i18n="cSectors">Target clients</th><th data-i18n="cStatus">Status</th>
+    </tr></thead><tbody id="tb-families"></tbody></table></div>
+    <div class="legend"><span><span class="chip fr">Balyo</span> <span data-i18n="frMaker">French maker or French-founded</span></span><span>≈ <span data-i18n="estimate">estimate</span></span></div>
+  </section>
+
+  <section class="panel" id="panel-bench" hidden>
+    <h2 data-i18n="hBench">Partner bench: who else we need</h2>
+    <p class="sub" data-i18n="sBench">Delivery, compliance, money and credibility partners. Targets from the Master Playbook §8.1.</p>
+    <div class="tablebox"><table><thead><tr>
+      <th data-i18n="cRole">Role</th><th data-i18n="cNames">Names / where to find them</th><th data-i18n="cGive">What they do for the client</th><th data-i18n="cTerms">Our terms</th><th data-i18n="cStatus">Status</th>
+    </tr></thead><tbody id="tb-bench"></tbody></table></div>
+  </section>
+
+  <footer data-i18n="foot">Source: Master Playbook “Robotics Integration Orchestrator, Île-de-France” (Nov 2026), §3.3 price list, §5 robot families, §6.2 sectors, §7 companies, §8 partners, §9 subsidies. Status of every partner: target, not signed.</footer>
+</div>
+
+<script>
+const T={
+ en:{title:"Robot sourcing catalogue",lede:"What we sell in France, which robots we advise on, and through which French channel each is bought. Internal: makers named here are targets, not partners.",badge:"Internal · Founders A & B · Nov 2026",tServices:"Our services",tFamilies:"Robot families & sourcing",tBench:"Partner bench",search:"Search…",allPrio:"All priorities",pNow:"Now",pTest:"Test",pNiche:"Founder A niche",pLater:"Later",pTrack:"Track only",
+ notice:"No partner agreement is signed yet. Never name a maker or distributor to a client as “our partner” before the agreement is signed (Master Playbook §8). Prices are launch prices to test, excl. VAT.",
+ hServices:"Services we can offer in France",sServices:"Client-paid offers in the order a client meets them. “Who we work with” is who delivers alongside us; we advise, qualified partners build and certify.",
+ cService:"Service",cPrice:"Price (HT)",cWhen:"When",cDeliv:"What the client gets",cWith:"Who we work with / source from",cPhase:"Phase",
+ hFamilies:"Robot families we advise on, and where we source them",sFamilies:"Figures are indicative ranges from the Master Playbook; always get quotes. In France most brands sell through a French subsidiary, an appointed distributor or a certified integrator: we buy through that channel, never import ourselves.",
+ cFamily:"Family",cPrio:"Priority",cBuy:"Purchase ≈",cRaas:"RaaS / month ≈",cDeploy:"Deploy",cPayback:"Payback ≈",cMakers:"Makers (French in blue)",cChannel:"How we source it in France",cSectors:"Target clients",cStatus:"Status",frMaker:"French maker or French-founded",estimate:"estimate",
+ hBench:"Partner bench: who else we need",sBench:"Delivery, compliance, money and credibility partners. Targets from the Master Playbook §8.1.",cRole:"Role",cNames:"Names / where to find them",cGive:"What they do for the client",cTerms:"Our terms",
+ notSigned:"Target · not signed",none:"No rows match. Clear the search or the priority filter.",
+ foot:"Source: Master Playbook “Robotics Integration Orchestrator, Île-de-France” (Nov 2026), §3.3 price list, §5 robot families, §6.2 sectors, §7 companies, §8 partners, §9 subsidies. Status of every partner: target, not signed.",
+ ph1:"Phase 1",ph2:"Phase 2"},
+ fr:{title:"Catalogue de sourcing robotique",lede:"Ce que nous vendons en France, les robots sur lesquels nous conseillons, et par quel canal français chacun s'achète. Interne : les fabricants cités sont des cibles, pas des partenaires.",badge:"Interne · Fondateurs A & B · nov. 2026",tServices:"Nos services",tFamilies:"Familles de robots & sourcing",tBench:"Réseau de partenaires",search:"Rechercher…",allPrio:"Toutes priorités",pNow:"Maintenant",pTest:"Test",pNiche:"Niche Fondateur A",pLater:"Plus tard",pTrack:"Veille seulement",
+ notice:"Aucun accord de partenariat n'est encore signé. Ne jamais présenter un fabricant ou distributeur comme « notre partenaire » avant signature (Master Playbook §8). Prix de lancement à tester, HT.",
+ hServices:"Services que nous pouvons proposer en France",sServices:"Offres payées par le client, dans l'ordre où il les rencontre. « Avec qui » = qui intervient à nos côtés ; nous conseillons, des partenaires qualifiés construisent et certifient.",
+ cService:"Service",cPrice:"Prix (HT)",cWhen:"Quand",cDeliv:"Ce que reçoit le client",cWith:"Avec qui / auprès de qui",cPhase:"Phase",
+ hFamilies:"Familles de robots et canaux d'approvisionnement",sFamilies:"Fourchettes indicatives du Master Playbook ; toujours demander des devis. En France, la plupart des marques vendent via une filiale française, un distributeur agréé ou un intégrateur certifié : nous passons par ce canal, nous n'importons jamais.",
+ cFamily:"Famille",cPrio:"Priorité",cBuy:"Achat ≈",cRaas:"RaaS / mois ≈",cDeploy:"Déploiement",cPayback:"Retour ≈",cMakers:"Fabricants (français en bleu)",cChannel:"Comment s'approvisionner en France",cSectors:"Clients cibles",cStatus:"Statut",frMaker:"Fabricant français ou d'origine française",estimate:"estimation",
+ hBench:"Réseau de partenaires : qui d'autre il nous faut",sBench:"Partenaires de réalisation, conformité, financement et crédibilité. Cibles du Master Playbook §8.1.",cRole:"Rôle",cNames:"Noms / où les trouver",cGive:"Ce qu'ils apportent au client",cTerms:"Nos conditions",
+ notSigned:"Cible · non signé",none:"Aucune ligne ne correspond. Effacez la recherche ou le filtre de priorité.",
+ foot:"Source : Master Playbook « Robotics Integration Orchestrator, Île-de-France » (nov. 2026), §3.3 grille tarifaire, §5 familles de robots, §6.2 secteurs, §7 entreprises, §8 partenaires, §9 aides. Statut de chaque partenaire : cible, non signé.",
+ ph1:"Phase 1",ph2:"Phase 2"}
+};
+const S=[
+ {n:{en:"Discovery call",fr:"Appel découverte"},p:{en:"Free, 20–30 min",fr:"Gratuit, 20–30 min"},w:{en:"Day 1",fr:"J1"},d:{en:"Qualify the task that costs most; book a site visit.",fr:"Qualifier la tâche la plus coûteuse ; caler une visite."},x:{en:"Founders only.",fr:"Fondateurs uniquement."},ph:1},
+ {n:{en:"Flash diagnostic",fr:"Diagnostic flash"},p:{en:"€1,500 (launch, credited if they buy the study)",fr:"1 500 € (lancement, déduit si étude)"},w:{en:"Week 2–3",fr:"Sem. 2–3"},d:{en:"½–1 day on site + 5-page report: ROI range, 2–3 options, subsidy check.",fr:"½–1 j sur site + rapport de 5 p. : fourchette de ROI, 2–3 options, éligibilité aux aides."},x:{en:"Freelance automation engineer (Malt, ≈€500–800/day or revenue share) on technical sites.",fr:"Ingénieur automaticien freelance (Malt, ≈500–800 €/j ou partage de revenu) sur sites techniques."},ph:1},
+ {n:{en:"Quote review / second opinion",fr:"Second avis sur devis"},p:{en:"€500–1,500",fr:"500–1 500 €"},w:{en:"Week 1–2",fr:"Sem. 1–2"},d:{en:"Check an existing integrator quote: scope, price, CE responsibility, 5-year cost.",fr:"Analyse d'un devis intégrateur : périmètre, prix, responsabilité CE, coût sur 5 ans."},x:{en:"Freelance engineer; our vendor & price database.",fr:"Ingénieur freelance ; notre base fournisseurs & prix."},ph:1},
+ {n:{en:"Feasibility & sourcing study",fr:"Étude de faisabilité & sourcing"},p:{en:"€4,000–8,000",fr:"4 000–8 000 €"},w:{en:"Month 1–3",fr:"Mois 1–3"},d:{en:"Spec, request for quotes to 3–5 suppliers, 5-year cost comparison, buy / lease / rent.",fr:"Cahier des charges, consultation de 3–5 fournisseurs, comparatif coût 5 ans, achat / location / RaaS."},x:{en:"Makers' French channels and integrators (see Robot families tab); freelance engineer.",fr:"Canaux français des fabricants et intégrateurs (onglet Familles) ; ingénieur freelance."},ph:1},
+ {n:{en:"Subsidy & financing file",fr:"Dossier d'aides & financement"},p:{en:"€800–2,500 fixed, or capped success fee",fr:"800–2 500 € forfait, ou succès plafonné"},w:{en:"Month 1–3",fr:"Mois 1–3"},d:{en:"CRAMIF ergonomics (≤€25k, owned new equipment only), Bpifrance, Région IDF, leasing options. No promise of approval.",fr:"CRAMIF risques ergonomiques (≤25 k€, matériel neuf acheté), Bpifrance, Région IDF, crédit-bail. Aucune garantie d'obtention."},x:{en:"CRAMIF prevention contact, Bpifrance / CCI adviser, bank leasing arm.",fr:"Contact prévention CRAMIF, conseiller Bpifrance / CCI, filiale crédit-bail bancaire."},ph:1},
+ {n:{en:"Project management to acceptance (AMO)",fr:"AMO jusqu'à la réception"},p:{en:"4–8% of project or €8–20k fixed",fr:"4–8 % du projet ou 8–20 k€ forfait"},w:{en:"Month 3–9",fr:"Mois 3–9"},d:{en:"We run the project for the client; our sign-off sits in the integrator's payment milestones.",fr:"Nous pilotons le projet pour le client ; notre validation conditionne les jalons de paiement de l'intégrateur."},x:{en:"Integrator (builds, carries CE); certification body (Apave, Bureau Veritas, Dekra, Socotec) for risk assessment.",fr:"Intégrateur (réalise, porte le CE) ; organisme de contrôle (Apave, Bureau Veritas, Dekra, Socotec) pour l'analyse de risques."},ph:1},
+ {n:{en:"Referral commission",fr:"Commission d'apport"},p:{en:"2–5% of equipment + integration",fr:"2–5 % équipement + intégration"},w:{en:"At order",fr:"À la commande"},d:{en:"Only when we are not the client's paid advisor. Always disclosed in writing; credited against our fee or declined.",fr:"Seulement si nous ne sommes pas conseil rémunéré du client. Toujours déclarée par écrit ; déduite de nos honoraires ou refusée."},x:{en:"Integrators and distributors with signed referral + non-circumvention agreement.",fr:"Intégrateurs et distributeurs avec contrat d'apporteur + non-contournement signés."},ph:1},
+ {n:{en:"RaaS / leasing brokerage",fr:"Courtage RaaS / location"},p:{en:"Disclosed fee or commission",fr:"Honoraire ou commission déclarés"},w:{en:"Month 6+",fr:"Mois 6+"},d:{en:"Monthly-payment offers; we review uptime, penalties, injury liability, data and exit clauses. We never carry the asset.",fr:"Offres au mois ; nous relisons disponibilité, pénalités, responsabilité, données et sortie. Nous ne portons jamais l'actif."},x:{en:"RobCo-type RaaS providers, distributors' RaaS offers, bank leasing arms.",fr:"Fournisseurs RaaS type RobCo, offres RaaS des distributeurs, filiales crédit-bail."},ph:2},
+ {n:{en:"Performance monitoring",fr:"Suivi de performance"},p:{en:"€300–800 / site / month",fr:"300–800 € / site / mois"},w:{en:"Month 6+",fr:"Mois 6+"},d:{en:"Power BI dashboards: uptime, OEE, energy, cleaning coverage; quarterly review. Machine data accessed under the EU Data Act with client consent.",fr:"Tableaux de bord Power BI : disponibilité, TRS, énergie, couverture de nettoyage ; revue trimestrielle. Données machines via le Data Act, avec accord du client."},x:{en:"Vendors' fleet software; brand-neutral data platforms (e.g. Hiboo).",fr:"Logiciels de flotte des fournisseurs ; plateformes de données multi-marques (ex. Hiboo)."},ph:2},
+ {n:{en:"Operator training coordination",fr:"Coordination de la formation"},p:{en:"Bundled; often OPCO-funded ⚠",fr:"Inclus ; souvent financé OPCO ⚠"},w:{en:"At go-live",fr:"Mise en service"},d:{en:"Training plan for operators and technicians, CSE information, staff redeployment plan.",fr:"Plan de formation opérateurs et techniciens, information du CSE, plan de redéploiement."},x:{en:"Makers' academies (e.g. free UR Academy), CETIM, the client's OPCO.",fr:"Académies des fabricants (ex. UR Academy gratuite), CETIM, OPCO du client."},ph:1}
+];
+const F=[
+ {n:{en:"Cobot arm",fr:"Bras cobot"},s:{en:"Pick & place, tending, screwing, packing next to people",fr:"Prise-dépose, chargement, vissage, conditionnement près des opérateurs"},pr:"later",buy:"€25–60k arm; €60–150k cell",raas:"€1–4k",dep:{en:"1–3 mo",fr:"1–3 mois"},pb:{en:"1.5–3 yrs",fr:"1,5–3 ans"},mk:["Universal Robots","Fanuc CRX","ABB GoFa","Doosan","Techman","Isybot*"],ch:{en:"French subsidiaries (Fanuc France, ABB France) and certified partner integrators (UR partner list). Isybot direct (91, IDF).",fr:"Filiales françaises (Fanuc France, ABB France) et intégrateurs partenaires certifiés (liste UR). Isybot en direct (91, IDF)."},sec:{en:"Machining subcontractors, cosmetics, packaging (month 3+)",fr:"Mécanique, cosmétique, emballage (mois 3+)"}},
+ {n:{en:"Palletiser (cobot or robot)",fr:"Palettiseur (cobot ou robot)"},s:{en:"Stacks cartons on pallets at end of line",fr:"Palettise les cartons en fin de ligne"},pr:"now",buy:"€70–150k (cobot); €150–250k+",raas:"€2–4k",dep:{en:"1–3 mo",fr:"1–3 mois"},pb:{en:"1.5–3 yrs",fr:"1,5–3 ans"},mk:["UR / Fanuc / ABB kits","Siléane*","Fives*","Savoye*"],ch:{en:"SME integrators building on UR/Fanuc/ABB palletising kits; find via SYMOP and UR/Fanuc partner lists. Larger lines: Siléane, Fives, Savoye.",fr:"Intégrateurs PME sur kits UR/Fanuc/ABB ; via SYMOP et listes partenaires UR/Fanuc. Grosses lignes : Siléane, Fives, Savoye."},sec:{en:"Food, drinks, cosmetics, packaging SMEs (20–250 staff)",fr:"PME agroalimentaire, boissons, cosmétique, emballage (20–250 salariés)"}},
+ {n:{en:"Industrial arm cell",fr:"Cellule robot industriel"},s:{en:"Fast heavy work: welding, painting, press tending",fr:"Travaux lourds et rapides : soudage, peinture, presses"},pr:"later",buy:"€100–400k",raas:"rare",dep:{en:"3–9 mo",fr:"3–9 mois"},pb:{en:"2–4 yrs",fr:"2–4 ans"},mk:["Fanuc","ABB","KUKA","Yaskawa","Stäubli*"],ch:{en:"Always through an integrator; makers' French subsidiaries (Stäubli has a French plant, 74).",fr:"Toujours via un intégrateur ; filiales françaises des fabricants (Stäubli produit en France, 74)."},sec:{en:"Automotive & aerospace suppliers (with references)",fr:"Sous-traitants auto & aéro (avec références)"}},
+ {n:{en:"AMR",fr:"AMR (robot mobile)"},s:{en:"Moves bins, carts and parts between stations",fr:"Déplace bacs, chariots et pièces entre postes"},pr:"now",buy:"€25–70k each + fleet software",raas:"€1–2.5k",dep:{en:"1–3 mo",fr:"1–3 mois"},pb:{en:"1.5–3 yrs",fr:"1,5–3 ans"},mk:["MiR","OTTO","Sherpa*","Geek+","Hikrobot"],ch:{en:"French distributors / integrators; Sherpa Mobile Robotics direct (59, made in France). For Chinese brands, check CE file and French after-sales service first.",fr:"Distributeurs / intégrateurs français ; Sherpa en direct (59, fabriqué en France). Marques chinoises : vérifier dossier CE et SAV français."},sec:{en:"Logistics / 3PL, e-commerce, industrial SMEs",fr:"Logistique / 3PL, e-commerce, PME industrielles"}},
+ {n:{en:"Autonomous forklift",fr:"Chariot autonome"},s:{en:"Moves pallets dock ↔ storage without a driver",fr:"Transfère les palettes quai ↔ stockage sans cariste"},pr:"now",buy:"€80–250k (retrofit cheaper)",raas:"€3–6k",dep:{en:"2–6 mo",fr:"2–6 mois"},pb:{en:"2–4 yrs (2+ shifts)",fr:"2–4 ans (2 équipes+)"},mk:["Balyo*","Agilox","Linde / Still","Vecna","Gideon"],ch:{en:"Balyo direct (77, IDF; SoftBank-controlled, check support continuity). Agilox and others via French partners; Linde/Still via their French networks.",fr:"Balyo en direct (77, IDF ; contrôlé par SoftBank, vérifier la continuité du support). Agilox et autres via partenaires français ; Linde/Still via leurs réseaux."},sec:{en:"3PL warehouses 5,000 m²+, 2+ shifts",fr:"Entrepôts 3PL 5 000 m²+, 2 équipes+"}},
+ {n:{en:"ASRS / goods-to-person",fr:"Stockage automatisé (ASRS)"},s:{en:"Robots bring goods to pickers",fr:"Les robots apportent les produits aux préparateurs"},pr:"later",buy:"€0.5–20M+",raas:"rare",dep:{en:"6–18 mo",fr:"6–18 mois"},pb:{en:"3–6 yrs",fr:"3–6 ans"},mk:["Exotec*","AutoStore","Scallog*","Hai"],ch:{en:"Partner-led sales (Exotec, AutoStore); Scallog direct (92, IDF) for mid-size sites. €5M+ projects are specialist-consultant territory.",fr:"Ventes via partenaires (Exotec, AutoStore) ; Scallog en direct (92, IDF) pour sites moyens. Au-delà de 5 M€ : consultants spécialisés."},sec:{en:"Mid-size e-commerce warehouses",fr:"Entrepôts e-commerce de taille moyenne"}},
+ {n:{en:"AI picking station",fr:"Station de picking IA"},s:{en:"Picks mixed items for orders",fr:"Prélève des articles variés pour les commandes"},pr:"later",buy:"€150–500k",raas:"emerging",dep:{en:"2–6 mo",fr:"2–6 mois"},pb:{en:"2–4 yrs",fr:"2–4 ans"},mk:["Sereact","Nomagic","Mujin","Siléane*"],ch:{en:"Direct from makers with an integrator; Siléane (42) for AI bin-picking.",fr:"En direct auprès des fabricants avec un intégrateur ; Siléane (42) pour le bin-picking IA."},sec:{en:"E-commerce, 3PL (picking = #1 labour cost)",fr:"E-commerce, 3PL (picking = 1er coût de main-d'œuvre)"}},
+ {n:{en:"Cleaning robot",fr:"Robot de nettoyage"},s:{en:"Scrubs / vacuums floors autonomously",fr:"Lave / aspire les sols en autonomie"},pr:"test",buy:"€15–70k",raas:"€0.5–2.5k",dep:{en:"1–4 wks",fr:"1–4 sem."},pb:{en:"1–2 yrs",fr:"1–2 ans"},mk:["Avidbots","Pudu","Gausium","Nilfisk / Brain Corp"],ch:{en:"French distributors of each brand (to identify and sign one); Brain Corp autonomy comes on Nilfisk and other machines via their French networks.",fr:"Distributeurs français de chaque marque (en identifier et en signer un) ; l'autonomie Brain Corp équipe Nilfisk et d'autres machines via leurs réseaux français."},sec:{en:"Cleaning contractors, facility managers, malls, La Défense towers",fr:"Entreprises de propreté, facility managers, centres commerciaux, tours de La Défense"}},
+ {n:{en:"Service / delivery robot",fr:"Robot de service / livraison"},s:{en:"Carries plates, linen, parcels in hotels and hospitals",fr:"Transporte plats, linge, colis en hôtels et hôpitaux"},pr:"test",buy:"€10–25k",raas:"€0.4–1k",dep:{en:"days–wks",fr:"jours–sem."},pb:{en:"1–2 yrs",fr:"1–2 ans"},mk:["Pudu","Keenon","Enchanted Tools*"],ch:{en:"Pudu / Keenon French distributors; Enchanted Tools direct (Paris) for hospitals. Check lift integration.",fr:"Distributeurs français Pudu / Keenon ; Enchanted Tools en direct (Paris) pour l'hôpital. Vérifier l'intégration ascenseur."},sec:{en:"Hotels 80+ rooms, restaurants, hospitals",fr:"Hôtels 80+ chambres, restaurants, hôpitaux"}},
+ {n:{en:"Inspection robot / drone",fr:"Robot / drone d'inspection"},s:{en:"Patrols, gauges, thermal, gas, security",fr:"Rondes, relevés, thermique, gaz, sûreté"},pr:"niche",buy:"€20–300k",raas:"as a service",dep:{en:"1–6 mo",fr:"1–6 mois"},pb:{en:"safety value",fr:"valeur sécurité"},mk:["Boston Dynamics Spot","ANYbotics","Azur Drones*","Energy Robotics"],ch:{en:"Mostly sold as a service by makers and their partners; Azur Drones direct (FR).",fr:"Surtout vendu en service par les fabricants et partenaires ; Azur Drones en direct (FR)."},sec:{en:"Energy sites, substations, data centres (91/93/95)",fr:"Sites énergie, postes électriques, data centres (91/93/95)"}},
+ {n:{en:"Exoskeleton",fr:"Exosquelette"},s:{en:"Reduces back / shoulder strain",fr:"Réduit les contraintes dos / épaules"},pr:"now",buy:"Passive €1–6k; active €10–40k",raas:"€0.3–0.8k",dep:{en:"days",fr:"jours"},pb:{en:"<1–2 yrs (absences)",fr:"<1–2 ans (absences)"},mk:["Japet*","German Bionic","Ottobock","Hilti"],ch:{en:"Japet direct (59); German Bionic France; Ottobock and Hilti French networks. Cheap door-opener; can fit the CRAMIF ergonomics subsidy if purchased.",fr:"Japet en direct (59) ; German Bionic France ; réseaux français Ottobock et Hilti. Porte d'entrée peu chère ; éligible CRAMIF si acheté."},sec:{en:"Logistics picking, handling-heavy SMEs",fr:"Préparation logistique, PME à forte manutention"}},
+ {n:{en:"Humanoid",fr:"Humanoïde"},s:{en:"General-purpose; today mostly moving totes in pilots",fr:"Généraliste ; aujourd'hui surtout des bacs en pilote"},pr:"track",buy:"≈$6k (research) to $250k",raas:"≈$8.5k reported",dep:{en:"pilots",fr:"pilotes"},pb:{en:"unproven",fr:"non prouvé"},mk:["Agility","Figure","Apptronik","Unitree","NEURA","Wandercraft*"],ch:{en:"Do not sell in Phase 1. Track; advise large IDF sites on pilots from 2027–29.",fr:"Ne pas vendre en phase 1. Veille ; conseil pilotes pour grands sites franciliens 2027–29."},sec:{en:"Large sites only (Renault, Airbus suppliers, 3PLs)",fr:"Grands sites uniquement (Renault, sous-traitants Airbus, 3PL)"}}
+];
+const B=[
+ {r:{en:"SME integrators (×3)",fr:"Intégrateurs PME (×3)"},n:{en:"In or near IDF; find via SYMOP, UR and Fanuc partner lists. Larger: Siléane, Fives, Savoye.",fr:"En IDF ou proches ; via SYMOP, listes partenaires UR et Fanuc. Plus grands : Siléane, Fives, Savoye."},g:{en:"Build the cell, carry CE marking and safety, install, maintain.",fr:"Réalisent la cellule, portent le marquage CE et la sécurité, installent, maintiennent."},t:{en:"Referral + 12–24-month non-circumvention; disclosed 2–5%.",fr:"Apport d'affaires + non-contournement 12–24 mois ; 2–5 % déclarés."}},
+ {r:{en:"Freelance automation engineer",fr:"Ingénieur automaticien freelance"},n:{en:"Malt; CETIM / engineering-school networks.",fr:"Malt ; réseaux CETIM / écoles d'ingénieurs."},g:{en:"Technical credibility on diagnostics and studies.",fr:"Crédibilité technique sur diagnostics et études."},t:{en:"≈€500–800/day or revenue share; own insurance.",fr:"≈500–800 €/j ou partage de revenu ; assurance propre."}},
+ {r:{en:"Cleaning-robot distributor",fr:"Distributeur robots de nettoyage"},n:{en:"French partner of Pudu, Gausium, Avidbots or a Brain Corp-equipped brand.",fr:"Partenaire français de Pudu, Gausium, Avidbots ou d'une marque équipée Brain Corp."},g:{en:"Machines, RaaS contracts, maintenance for the La Défense track.",fr:"Machines, contrats RaaS, maintenance pour la piste La Défense."},t:{en:"Joint pilots; disclosed commission credited to client.",fr:"Pilotes conjoints ; commission déclarée, déduite pour le client."}},
+ {r:{en:"Hotel delivery-robot distributor",fr:"Distributeur robots de livraison"},n:{en:"French partner of Pudu or Keenon.",fr:"Partenaire français de Pudu ou Keenon."},g:{en:"Delivery robots with lift integration for hotels.",fr:"Robots de livraison avec intégration ascenseur pour hôtels."},t:{en:"Same as above.",fr:"Idem."}},
+ {r:{en:"AMR / autonomous-forklift player",fr:"Acteur AMR / chariot autonome"},n:{en:"Balyo, or an Agilox / MiR partner.",fr:"Balyo, ou un partenaire Agilox / MiR."},g:{en:"Logistics delivery partner.",fr:"Partenaire de réalisation logistique."},t:{en:"Referral agreement.",fr:"Contrat d'apporteur."}},
+ {r:{en:"Exoskeleton maker",fr:"Fabricant d'exosquelettes"},n:{en:"Japet or German Bionic France.",fr:"Japet ou German Bionic France."},g:{en:"Low-cost first sale; CRAMIF-eligible when bought.",fr:"Première vente peu chère ; éligible CRAMIF à l'achat."},t:{en:"Referral agreement.",fr:"Contrat d'apporteur."}},
+ {r:{en:"Certification body",fr:"Organisme de contrôle"},n:{en:"Apave, Bureau Veritas, Dekra, Socotec.",fr:"Apave, Bureau Veritas, Dekra, Socotec."},g:{en:"Risk assessments; Machinery Regulation (from 20 Jan 2027) checks.",fr:"Analyses de risques ; contrôles Règlement Machines (dès le 20 janv. 2027)."},t:{en:"Referrals both ways.",fr:"Recommandations réciproques."}},
+ {r:{en:"Leasing / RaaS financer",fr:"Financeur location / RaaS"},n:{en:"Bank leasing arms; RobCo-type RaaS providers.",fr:"Filiales crédit-bail bancaires ; fournisseurs RaaS type RobCo."},g:{en:"Monthly payment instead of capex.",fr:"Paiement mensuel au lieu d'investissement."},t:{en:"Phase-2 brokerage; we never carry the asset.",fr:"Courtage phase 2 ; nous ne portons jamais l'actif."}},
+ {r:{en:"Public funders",fr:"Financeurs publics"},n:{en:"CRAMIF prevention, Bpifrance (Diagnostic Data & IA), Région IDF (Innov'up, PM'up), CCI Paris IDF.",fr:"Prévention CRAMIF, Bpifrance (Diagnostic Data & IA), Région IDF (Innov'up, PM'up), CCI Paris IDF."},g:{en:"Subsidies and diagnostics; double-check every file.",fr:"Aides et diagnostics ; double vérification de chaque dossier."},t:{en:"Information only; no fees from funders.",fr:"Information seulement ; aucune rémunération des financeurs."}},
+ {r:{en:"Software & simulation",fr:"Logiciel & simulation"},n:{en:"Dassault Systèmes DELMIA, Schneider Electric, Inbolt, Exwayz, Outsight, Wandelbots, Hiboo.",fr:"Dassault Systèmes DELMIA, Schneider Electric, Inbolt, Exwayz, Outsight, Wandelbots, Hiboo."},g:{en:"Simulate before buying; vision add-ons; multi-brand data.",fr:"Simuler avant d'acheter ; vision ; données multi-marques."},t:{en:"Joint pilots, use cases.",fr:"Pilotes conjoints, cas d'usage."}},
+ {r:{en:"Research & technical centres",fr:"Centres de recherche & techniques"},n:{en:"CEA-List (Saclay), Inria, ISIR Sorbonne, CETIM, INRS.",fr:"CEA-List (Saclay), Inria, ISIR Sorbonne, CETIM, INRS."},g:{en:"Credibility, EU consortia, interns.",fr:"Crédibilité, consortiums UE, stagiaires."},t:{en:"Partnerships, no fees.",fr:"Partenariats, sans honoraires."}},
+ {r:{en:"Lawyer & insurer",fr:"Avocat & assureur"},n:{en:"French business lawyer; RC Pro insurer.",fr:"Avocat d'affaires ; assureur RC Pro."},g:{en:"Referral, AMO and RaaS-review contracts; advice liability cover from day one.",fr:"Contrats d'apport, d'AMO, relecture RaaS ; couverture RC Pro dès le premier jour."},t:{en:"Paid services.",fr:"Prestations payantes."}}
+];
+const FRM=new Set(["Isybot*","Siléane*","Fives*","Savoye*","Stäubli*","Sherpa*","Balyo*","Exotec*","Scallog*","Azur Drones*","Japet*","Wandercraft*","Enchanted Tools*"]);
+let lang="en",tab="services";
+try{lang=localStorage.getItem("rsc-lang")||"en";tab=localStorage.getItem("rsc-tab")||"services"}catch(e){}
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pillTxt=p=>T[lang]["p"+p[0].toUpperCase()+p.slice(1)];
+function match(txt){const q=$("#q").value.trim().toLowerCase();return !q||txt.toLowerCase().includes(q)}
+function render(){
+  const t=T[lang];document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(t[k]!=null)el.textContent=t[k]});
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>el.placeholder=t[el.dataset.i18nPh]);
+  $("#lang").innerHTML=lang==="en"?"<b>EN</b> / FR":"EN / <b>FR</b>";
+  const prio=$("#prio").value;
+  $("#prio").hidden=tab!=="families";
+  let rows=S.filter(r=>match([r.n[lang],r.p[lang],r.d[lang],r.x[lang]].join(" "))).map(r=>`<tr><td class="name">${esc(r.n[lang])}</td><td class="num">${esc(r.p[lang])}</td><td>${esc(r.w[lang])}</td><td>${esc(r.d[lang])}</td><td>${esc(r.x[lang])}</td><td><span class="pill ${r.ph===1?"p-now":"p-later"}">${r.ph===1?t.ph1:t.ph2}</span></td></tr>`);
+  $("#tb-services").innerHTML=rows.join("")||`<tr><td colspan="6" class="empty">${t.none}</td></tr>`;
+  rows=F.filter(r=>(!prio||r.pr===prio)&&match([r.n[lang],r.s[lang],r.mk.join(" "),r.ch[lang],r.sec[lang]].join(" "))).map(r=>`<tr><td class="name">${esc(r.n[lang])}<small>${esc(r.s[lang])}</small></td><td><span class="pill p-${r.pr}">${esc(pillTxt(r.pr))}</span></td><td class="num">${esc(r.buy)}</td><td class="num">${esc(r.raas)}</td><td class="num">${esc(r.dep[lang])}</td><td class="num">${esc(r.pb[lang])}</td><td><div class="makers">${r.mk.map(m=>`<span class="chip${FRM.has(m)?" fr":""}">${esc(m.replace("*",""))}</span>`).join("")}</div></td><td>${esc(r.ch[lang])}</td><td>${esc(r.sec[lang])}</td><td class="status">${t.notSigned}</td></tr>`);
+  $("#tb-families").innerHTML=rows.join("")||`<tr><td colspan="10" class="empty">${t.none}</td></tr>`;
+  rows=B.filter(r=>match([r.r[lang],r.n[lang],r.g[lang],r.t[lang]].join(" "))).map(r=>`<tr><td class="name">${esc(r.r[lang])}</td><td>${esc(r.n[lang])}</td><td>${esc(r.g[lang])}</td><td>${esc(r.t[lang])}</td><td class="status">${t.notSigned}</td></tr>`);
+  $("#tb-bench").innerHTML=rows.join("")||`<tr><td colspan="5" class="empty">${t.none}</td></tr>`;
+  document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===tab));
+  ["services","families","bench"].forEach(k=>$("#panel-"+k).hidden=k!==tab);
+}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{tab=b.dataset.tab;try{localStorage.setItem("rsc-tab",tab)}catch(e){}render()}));
+$("#lang").addEventListener("click",()=>{lang=lang==="en"?"fr":"en";try{localStorage.setItem("rsc-lang",lang)}catch(e){}render()});
+$("#q").addEventListener("input",render);$("#prio").addEventListener("change",render);
+render();
+</script>
