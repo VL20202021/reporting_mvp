@@ -1,0 +1,426 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Physical AI Dossier Batch 1</title>
+<style>
+@page { size: A4; margin: 16mm 14mm; }
+body { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9.6pt; color:#1a1d24; line-height:1.42; }
+h1 { font-size: 28pt; margin:0; line-height:1.1 } h1 span { color:#2546e6 }
+h2 { font-size: 15pt; border-bottom: 2px solid #2546e6; padding-bottom:3px; margin-top:22px; page-break-after: avoid; }
+h3 { font-size: 12pt; margin: 14px 0 4px; }
+h4 { font-size: 9.8pt; margin: 9px 0 3px; color:#2546e6; text-transform: uppercase; letter-spacing:.04em; page-break-after: avoid; }
+ul,ol { margin: 2px 0 4px 18px; padding:0 } li { margin: 1px 0 }
+sup { color:#6b7280; font-size: 6.5pt }
+.cover { height: 255mm; display:flex; flex-direction:column; justify-content:center; page-break-after: always; }
+.kicker { font-family: monospace; color:#2546e6; letter-spacing:.15em; font-weight:bold }
+.pill { display:inline-block; background:#111; color:#fff; border-radius:20px; padding:4px 12px; margin:10px 6px 0 0; font-family:monospace }
+.pill.b { background:#2546e6 }
+.note { background:#f3f5fb; border-left: 3px solid #2546e6; padding:8px 10px; margin:8px 0; }
+.warn { background:#fff7e6; border-left: 3px solid #e69a00; padding:8px 10px; margin:8px 0; }
+table.t { width:100%; border-collapse: collapse; margin: 4px 0 8px; font-size: 8.4pt; page-break-inside: auto; }
+table.t th { background:#111; color:#fff; text-align:left; padding:4px 5px; }
+table.t td { border-bottom: 1px solid #e3e6ee; padding:4px 5px; vertical-align: top; }
+table.t tr { page-break-inside: avoid; }
+.profile { page-break-before: always; }
+.strip { background:#111; color:#fff; padding:8px 10px; border-radius:6px; display:flex; flex-wrap:wrap; gap:4px 14px; font-size:8.5pt }
+.strip .cname { font-size: 13pt; font-weight:bold; width:100% }
+.web { color:#6b7280; margin:4px 0 0 }
+.toc li { margin: 3px 0 }
+.src li { font-size: 7.4pt; word-break: break-all; }
+.layer { page-break-before: always; }
+</style></head><body>
+
+<div class="cover">
+ <div class="kicker">RESEARCH DOSSIER · BATCH 1 OF ~8</div>
+ <h1>Bay Area physical AI:<br><span>capital, deploy &amp; connectors</span></h1>
+ <p style="font-size:12pt;max-width:150mm;margin-top:14px">Who they are, what they did recently, the economics they see, and who to call — prepared for an India-based founder in Mumbai.</p>
+ <div><span class="pill">22 organizations</span><span class="pill">Capital · Deploy · Community</span><span class="pill b">14 Nov 2026</span></div>
+ <p style="margin-top:28px;color:#6b7280;font-size:8.5pt">Based on the Embodied Collective “Bay Area Physical AI Stack” map (Nov 2026). Compiled from public web sources on 14 Nov 2026. Contacts are limited to public business channels: no personal phone numbers. Items marked ⚠ could not be verified from a primary source and must be checked before use.</p>
+</div>
+
+<h2>Contents</h2>
+<ol class="toc">
+ <li>Executive summary</li><li>How money flows across the stack (economics by layer)</li><li>Funding landscape</li><li>Recurring problems</li>
+ <li>India opportunity map</li><li>Top 15 priority calls</li><li>Call plan, time zones &amp; outreach templates</li>
+ <li>Company profiles: Community → Deploy → Capital</li><li>Appendix 1: Master contact sheet</li><li>Appendix 2: Sources</li><li>Gaps &amp; next batches</li>
+</ol>
+<div class="note"><b>Batch scope:</b> Embodied Collective, the 7 Deploy-layer organizations (Robotics Center of Silicon Valley, Fictiv, Flexport, Sanmina, Exponent, Gunderson Dettmer, Orrick), the 11 robotics VCs (Eclipse, Root, Lux, Khosla, Savant, Bosch Ventures, NVentures, Bessemer, MFV, Boost, Scale VP) and the 3 corporate VCs (Intel Capital, Salesforce Ventures, Prologis Ventures). Remaining batches: generalist VCs &amp; accelerators, Parts &amp; compute, Data/sim/software, Bodies (×2–3), Brains.</div>
+<div class="warn"><b>How to read the confidence markers:</b> a superscript [n] links to a source in Appendix 2. “⚠” means the item comes from a single source, an aggregator database or memory, or that sources disagree. Re-check every person's title on LinkedIn before outreach, because people at startups move often.</div>
+
+<h2>1 · Executive summary</h2>
+<ol>
+<li><b>Money is flooding in.</b> Crunchbase counts ~$9.9B of robotics venture funding in Q3 2026, against $4.3B in Q3 2025, and roughly $10B per quarter through 2026 <sup>[86]</sup><sup>[85]</sup>. Physical AI as a broader category raised $47.4B across 521 deals in H1 2026 <sup>[87]</sup>. PitchBook counted $27.6B for all of 2025 <sup>[88]</sup>.</li>
+<li><b>Mega-seeds are now normal.</b> Walden Robotics raised a $300M <i>seed</i> at a $1.1B valuation (Jul 2026). Robotics VCs are raising billion-dollar funds: Eclipse $1.3B, Lux $1.5B, and Khosla reportedly targeting $5.5B.</li>
+<li><b>Hardware needs bigger, longer capital.</b> Eclipse built a growth fund specifically because hardware companies outgrow what software-style VCs will fund. Root keeps about two-thirds of each fund for follow-ons and bridges.</li>
+<li><b>Investors disagree on where the technology is.</b> Bessemer says “GPT-2.5 moment”, with real capability but a wide lab-to-field gap <sup>[63]</sup>. Khosla's Ethan Choi expects a “GPT-3 moment” in 2026. Vinod Khosla still expects most robotics valuations to fall by 2030.</li>
+<li><b>Deployment is the new moat.</b> Bay Area event titles in 2026 include “Deployment is the Moat” and “Selling Outcomes, Not Robots”. The money is shifting towards proof of real-world uptime and robots-as-a-service pricing.</li>
+<li><b>Buyers are sceptical.</b> Flexport's CEO runs about 5M sq ft of fulfilment space, doubts humanoids fit that work, and will buy robots but not build them <sup>[18]</sup>. ROI-driven buyers, not demos, decide revenue.</li>
+<li><b>Corporates want to be the parts supplier.</b> Bosch (Neura, Humanoid), NVIDIA (chips plus NVentures) and Intel (RealSense, Figure) invest to own the component layer of humanoids.</li>
+<li><b>Defence is the fastest commercial path.</b> Bessemer expects the biggest robotics outcomes to come from defence, and drones and defence are a whole category on the map.</li>
+<li><b>The supply chain is the bottleneck and India's opening.</b> Indian robot makers import actuators and sensors from Germany, Japan, Korea and China <sup>[89]</sup>. The US is pushing to source away from China because of tariffs and China+1, and Fictiv/MISUMI is publicly reorganising around a “global sourcing shift”.</li>
+<li><b>Lawyers and contract manufacturers are under-used information sources.</b> Gunderson sees dozens of robotics term sheets, and Sanmina and Fictiv see real build volumes. Calls to them teach economics faster than calls to robot companies.</li>
+</ol>
+
+<h2>2 · How money flows across the stack</h2>
+<p><i>This section is analysis, mainly Claude's synthesis of the sources and general industry knowledge. Use it as a framework to test on calls, not as reported fact.</i></p>
+<table class="t">
+<tr><th>Layer</th><th>Who pays whom</th><th>Typical pricing</th><th>Margin / capital intensity</th><th>Where value accrues</th></tr>
+<tr><td><b>Brains</b> (models)</td><td>Robot makers and enterprises pay model labs; big tech funds its own labs</td><td>Licences, API or usage fees, or bundled with hardware</td><td>Software-like margins in theory, but huge training and data costs</td><td>Whoever owns the most real-world robot data</td></tr>
+<tr><td><b>Bodies</b> (robots)</td><td>End customers (warehouses, hospitals, factories, defence) pay robot companies</td><td>Hardware sale, robots-as-a-service (per month, pick, mile or hour), or service contracts</td><td>Hardware margins are often thin early; capital-heavy; long pilot-to-production cycles</td><td>Companies with a deployment base and proven uptime</td></tr>
+<tr><td><b>Parts &amp; compute</b></td><td>Robot makers pay component and chip vendors</td><td>Per-unit pricing that falls with volume</td><td>Chips are high-margin; actuators and motors are volume and cost games</td><td>Chips (NVIDIA, Qualcomm); actuators are a supply bottleneck</td></tr>
+<tr><td><b>Data, sim &amp; software</b></td><td>Model labs and robot makers pay for data, simulation and fleet software</td><td>Per hour of data, per seat or robot, usage-based</td><td>Labour-heavy for teleop and data; software-like for tools</td><td>Scarce, high-quality manipulation data</td></tr>
+<tr><td><b>Deploy</b></td><td>Robot makers pay contract manufacturers, logistics firms, lawyers and safety consultants</td><td>Per part or build, freight per shipment, hourly fees</td><td>Thin (EMS around 6%) to high (consulting, legal)</td><td>Information about many companies' real volumes and terms</td></tr>
+<tr><td><b>Capital</b></td><td>LPs pay VCs; VCs fund all of the above</td><td>2% fee and 20% carry</td><td>—</td><td>Concentrating in mega-funds and mega-rounds</td></tr>
+</table>
+<p><b>Chain:</b> chips/sensors/actuators → robot body → model/brain plus data → deployment (manufacturing, integration, safety) → customer (RaaS or capex). India can enter at <b>parts</b>, <b>data/teleop</b>, <b>manufacturing</b> and <b>as a customer market</b>.</p>
+
+<h2>3 · Funding landscape</h2>
+<table class="t"><tr><th>Company / fund</th><th>Amount</th><th>Lead / investor</th><th>Date</th><th>Src</th></tr><tr><td>Walden Robotics</td><td>$300M seed (val. $1.1B)</td><td>Deviation Capital &amp; Toyota (co-leads)</td><td>Jul 2026</td><td><sup>[29]</sup></td></tr><tr><td>Bedrock Robotics</td><td>$600M Series C</td><td>Bessemer participated</td><td>2026</td><td><sup>[64]</sup></td></tr><tr><td>Rhoda</td><td>$450M Series A (val. $2.3B) ⚠</td><td>Khosla (reported lead)</td><td>Mar 2026</td><td><sup>[50]</sup></td></tr><tr><td>Neura Robotics</td><td>~€1.2B/$1.4B Series C ⚠</td><td>Bosch among investors</td><td>Jun 2026</td><td><sup>[57]</sup></td></tr><tr><td>Dyna Robotics (on map)</td><td>$120M Series A</td><td>RoboStrategy, CRV, First Round</td><td>2025</td><td><sup>[32]</sup></td></tr><tr><td>Ultra Robotics</td><td>$50M Series A</td><td>—</td><td>Oct 2026</td><td><sup>[31]</sup></td></tr><tr><td>Mara (on map)</td><td>$7M seed ⚠</td><td>Khosla among investors</td><td>Aug 2026</td><td><sup>[50]</sup></td></tr><tr><td>Eclipse (fund)</td><td>$1.3B (Fund VI + Growth III)</td><td>—</td><td>Apr 2026</td><td><sup>[38]</sup></td></tr><tr><td>Lux Ventures IX (fund)</td><td>$1.5B</td><td>—</td><td>Jan 2026</td><td><sup>[43]</sup></td></tr></table>
+<p><b>Most visible investors in this batch:</b> Khosla (foundation models, humanoids, defence), Eclipse (full-stack industrial), NVentures (platform-strategic), Bessemer (thesis-driven, defence), Lux (Physical Intelligence). <b>Most accessible to an early founder:</b> Savant, Boost VC, Root.</p>
+
+<h2>4 · Recurring problems (ranked by frequency in sources)</h2>
+<ol>
+<li><b>Lab-to-field gap:</b> demos work, but reliability in messy real environments does not (Bessemer, deployment-themed events).</li>
+<li><b>Capital intensity:</b> hardware needs far more money and time, hence growth funds, large reserves and mega-rounds.</li>
+<li><b>Proving ROI to buyers:</b> buyers like Flexport and Prologis want payback, not demos.</li>
+<li><b>Component supply and tariffs:</b> dependence on China and imports for actuators, motors and sensors; US tariff volatility (Flexport, Fictiv).</li>
+<li><b>Safety and regulation:</b> safety cases, incident analysis and export controls for drones and defence (Exponent, Orrick).</li>
+<li><b>Valuation risk:</b> Vinod Khosla expects most robotics valuations to fall by 2030.</li>
+</ol>
+
+<h2>5 · India opportunity map</h2>
+<p>Context: India's robotics market is roughly $2B (estimates vary: ~$2.14B in 2026 per SVRC <sup>[6]</sup>; $1.98B in 2025 per IMARC <sup>[91]</sup>). The government's Principal Scientific Adviser published a Physical AI issue in Aug 2026 <sup>[90]</sup>. Core components are still largely imported <sup>[89]</sup>.</p>
+<table class="t">
+<tr><th>Opening</th><th>Why now</th><th>Who in this batch to talk to</th></tr>
+<tr><td><b>Precision parts and sub-assemblies</b> (CNC, moulding, harnesses)</td><td>US companies moving sourcing away from China; tariffs</td><td>Fictiv/MISUMI (supplier network), Sanmina (India JV), Flexport (landed cost)</td></tr>
+<tr><td><b>Actuators, motors, gearboxes</b></td><td>Humanoid supply bottleneck; imported today</td><td>Bosch Ventures (component strategy), Eclipse, NVentures portfolios</td></tr>
+<tr><td><b>Teleop and robot data collection</b></td><td>Manipulation data is scarce; labour-heavy work suits India</td><td>SVRC (sells data collection), Khosla and Lux (foundation-model portfolios)</td></tr>
+<tr><td><b>Safety and testing services</b></td><td>US deployments need safety cases</td><td>Exponent (learn the requirements)</td></tr>
+<tr><td><b>India as a deployment market</b></td><td>Warehousing, manufacturing (China+1, Apple supply chain)</td><td>Prologis Ventures and Scale VP (buyer economics), Bessemer India</td></tr>
+<tr><td><b>US–India company structure</b></td><td>Needed to raise US robotics capital</td><td>Gunderson Dettmer, Orrick</td></tr>
+</table>
+
+<h2>6 · Top 15 priority calls (this batch)</h2>
+<p>Ranked by how likely they are to reply to a Mumbai founder and how much you will learn, not by seniority.</p>
+<table class="t"><tr><th>#</th><th>Person</th><th>Org</th><th>Why first</th><th>Channel</th></tr><tr><td>1</td><td><b>Embodied Collective organizers</b></td><td>Embodied Collective</td><td>Connect all 6 layers; ask for warm intros</td><td>Luma host message / website</td></tr><tr><td>2</td><td><b>SVRC founder + India-report author</b></td><td>Robotics Center of SV</td><td>Published India 2026 report; data/teleop services</td><td>roboticscenter.ai</td></tr><tr><td>3</td><td><b>Savant / Boost office-hour hosts</b></td><td>Savant VC · Boost VC</td><td>Open office hours for physical-AI founders</td><td>Luma events</td></tr><tr><td>4</td><td><b>Avidan Ross</b></td><td>Root Ventures</td><td>Engineer-investor; honest technical feedback</td><td>root.vc</td></tr><tr><td>5</td><td><b>Dave Evans (or supplier-network lead)</b></td><td>Fictiv / MISUMI</td><td>Supplier qualification; India as a supply region</td><td>fictiv.com / LinkedIn</td></tr><tr><td>6</td><td><b>Handi Xu</b></td><td>Gunderson Dettmer</td><td>2026 robotics deal terms; US–India structuring</td><td>gunder.com; (650) 321-2400</td></tr><tr><td>7</td><td><b>Ethan Choi / Kanu Gulati</b></td><td>Khosla Ventures</td><td>Public robotics thesis; possible India link</td><td>(650) 376-8500 / contact page</td></tr><tr><td>8</td><td><b>BVP India team → Talia Goldberg / Jeremy Levine</b></td><td>Bessemer</td><td>India bridge to robotics thesis</td><td>LinkedIn</td></tr><tr><td>9</td><td><b>Rory O&#x27;Driscoll</b></td><td>Scale Venture Partners</td><td>What &#x27;traction&#x27; means in robotics</td><td>(650) 378-6000</td></tr><tr><td>10</td><td><b>Will O&#x27;Donnell</b></td><td>Prologis Ventures</td><td>Buyer/landlord view of warehouse-robot ROI</td><td>(415) 394-9000</td></tr><tr><td>11</td><td><b>Sanmina IR → India JV contact</b></td><td>Sanmina</td><td>EMS economics; India manufacturing</td><td>(408) 964-3500</td></tr><tr><td>12</td><td><b>Robotics practice lead</b></td><td>Exponent</td><td>US safety evidence requirements</td><td>(650) 326-9400</td></tr><tr><td>13</td><td><b>Eclipse manufacturing partner</b></td><td>Eclipse</td><td>Scale-up and supplier choice</td><td>LinkedIn</td></tr><tr><td>14</td><td><b>Sid Siddeek / Inception team</b></td><td>NVentures</td><td>Compute economics; Inception access</td><td>NVIDIA Inception</td></tr><tr><td>15</td><td><b>Shahin Farshchi</b></td><td>Lux Capital</td><td>Foundation models vs hardware margins</td><td>LinkedIn</td></tr></table>
+
+<h2>7 · Call plan, time zones &amp; outreach</h2>
+<h3>When to call</h3>
+<p>Mumbai is IST (UTC+5:30). The Bay Area is on <b>PST (UTC−8) from 1 Nov 2026 to 14 Mar 2027</b>, which puts Mumbai 13.5 hours ahead. 9:00–11:30 am Pacific = <b>10:30 pm–1:00 am IST</b>. When PDT returns (UTC−7), the same window is 9:30 pm–midnight IST. Avoid Pacific Fridays and US holidays (Thanksgiving is 26 Nov 2026).</p>
+<h3>Sequence</h3>
+<ol><li>Warm intro: ask Embodied Collective, SVRC or office-hour hosts first.</li><li>LinkedIn connection note.</li><li>Short email (use the firm's contact page or the published lawyer or partner email).</li><li>Propose two specific 20-minute slots in <i>their</i> time zone.</li><li>One follow-up after 5–7 days, then stop.</li></ol>
+<p>Main office numbers are for reaching a receptionist or front desk only (for example, to ask for the right contact person or the best email). Do not cold-call individuals.</p>
+<h3>Template 1: LinkedIn note (under 300 characters)</h3>
+<div class="note">Hi [Name], I'm a founder in Mumbai working on [robot parts / data ops / X]. Your [deal / post / talk] on [topic] stood out. Could I get 20 minutes to learn how you think about [unit economics / supplier choice]? I'll keep it tight. Thank you!</div>
+<h3>Template 2: Cold email</h3>
+<div class="note"><b>Subject:</b> 20 min: India founder learning [robot unit economics / supply chain]<br><br>Hi [Name],<br>I'm [Your name], building [one line] from Mumbai. I'm studying the Bay Area physical-AI stack, and your [specific recent item, e.g. “Fund VI thesis” / “Ultra Robotics deal”] is directly relevant.<br><br>Three questions I'd value your view on:<br>1. [Question from profile]<br>2. [Question]<br>3. [Question]<br><br>Could we do 20 minutes on [two slots in Pacific time]? I'm happy to share what I'm seeing on Indian component costs and talent in return.<br><br>Thanks,<br>[Name] · [LinkedIn] · [one-line credibility]</div>
+<h3>Template 3: Follow-up</h3>
+<div class="note">Hi [Name], a quick nudge on the note below. I know you're busy. If a call doesn't work, even a one-line answer to “[best question]” would help a lot. Thank you!</div>
+
+
+<section class="profile"><h2>8 · Company profiles</h2>
+ <div class="strip"><span class="cname">Embodied Collective</span><span>Community / connector</span><span>Community &amp; events org</span><span>San Francisco</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: embodiedcollective.org</p>
+ <h4>Latest activities</h4><ul><li>Publisher of the 'Bay Area Physical AI Stack' map (170 orgs, 6 layers, Nov 2026); says 1,585 registrations across 4 events.</li><li>Hosts events like 'The Deployment Moat: A Physical AI Industry Panel' at Mission Robotics, SF <sup>[1]</sup>.</li><li>Describes itself as a global community connecting robotics startups, researchers and industry to accelerate physical-AI commercialization <sup>[1]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Event/community model (sponsorships, ticketing likely). No financials public.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>Not a company with operating problems; value is in introductions across all 6 layers.</li></ul>
+ <h4>India angle</h4><p>No India presence found. Best use: ask organizers for 3–5 warm intros and whether they run virtual sessions you can join from Mumbai.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Organizers / hosts (names not found publicly)</b></td><td>Event hosts on Luma</td><td>Connect every layer of the stack; best first call</td><td>⚠ Not found — check embodiedcollective.org 'About' and Luma host profile</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not published <br><b>Other:</b> Website contact form; message the host on the Luma event page; LinkedIn company page</p>
+ <h4>Questions to ask</h4><ol><li>Which 5 people on your map would most help an India-based founder understand robot unit economics?</li><li>Which layers are most supply-constrained right now (actuators, hands, data)?</li><li>Do you run virtual sessions or could I co-host an India-focused session?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Robotics Center of Silicon Valley (SVRC)</span><span>5 · Deploy — Integrators &amp; suppliers</span><span>Private hub / services</span><span>San Francisco &amp; Palo Alto (sources conflict)</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: roboticscenter.ai</p>
+ <h4>Latest activities</h4><ul><li>Hub providing robots, demonstration-data collection (imitation learning / RL) and operator support to move teams from demo to deployment <sup>[2]</sup>.</li><li>Announced opening in Palo Alto (Jan 2026) and a new SF HQ grand opening + 'Robots & Data' meetup (Jun 26) <sup>[3]</sup> <sup>[4]</sup>.</li><li>Runs a Robotics Alliance membership, academy and forum; publishes OpenArm 101 open-source hardware <sup>[5]</sup>.</li><li>Published a 'State of Robotics: India 2026' report (India market ~$2.14B in 2026, +17% YoY) <sup>[6]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Revenue from data-collection services, robot access/rental, membership (Alliance) and events. Figures differ across its own pages (40+ vs 60+ robot models; '500+ deployments') — treat as marketing.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>Brand/site inconsistency (multiple subdomains, HQ listed as SF, Palo Alto and Mountain View) — confirm which entity you are talking to.</li></ul>
+ <h4>India angle</h4><p>Strongest India link in this batch: it publishes India market research. Ask who wrote the India report and whether they want Indian data-collection or teleop partners.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Founder (name not found in search)</b></td><td>Founder</td><td>Site mentions direct founder support</td><td>⚠ Check roboticscenter.ai/about/team</td></tr><tr><td><b>Author of &#x27;State of Robotics India 2026&#x27;</b></td><td>Research</td><td>Direct India angle</td><td>⚠ Identify from report byline</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not found <br><b>Other:</b> roboticscenter.ai contact/careers pages; attend SF meetups</p>
+ <h4>Questions to ask</h4><ol><li>What does a buyer pay per hour of robot demonstration data, and where are the cost drivers?</li><li>Would you use an India-based teleop/data-collection team, and what quality bar would it need?</li><li>What did your India report find about actuator and sensor sourcing?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Fictiv (a MISUMI company)</span><span>5 · Deploy — Manufacturing &amp; supply</span><span>Acquired by MISUMI (2025, ~$350M)</span><span>San Francisco</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: fictiv.com</p>
+ <h4>Latest activities</h4><ul><li>MISUMI acquisition (announced Apr 2025, reported ~$350M) <sup>[7]</sup> <sup>[8]</sup>.</li><li>Jan 2026: CEO Dave Evans also named President of MISUMI Americas, to unify MISUMI + Fictiv into one AI-powered platform <sup>[9]</sup>.</li><li>Mar 2026: launched instant injection-moulding quotes <sup>[10]</sup>; Jun 2026: SupplyTech Breakthrough 'Sourcing Solution of the Year' <sup>[11]</sup>.</li><li>Released 2026 State of Manufacturing & Supply Chain report (AI, digital platforms, on-shoring) <sup>[12]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Marketplace / managed-manufacturing model: takes margin between customer price and partner-factory cost for CNC, moulding, 3D printing, sheet metal. Robotics startups are core customers for prototype → low-volume parts.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>Tariffs and 'global sourcing shift' pressure on China-based supply; integration of Fictiv into MISUMI.</li></ul>
+ <h4>India angle</h4><p>Fictiv has a global partner-factory network (an article covers its network expansion <sup>[13]</sup>); ⚠ verify whether India is an active region. Direct opportunity: become a qualified Indian supplier for robotics parts.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Dave Evans</b></td><td>CEO &amp; co-founder, Fictiv; President, MISUMI Americas (since Jan 2026)</td><td>Owns supplier strategy across Americas</td><td>Confirmed Jan 2026 <sup>[9]</sup></td></tr><tr><td><b>Head of supply chain / partner network (find on LinkedIn)</b></td><td>—</td><td>Decides which countries/factories join the network</td><td>⚠ To identify</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not verified <br><b>Other:</b> fictiv.com contact &amp; supplier-application pages; LinkedIn</p>
+ <h4>Questions to ask</h4><ol><li>What share of your robotics customers&#x27; parts now come from outside China, and where is it going?</li><li>What does a factory need to qualify as a Fictiv/MISUMI supplier, and is India on the roadmap?</li><li>Where do robotics startups overspend on parts (tolerances, materials, volumes)?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Flexport</span><span>5 · Deploy — Manufacturing &amp; supply</span><span>Private (late-stage)</span><span>San Francisco</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: flexport.com</p>
+ <h4>Latest activities</h4><ul><li>Feb 2026: launched AI agents to automate customs work and IEEPA tariff refunds; claims 0.2% US customs filing error rate <sup>[14]</sup> <sup>[15]</sup>.</li><li>CEO Ryan Petersen: volumes up ~40% YoY with headcount up ~5% <sup>[16]</sup>.</li><li>Extended fulfilment network to Canada and UK <sup>[17]</sup>; Fall Technology Release on Sep 29, 2026 with AI customs-classification engine (secondary source).</li><li>Petersen has said Flexport runs ~5M sq ft of fulfilment space, is sceptical humanoids suit fulfilment, and will buy/invest in robotics but not build it <sup>[18]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Freight forwarding + customs brokerage + fulfilment: revenue per shipment/entry; AI is used to raise volume per employee (operating leverage).</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>Tariff volatility; freight market chaos; proving AI broker accuracy at scale.</li></ul>
+ <h4>India angle</h4><p>Petersen has given an interview covering India and global trade <sup>[19]</sup>. Useful for: landed cost of shipping robot parts India→US and tariff exposure.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Ryan Petersen</b></td><td>Founder &amp; CEO</td><td>Public voice on tariffs, India and robotics-in-warehouses</td><td>Confirmed 2026 (multiple sources)</td></tr><tr><td><b>Fulfilment / warehouse operations lead (find on LinkedIn)</b></td><td>—</td><td>Buyer view on warehouse robotics ROI</td><td>⚠ To identify</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not verified <br><b>Other:</b> flexport.com contact/sales form; Petersen is active on X (@typesfast — ⚠ verify)</p>
+ <h4>Questions to ask</h4><ol><li>What ROI/payback do you require before deploying robots in your 5M sq ft?</li><li>How do current US tariffs change the landed cost of India-made vs China-made components?</li><li>Which robotics vendors have actually passed your pilots?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Sanmina</span><span>5 · Deploy — Manufacturing &amp; supply</span><span>Public (NASDAQ: SANM)</span><span>2700 N First St, San Jose, CA</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: sanmina.com</p>
+ <h4>Latest activities</h4><ul><li>Q1 FY26 revenue $3.19B (+59% YoY), non-GAAP op margin 6.0% <sup>[20]</sup>.</li><li>Q2 FY26 revenue ~$4.0B; IMS segment +123.5% YoY, driven by cloud/AI infrastructure incl. ZT Systems <sup>[21]</sup>.</li><li>FY26 guidance $13.7–14.3B reiterated; ZT Systems (acquired from AMD) integration on plan <sup>[22]</sup>. ⚠ Q3 figures conflict across sources — check SEC filings.</li><li>India joint venture referenced on earnings calls (partner's equity interest) <sup>[22]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Contract manufacturing (EMS): high revenue, thin margins (~6% non-GAAP operating margin). Growth currently from AI data-centre racks, not robots — but it is a reference for what scaled robot manufacturing economics look like.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>Thin margins; customer concentration in AI infrastructure; integration risk.</li></ul>
+ <h4>India angle</h4><p>Has an India JV (⚠ widely reported in 2022 as a JV with Reliance; verify current structure) with manufacturing in Chennai. Ask about robotics/automation programmes in India.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Jure Sola</b></td><td>Chairman &amp; CEO (⚠ verify current title)</td><td>Long-time leader; India JV decisions</td><td>⚠ Not re-verified in this run</td></tr><tr><td><b>Investor Relations</b></td><td>IR team</td><td>Easiest formal entry point</td><td>Via sanmina.com IR page</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> +1 (408) 964-3500 (HQ main) <sup>[23]</sup><br><b>Other:</b> Investor relations contact on sanmina.com</p>
+ <h4>Questions to ask</h4><ol><li>What volume does a robotics customer need before EMS economics beat in-house assembly?</li><li>Is the India JV building any robotics or automation hardware?</li><li>What margin do EMS providers earn on complex electromechanical builds vs servers?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Exponent</span><span>5 · Deploy — Legal, safety, insurance</span><span>Public (NASDAQ: EXPO)</span><span>149 Commonwealth Dr, Menlo Park, CA</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: exponent.com</p>
+ <h4>Latest activities</h4><ul><li>Filings say demand for independent evaluation and testing grows as physical AI, robotics and autonomous systems move into real-world operation <sup>[24]</sup> (excerpt only; ⚠ confirm year).</li><li>AV incident analysis, safety cases and regulator liaison services <sup>[25]</sup>; ADAS testing <sup>[26]</sup>.</li><li>Hiring 2026 ADAS/AV engineers in Phoenix and Natick <sup>[27]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Engineering & scientific consulting billed by the hour; robotics safety, failure analysis and litigation support are a growing revenue line as robots enter public spaces.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>Depends on incident/litigation cycles; standards for humanoid/mobile-robot safety are still forming.</li></ul>
+ <h4>India angle</h4><p>No India robotics practice found. Learning value: what safety evidence US buyers/regulators require — essential if you ship Indian-made robots or parts to the US.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Catherine Corrigan</b></td><td>President &amp; CEO (⚠ verify)</td><td>Strategy view</td><td>⚠ Not re-verified in this run</td></tr><tr><td><b>Lead of Robotics/Autonomous Systems practice (find on exponent.com/people)</b></td><td>—</td><td>Hands-on safety-case expert</td><td>⚠ To identify</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> +1 (650) 326-9400 (HQ main); toll-free +1 (888) 656-3976 <sup>[28]</sup><br><b>Other:</b> exponent.com contact form</p>
+ <h4>Questions to ask</h4><ol><li>What safety evidence do customers ask for before deploying a mobile or humanoid robot near people?</li><li>What are the most common failure modes you investigate in deployed robots?</li><li>What does a typical safety case cost a startup?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Gunderson Dettmer</span><span>5 · Deploy — Legal</span><span>Law firm (VC/startup)</span><span>Redwood City, CA (Silicon Valley office)</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: gunder.com</p>
+ <h4>Latest activities</h4><ul><li>Jul 2026: counsel to Deviation Capital (co-lead) on Walden Robotics' $300M seed at $1.1B valuation, co-led by Toyota <sup>[29]</sup>.</li><li>Jul 22, 2026: counsel to a16z leading Atoms' financing (physical automation) <sup>[30]</sup>.</li><li>Oct 9, 2026: counsel to Ultra Robotics (warehouse) on $50M Series A <sup>[31]</sup>.</li><li>Counsel to Dyna Robotics on $120M Series A (RoboStrategy, CRV, First Round) <sup>[32]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Sees deal terms across dozens of robotics rounds — best source on valuations, round sizes and terms (e.g. $300M seeds now exist).</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>N/A — advisor.</li></ul>
+ <h4>India angle</h4><p>Ask whether they advise on US–India 'flip' structures (Delaware parent + Indian subsidiary), common for Indian deep-tech founders raising US money.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Handi Xu</b></td><td>Lawyer on Ultra Robotics and Dyna Robotics deals</td><td>Repeat robotics deal counsel</td><td>Named on 2026 deals <sup>[32]</sup></td></tr><tr><td><b>Ryan Purcell</b></td><td>Led Dyna Robotics deal team</td><td>Robotics company-side counsel</td><td>Named on deal release</td></tr><tr><td><b>Hozefa Botee</b></td><td>On Walden Robotics deal team</td><td>Investor-side robotics deal</td><td>Named Jul 2026</td></tr><tr><td><b>Jeff Stricker</b></td><td>Led a16z/Atoms deal team</td><td>Investor-side physical automation</td><td>Named Jul 2026</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> +1 (650) 321-2400 (Silicon Valley main) <sup>[33]</sup><br><b>Other:</b> Lawyer bios &amp; emails on gunder.com</p>
+ <h4>Questions to ask</h4><ol><li>What do robotics seed and Series A terms look like in 2026 vs 2024?</li><li>How do Indian founders typically structure a US parent with an India subsidiary?</li><li>Which robotics deal terms surprise first-time hardware founders?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Orrick</span><span>5 · Deploy — Legal</span><span>Law firm (global)</span><span>405 Howard St, San Francisco, CA</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: orrick.com</p>
+ <h4>Latest activities</h4><ul><li>Drones & Other Unmanned Vehicles practice; has advised DJI and driverless-car companies <sup>[34]</sup>.</li><li>Artificial Intelligence practice <sup>[35]</sup>.</li><li>India work is mainly projects & energy, led from Singapore <sup>[36]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Regulatory + financing counsel for drones/AVs; useful on FAA/defence/export-control questions.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>No India robotics practice found.</li></ul>
+ <h4>India angle</h4><p>Useful for export controls (ITAR/EAR) if you supply drone/defence components from India to US companies on the map (Skydio, Zipline, Saildrone etc.).</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Partner, Drones &amp; Unmanned Vehicles practice (see practice page)</b></td><td>—</td><td>Regulatory expert</td><td>⚠ To identify</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> +1 (415) 773-5700 (SF main) <sup>[37]</sup><br><b>Other:</b> Lawyer bios on orrick.com</p>
+ <h4>Questions to ask</h4><ol><li>What export-control issues apply if Indian firms supply drone/robot components to US defence-adjacent companies?</li><li>What regulatory approvals slow down drone and AV commercialisation most?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Eclipse</span><span>6 · Capital — Robotics VC</span><span>VC (~multi-$B AUM)</span><span>Palo Alto, CA</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: eclipse.vc</p>
+ <h4>Latest activities</h4><ul><li>Apr 2026: raised $1.3B — Fund VI ($720M) + Early Growth Fund III ($591M) — for 'physical AI' and physical industries <sup>[38]</sup> <sup>[39]</sup>.</li><li>Growth fund exists because hardware companies need more capital than software-focused VCs provide.</li><li>Portfolio includes Bedrock Robotics, Mind Robotics, Cerebras; co-led Genesis AI's $105M seed with Khosla (2025) <sup>[40]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Thesis: a connected 'industrial economy' of portfolio companies sharing customers, talent and infrastructure. Writes larger, later cheques than typical seed hardware VCs.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>Hardware capital intensity; long time to revenue.</li></ul>
+ <h4>India angle</h4><p>No India activity found. Learn how they underwrite manufacturing scale-up and supplier choices.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Lior Susan</b></td><td>Founder &amp; CEO</td><td>Sets physical-AI thesis</td><td>Confirmed Apr 2026</td></tr><tr><td><b>Partner covering manufacturing/supply chain (see eclipse.vc team)</b></td><td>—</td><td>More reachable than CEO</td><td>⚠ To identify</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> 650-720-4667 (single directory — ⚠ unverified) <sup>[41]</sup><br><b>Other:</b> eclipse.vc; partners on LinkedIn/X</p>
+ <h4>Questions to ask</h4><ol><li>What gross margin do you expect from robotics hardware at scale, and by when?</li><li>How do your portfolio companies choose contract manufacturers and component suppliers?</li><li>Would a lower-cost supplier base outside China change your companies&#x27; unit economics?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Root Ventures</span><span>6 · Capital — Robotics VC</span><span>Seed VC</span><span>San Francisco</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: root.vc</p>
+ <h4>Latest activities</h4><ul><li>Reported $190M Fund IV (announced Nov 2025, secondary sources) <sup>[42]</sup>.</li><li>Seed fund run by practising engineers; focus on robotics, hardware and multidisciplinary engineering; keeps ~2/3 of each fund for follow-ons (aggregator).</li><li>⚠ Reported 2026 leads (Volund Manufacturing, Instrumental) not confirmed against primary sources.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Underwrites engineering risk at seed; reserves-heavy model because hardware needs bridge rounds.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>—</li></ul>
+ <h4>India angle</h4><p>None found. Good for honest technical feedback on a hardware idea.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Avidan Ross</b></td><td>Founding Partner</td><td>Engineer; still builds hardware</td><td>Confirmed (multiple profiles)</td></tr><tr><td><b>Lee Edwards</b></td><td>General Partner</td><td>Announced Fund IV</td><td>Secondary source</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not published <br><b>Other:</b> root.vc; partners publish email/X handles on site</p>
+ <h4>Questions to ask</h4><ol><li>What technical milestones do you need before a seed cheque in robotics?</li><li>What&#x27;s a realistic BOM-to-price ratio for a first commercial robot?</li><li>Where do hardware seed companies run out of money?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Lux Capital</span><span>6 · Capital — Robotics VC</span><span>VC</span><span>New York &amp; Menlo Park</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: luxcapital.com</p>
+ <h4>Latest activities</h4><ul><li>Jan 2026: closed Lux Ventures IX at $1.5B (largest to date) <sup>[43]</sup>.</li><li>Says it was first investor in Physical Intelligence; robotics holdings incl. Collaborative Robotics, Hadrian, Zoox, Applied Intuition.</li><li>Ranked among most active AI-robotics investors (6 tracked deals, 3 led) <sup>[44]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Bets on foundation-model layer (Physical Intelligence) plus vertical robotics.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>—</li></ul>
+ <h4>India angle</h4><p>None found.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Shahin Farshchi</b></td><td>Partner (hardware/robotics/manufacturing per F4)</td><td>Robotics lead</td><td>Secondary <sup>[45]</sup></td></tr><tr><td><b>Brandon Reeves</b></td><td>Partner</td><td>Robotics/automation &amp; compute</td><td>Lux site <sup>[46]</sup></td></tr><tr><td><b>Bilal Zuberi</b></td><td>⚠ Not found at Lux in 2026 results — check before contacting</td><td>—</td><td>⚠ Unverified</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not verified <br><b>Other:</b> luxcapital.com team pages; LinkedIn</p>
+ <h4>Questions to ask</h4><ol><li>Will robot foundation models commoditise hardware, or will hardware margins hold?</li><li>What evidence of real deployments do you need at Series A?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Khosla Ventures</span><span>6 · Capital — Robotics VC</span><span>VC</span><span>2128 Sand Hill Rd, Menlo Park, CA</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: khoslaventures.com</p>
+ <h4>Latest activities</h4><ul><li>Partner Ethan Choi predicted a robotics 'GPT-3 moment' in 2026 <sup>[47]</sup>; Vinod Khosla has also said most robotics valuations will fall by 2030 <sup>[48]</sup>.</li><li>Co-led Genesis AI $105M seed (2025, with Eclipse) <sup>[40]</sup>; backer of Physical Intelligence and Field AI <sup>[49]</sup>.</li><li>Aggregators report 2026 deals incl. Rhoda ($450M Series A, Mar 2026), Monumental, and Mara ($7M seed, Aug 2026 — Mara is on the map) <sup>[50]</sup> ⚠ unverified.</li><li>Reported to be targeting a $5.5B fund (Jul 2026) <sup>[51]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Heavy bets on robot foundation models; publicly expects valuation correction for most robotics startups.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>—</li></ul>
+ <h4>India angle</h4><p>Founder Vinod Khosla is Indian-origin; firm has invested in India historically. Kanu Gulati appears in profiles as a Khosla partner (⚠ verify).</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Ethan Choi</b></td><td>Partner</td><td>Public robotics thesis 2026</td><td>Confirmed via interview coverage</td></tr><tr><td><b>Kanu Gulati</b></td><td>Partner (⚠ verify)</td><td>Possible India connection</td><td>⚠ Unverified</td></tr><tr><td><b>Vinod Khosla</b></td><td>Founder</td><td>Hard to reach; reference his public views</td><td>—</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> +1 (650) 376-8500 (Menlo Park main) <sup>[52]</sup><br><b>Other:</b> khoslaventures.com/contact</p>
+ <h4>Questions to ask</h4><ol><li>Why do you think most robotics valuations will fall by 2030 — what survives?</li><li>Is India relevant to your robotics companies as a market, supplier or talent base?</li><li>What would a &#x27;GPT-3 moment&#x27; look like commercially?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Savant VC</span><span>6 · Capital — Robotics VC</span><span>Pre-seed fund (Fund I)</span><span>San Francisco</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: savantvc.com (⚠ verify)</p>
+ <h4>Latest activities</h4><ul><li>Pre-seed physical-AI fund; Fund I target $25M; filing showed $735K from 5 investors as of Nov 2025 <sup>[53]</sup>.</li><li>Invested in Run Robotics (debugging/evaluation for robot learning) <sup>[54]</sup>.</li><li>Co-hosts 'Ramen & Robots' with Scale VP and 'Physical AI Co-working & Office Hours' with Boost VC <sup>[55]</sup> <sup>[56]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Very small, early fund; value is community and access rather than capital.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>Small fund; partner roster not public.</li></ul>
+ <h4>India angle</h4><p>Office hours may be the most accessible entry point for a remote founder.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Jeson Lee &amp; Emily Yu</b></td><td>Listed hosts of Savant/Boost co-working event</td><td>Run founder office hours</td><td>⚠ Role at Savant unverified</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not published <br><b>Other:</b> Luma event pages; LinkedIn</p>
+ <h4>Questions to ask</h4><ol><li>What are pre-seed physical-AI founders getting wrong about go-to-market?</li><li>Can remote founders join office hours?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Bosch Ventures</span><span>6 · Capital — Robotics VC (corporate)</span><span>Corporate VC (Robert Bosch)</span><span>Stuttgart; US office Sunnyvale (⚠ verify)</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: bosch-ventures.com</p>
+ <h4>Latest activities</h4><ul><li>Jan 2026: Bosch–Neura Robotics partnership on humanoids/physical AI; Neura Series C reported Jun 2026 (€1.2B / $1.4B — sources conflict) <sup>[57]</sup>.</li><li>Jul 2026: investment in Humanoid (reported $152M Series A) ⚠ amounts from aggregators.</li><li>Strategic investment in Asylon Robotics (security robots) <sup>[58]</sup>.</li><li>Bosch set up Robert Bosch Robotics GmbH to industrialise robotics <sup>[59]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Strategic: Bosch is a supplier of motors, sensors and drives — it invests to become the parts supplier to robot makers.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>Parent's auto-supply business is under pressure, pushing pivot to robotics.</li></ul>
+ <h4>India angle</h4><p>Bosch has a very large India business (Bengaluru). Ask whether robotics component manufacturing could be localised in India.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>US investment partner (see bosch-ventures.com team)</b></td><td>—</td><td>Robotics deals</td><td>⚠ To identify</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not verified <br><b>Other:</b> bosch-ventures.com</p>
+ <h4>Questions to ask</h4><ol><li>Is Bosch positioning to be the actuator/sensor supplier for humanoids?</li><li>Could Bosch India manufacture robot components for your portfolio?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">NVentures (NVIDIA)</span><span>6 · Capital — Robotics VC (corporate)</span><span>Corporate VC</span><span>Santa Clara, CA</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: nvidia.com/en-us/startups/nventures/</p>
+ <h4>Latest activities</h4><ul><li>Robotics portfolio per NVIDIA: Skild AI, Generalist AI, Agility Robotics, 1X, Bedrock Robotics, Flexion, Vention <sup>[60]</sup>.</li><li>Oct 2026: participated in Agile Robots late-stage round <sup>[61]</sup>.</li><li>Nvidia did 125+ venture rounds since start of 2025 (balance sheet + NVentures) <sup>[62]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Invests where it strengthens NVIDIA's platform (Jetson/Thor chips, Isaac sim, GR00T models) and seeks financial returns.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>—</li></ul>
+ <h4>India angle</h4><p>NVIDIA has large India engineering teams; ⚠ ask about Indian robotics startups on Inception program.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Mohamed &#x27;Sid&#x27; Siddeek</b></td><td>Corporate VP &amp; Head of NVentures</td><td>Runs the fund</td><td>GCV Powerlist 2026 <sup>[62]</sup></td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not verified (use NVIDIA corporate) <br><b>Other:</b> NVIDIA Inception program application; nventures page</p>
+ <h4>Questions to ask</h4><ol><li>What compute cost per robot do your portfolio companies budget?</li><li>How can an Indian robotics startup get into Inception/NVentures pipeline?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Bessemer Venture Partners</span><span>6 · Capital — Robotics VC</span><span>VC (also active in India)</span><span>SF office 539 Bryant St (⚠ verify)</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: bvp.com</p>
+ <h4>Latest activities</h4><ul><li>2026 'Robotics & Physical AI' predictions: we are at a 'GPT-2.5 moment' — real capabilities but wide lab-to-field gap <sup>[63]</sup>.</li><li>Argues global physical-labour spend is ~30× software spend, so robotics funding should keep growing; expects biggest robotics outcomes from defence.</li><li>Participated in Bedrock Robotics' $600M Series C (autonomous construction equipment) <sup>[64]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Publishes the clearest public framework on robotics market sizing — read before calling.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>—</li></ul>
+ <h4>India angle</h4><p>Bessemer has a long-running India team (⚠ verify current India office) — a natural bridge for a Mumbai founder.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Talia Goldberg</b></td><td>Partner</td><td>Robotics/physical AI voice</td><td>Named in 2026 robotics content</td></tr><tr><td><b>Jeremy Levine</b></td><td>Partner</td><td>Robotics/physical AI voice</td><td>Named in 2026 robotics content</td></tr><tr><td><b>Alexandra Sukin</b></td><td>Investor</td><td>Robotics Day content</td><td>Named in 2026 robotics content</td></tr><tr><td><b>BVP India team member</b></td><td>—</td><td>Warm bridge to US robotics team</td><td>⚠ To identify</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> 415-800-8982 (single directory — ⚠ unverified) <sup>[65]</sup><br><b>Other:</b> bvp.com; partners on LinkedIn/X</p>
+ <h4>Questions to ask</h4><ol><li>How do you size the robotics market against physical-labour spend?</li><li>What closes the lab-to-field gap fastest — data, hardware reliability or business model?</li><li>Does your India team see robotics opportunities?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">MFV Partners</span><span>6 · Capital — Robotics VC</span><span>Seed/Series A VC</span><span>Los Altos, CA</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: mfvpartners.com</p>
+ <h4>Latest activities</h4><ul><li>Fund II focuses on four sectors incl. robotics & physical AI (autonomy, humanoids, sensor networks) <sup>[66]</sup>.</li><li>Portfolio includes Agility Robotics and Chef Robotics (Chef is on the map).</li><li>Typical cheque $1–5M at seed/Series A (aggregator); launched Harper Court Ventures with University of Chicago (May 2025).</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Early-stage deep tech; publishes updates on Substack.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>—</li></ul>
+ <h4>India angle</h4><p>None found.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Partners (see mfvpartners.com)</b></td><td>—</td><td>—</td><td>⚠ Names not found in search</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not verified <br><b>Other:</b> mfvpartners.com; Substack mfvpartners.substack.com</p>
+ <h4>Questions to ask</h4><ol><li>What did Chef Robotics&#x27; unit economics look like at seed?</li><li>Which sensor-network bets look most promising?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Boost VC</span><span>6 · Capital — Robotics VC</span><span>Pre-seed VC</span><span>55 E 3rd Ave, San Mateo, CA</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: boost.vc</p>
+ <h4>Latest activities</h4><ul><li>Pre-seed fund (since 2012) leading ~$500K rounds in frontier tech incl. robotics; Fund 4 reported ~$87.65M (Sep 2025) <sup>[67]</sup> ⚠ sizes conflict.</li><li>Co-hosts Physical AI co-working & office hours with Savant <sup>[56]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Small cheques, accelerator-style community in San Mateo.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>—</li></ul>
+ <h4>India angle</h4><p>Accessible for very early founders; ask if they accept non-US founders who relocate.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Adam Draper</b></td><td>Managing Director / co-founder</td><td>Leads fund</td><td><sup>[68]</sup></td></tr><tr><td><b>Brayton Williams</b></td><td>Co-founder &amp; Partner</td><td>—</td><td>Boost team page</td></tr><tr><td><b>Maddie Callander, Gus Domel</b></td><td>Investment team</td><td>More reachable</td><td>Boost team page</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> (650) 458-7039 (directories — ⚠ not on Boost&#x27;s site) <sup>[69]</sup><br><b>Other:</b> boost.vc application/FAQ</p>
+ <h4>Questions to ask</h4><ol><li>What do you need to see from a pre-seed robotics team?</li><li>Do you back founders who will relocate from India?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Scale Venture Partners</span><span>6 · Capital — Robotics VC</span><span>VC (early growth)</span><span>950 Tower Ln, Foster City, CA</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: scalevp.com</p>
+ <h4>Latest activities</h4><ul><li>Jun 9, 2026: announced investment in Generalist (dexterous manipulation) <sup>[70]</sup>.</li><li>Co-hosted 'Ramen & Robots' physical-AI founder meetup with Savant (SF Deep Tech Week 2026) <sup>[71]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Invests when there is revenue traction — good for learning what 'commercial traction' means in robotics.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>—</li></ul>
+ <h4>India angle</h4><p>None found.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Rory O&#x27;Driscoll</b></td><td>Partner (apps, robotics, AI per F4)</td><td>Robotics coverage</td><td>Secondary <sup>[72]</sup></td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> +1 (650) 378-6000 (main) <sup>[73]</sup><br><b>Other:</b> scalevp.com</p>
+ <h4>Questions to ask</h4><ol><li>What revenue/ARR do you expect from a robotics company at your entry point?</li><li>Why Generalist — what made dexterity investable now?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Intel Capital</span><span>6 · Capital — Corporate VC</span><span>Corporate VC (spin-out announced)</span><span>Santa Clara / San Francisco</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: intelcapital.com</p>
+ <h4>Latest activities</h4><ul><li>Intel announced plans to spin Intel Capital out as an independent fund (2025) <sup>[74]</sup>; ⚠ 2026 status not confirmed.</li><li>Robotics bets include Figure AI and Formant; participated in RealSense's $50M Series A after its Jul 2025 spin-out from Intel <sup>[75]</sup>.</li><li>RealSense (on the map) says its depth cameras are in >60% of AMRs and humanoids worldwide.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Strategic chip/sensor ecosystem investor in transition to independent fund.</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>Parent restructuring.</li></ul>
+ <h4>India angle</h4><p>Intel has big India R&D (Bengaluru). ⚠ Ask about India sourcing for sensors.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Robotics/edge investor at Intel Capital</b></td><td>—</td><td>—</td><td>⚠ To identify</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not verified <br><b>Other:</b> intelcapital.com</p>
+ <h4>Questions to ask</h4><ol><li>How does the spin-out change your robotics strategy?</li><li>What&#x27;s driving RealSense adoption in humanoids?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Salesforce Ventures</span><span>6 · Capital — Corporate VC</span><span>Corporate VC</span><span>San Francisco</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: salesforceventures.com</p>
+ <h4>Latest activities</h4><ul><li>Invested in Physical Intelligence (2025) <sup>[76]</sup>, Dyna Robotics ($120M Series A), Mujin (Series D) <sup>[77]</sup>.</li><li>Published a robotics investing framework (Aug 2025) <sup>[78]</sup>; Fortune commentary on robotics risk/reward <sup>[79]</sup>.</li><li>Jan 2026: Salesforce–NVIDIA physical-AI partnership (Cobalt security robots at Salesforce Tower) — product partnership, not a VC deal.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Bets on robots + enterprise software/agents (Agentforce).</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>—</li></ul>
+ <h4>India angle</h4><p>Salesforce has large India operations; none robotics-specific found.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Robotics investors (Fortune piece bylines list Emily Zhao &amp; Pascha Hao)</b></td><td>⚠ Roles not confirmed</td><td>Wrote public robotics thesis</td><td>⚠ Verify on salesforceventures.com/team</td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> Not published <br><b>Other:</b> salesforceventures.com</p>
+ <h4>Questions to ask</h4><ol><li>Which of your 7 robotics criteria do most startups fail?</li><li>How will enterprises buy robots — capex or subscription?</li></ol>
+</section>
+<section class="profile">
+ <div class="strip"><span class="cname">Prologis Ventures</span><span>6 · Capital — Corporate VC</span><span>Corporate VC (world&#x27;s largest logistics landlord)</span><span>Pier 1, Bay 1, San Francisco</span><span>Updated 14 Nov 2026</span></div>
+ <p class="web">Web: prologis.com/about/prologis-ventures</p>
+ <h4>Latest activities</h4><ul><li>Anchoring a $200M maritime & logistics innovation fund managed by TMV (autonomy, robotics, operational AI) <sup>[80]</sup>.</li><li>Participated in Locus Robotics' $150M Series E <sup>[81]</sup>; portfolio incl. Gideon, Gaussy, Hakuou Robotics (autonomous forklifts).</li><li>Commentary: 'the best bets in logistics robotics may not look like robots' <sup>[82]</sup>.</li></ul>
+ <h4>Business model &amp; economics</h4><ul><li>Strategic: robots that make Prologis warehouses more valuable to tenants. Cheques ~$2–20M (aggregator).</li></ul>
+ <h4>Problems &amp; challenges</h4><ul><li>—</li></ul>
+ <h4>India angle</h4><p>Prologis does not have a major India footprint (⚠ verify). Learning value: landlord view on warehouse automation ROI.</p>
+ <h4>Key people</h4>
+ <table class="t"><tr><th>Name</th><th>Title</th><th>Why them</th><th>Status</th></tr><tr><td><b>Will O&#x27;Donnell</b></td><td>MD &amp; Global Head of Corporate Development, Prologis Ventures</td><td>Has led the fund since 2016</td><td>Prologis site <sup>[83]</sup></td></tr></table>
+ <h4>Contact channels (public business only)</h4>
+ <p><b>Phone:</b> +1 (415) 394-9000 (Prologis HQ); media +1 (415) 733-9597 <sup>[84]</sup><br><b>Other:</b> prologis.com contact</p>
+ <h4>Questions to ask</h4><ol><li>Which warehouse robots do your tenants actually pay for?</li><li>Why might the best logistics-robotics bets &#x27;not look like robots&#x27;?</li></ol>
+</section>
+
+<section class="profile">
+<h2>Appendix 1 · Master contact sheet</h2>
+<p>Public business channels only. The CSV version is <b>contacts_batch1.csv</b>.</p>
+<table class="t"><tr><th>Org</th><th>Person</th><th>Title</th><th>Company phone</th><th>Channel</th></tr><tr><td>Embodied Collective</td><td>Organizers / hosts (names not found publicly)</td><td>Event hosts on Luma</td><td>Not published</td><td>Website contact form; message the host on the Luma event page; LinkedIn company page</td></tr><tr><td>Robotics Center of Silicon Valley (SVRC)</td><td>Founder (name not found in search)</td><td>Founder</td><td>Not found</td><td>roboticscenter.ai contact/careers pages; attend SF meetups</td></tr><tr><td>Robotics Center of Silicon Valley (SVRC)</td><td>Author of &#x27;State of Robotics India 2026&#x27;</td><td>Research</td><td>Not found</td><td>roboticscenter.ai contact/careers pages; attend SF meetups</td></tr><tr><td>Fictiv (a MISUMI company)</td><td>Dave Evans</td><td>CEO &amp; co-founder, Fictiv; President, MISUMI Americas (since Jan 2026)</td><td>Not verified</td><td>fictiv.com contact &amp; supplier-application pages; LinkedIn</td></tr><tr><td>Fictiv (a MISUMI company)</td><td>Head of supply chain / partner network (find on LinkedIn)</td><td>—</td><td>Not verified</td><td>fictiv.com contact &amp; supplier-application pages; LinkedIn</td></tr><tr><td>Flexport</td><td>Ryan Petersen</td><td>Founder &amp; CEO</td><td>Not verified</td><td>flexport.com contact/sales form; Petersen is active on X (@typesfast — ⚠ verify)</td></tr><tr><td>Flexport</td><td>Fulfilment / warehouse operations lead (find on LinkedIn)</td><td>—</td><td>Not verified</td><td>flexport.com contact/sales form; Petersen is active on X (@typesfast — ⚠ verify)</td></tr><tr><td>Sanmina</td><td>Jure Sola</td><td>Chairman &amp; CEO (⚠ verify current title)</td><td>+1 (408) 964-3500 (HQ main)</td><td>Investor relations contact on sanmina.com</td></tr><tr><td>Sanmina</td><td>Investor Relations</td><td>IR team</td><td>+1 (408) 964-3500 (HQ main)</td><td>Investor relations contact on sanmina.com</td></tr><tr><td>Exponent</td><td>Catherine Corrigan</td><td>President &amp; CEO (⚠ verify)</td><td>+1 (650) 326-9400 (HQ main); toll-free +1 (888) 656-3976</td><td>exponent.com contact form</td></tr><tr><td>Exponent</td><td>Lead of Robotics/Autonomous Systems practice (find on exponent.com/people)</td><td>—</td><td>+1 (650) 326-9400 (HQ main); toll-free +1 (888) 656-3976</td><td>exponent.com contact form</td></tr><tr><td>Gunderson Dettmer</td><td>Handi Xu</td><td>Lawyer on Ultra Robotics and Dyna Robotics deals</td><td>+1 (650) 321-2400 (Silicon Valley main)</td><td>Lawyer bios &amp; emails on gunder.com</td></tr><tr><td>Gunderson Dettmer</td><td>Ryan Purcell</td><td>Led Dyna Robotics deal team</td><td>+1 (650) 321-2400 (Silicon Valley main)</td><td>Lawyer bios &amp; emails on gunder.com</td></tr><tr><td>Gunderson Dettmer</td><td>Hozefa Botee</td><td>On Walden Robotics deal team</td><td>+1 (650) 321-2400 (Silicon Valley main)</td><td>Lawyer bios &amp; emails on gunder.com</td></tr><tr><td>Gunderson Dettmer</td><td>Jeff Stricker</td><td>Led a16z/Atoms deal team</td><td>+1 (650) 321-2400 (Silicon Valley main)</td><td>Lawyer bios &amp; emails on gunder.com</td></tr><tr><td>Orrick</td><td>Partner, Drones &amp; Unmanned Vehicles practice (see practice page)</td><td>—</td><td>+1 (415) 773-5700 (SF main)</td><td>Lawyer bios on orrick.com</td></tr><tr><td>Eclipse</td><td>Lior Susan</td><td>Founder &amp; CEO</td><td>650-720-4667 (single directory — ⚠ unverified)</td><td>eclipse.vc; partners on LinkedIn/X</td></tr><tr><td>Eclipse</td><td>Partner covering manufacturing/supply chain (see eclipse.vc team)</td><td>—</td><td>650-720-4667 (single directory — ⚠ unverified)</td><td>eclipse.vc; partners on LinkedIn/X</td></tr><tr><td>Root Ventures</td><td>Avidan Ross</td><td>Founding Partner</td><td>Not published</td><td>root.vc; partners publish email/X handles on site</td></tr><tr><td>Root Ventures</td><td>Lee Edwards</td><td>General Partner</td><td>Not published</td><td>root.vc; partners publish email/X handles on site</td></tr><tr><td>Lux Capital</td><td>Shahin Farshchi</td><td>Partner (hardware/robotics/manufacturing per F4)</td><td>Not verified</td><td>luxcapital.com team pages; LinkedIn</td></tr><tr><td>Lux Capital</td><td>Brandon Reeves</td><td>Partner</td><td>Not verified</td><td>luxcapital.com team pages; LinkedIn</td></tr><tr><td>Lux Capital</td><td>Bilal Zuberi</td><td>⚠ Not found at Lux in 2026 results — check before contacting</td><td>Not verified</td><td>luxcapital.com team pages; LinkedIn</td></tr><tr><td>Khosla Ventures</td><td>Ethan Choi</td><td>Partner</td><td>+1 (650) 376-8500 (Menlo Park main)</td><td>khoslaventures.com/contact</td></tr><tr><td>Khosla Ventures</td><td>Kanu Gulati</td><td>Partner (⚠ verify)</td><td>+1 (650) 376-8500 (Menlo Park main)</td><td>khoslaventures.com/contact</td></tr><tr><td>Khosla Ventures</td><td>Vinod Khosla</td><td>Founder</td><td>+1 (650) 376-8500 (Menlo Park main)</td><td>khoslaventures.com/contact</td></tr><tr><td>Savant VC</td><td>Jeson Lee &amp; Emily Yu</td><td>Listed hosts of Savant/Boost co-working event</td><td>Not published</td><td>Luma event pages; LinkedIn</td></tr><tr><td>Bosch Ventures</td><td>US investment partner (see bosch-ventures.com team)</td><td>—</td><td>Not verified</td><td>bosch-ventures.com</td></tr><tr><td>NVentures (NVIDIA)</td><td>Mohamed &#x27;Sid&#x27; Siddeek</td><td>Corporate VP &amp; Head of NVentures</td><td>Not verified (use NVIDIA corporate)</td><td>NVIDIA Inception program application; nventures page</td></tr><tr><td>Bessemer Venture Partners</td><td>Talia Goldberg</td><td>Partner</td><td>415-800-8982 (single directory — ⚠ unverified)</td><td>bvp.com; partners on LinkedIn/X</td></tr><tr><td>Bessemer Venture Partners</td><td>Jeremy Levine</td><td>Partner</td><td>415-800-8982 (single directory — ⚠ unverified)</td><td>bvp.com; partners on LinkedIn/X</td></tr><tr><td>Bessemer Venture Partners</td><td>Alexandra Sukin</td><td>Investor</td><td>415-800-8982 (single directory — ⚠ unverified)</td><td>bvp.com; partners on LinkedIn/X</td></tr><tr><td>Bessemer Venture Partners</td><td>BVP India team member</td><td>—</td><td>415-800-8982 (single directory — ⚠ unverified)</td><td>bvp.com; partners on LinkedIn/X</td></tr><tr><td>MFV Partners</td><td>Partners (see mfvpartners.com)</td><td>—</td><td>Not verified</td><td>mfvpartners.com; Substack mfvpartners.substack.com</td></tr><tr><td>Boost VC</td><td>Adam Draper</td><td>Managing Director / co-founder</td><td>(650) 458-7039 (directories — ⚠ not on Boost&#x27;s site)</td><td>boost.vc application/FAQ</td></tr><tr><td>Boost VC</td><td>Brayton Williams</td><td>Co-founder &amp; Partner</td><td>(650) 458-7039 (directories — ⚠ not on Boost&#x27;s site)</td><td>boost.vc application/FAQ</td></tr><tr><td>Boost VC</td><td>Maddie Callander, Gus Domel</td><td>Investment team</td><td>(650) 458-7039 (directories — ⚠ not on Boost&#x27;s site)</td><td>boost.vc application/FAQ</td></tr><tr><td>Scale Venture Partners</td><td>Rory O&#x27;Driscoll</td><td>Partner (apps, robotics, AI per F4)</td><td>+1 (650) 378-6000 (main)</td><td>scalevp.com</td></tr><tr><td>Intel Capital</td><td>Robotics/edge investor at Intel Capital</td><td>—</td><td>Not verified</td><td>intelcapital.com</td></tr><tr><td>Salesforce Ventures</td><td>Robotics investors (Fortune piece bylines list Emily Zhao &amp; Pascha Hao)</td><td>⚠ Roles not confirmed</td><td>Not published</td><td>salesforceventures.com</td></tr><tr><td>Prologis Ventures</td><td>Will O&#x27;Donnell</td><td>MD &amp; Global Head of Corporate Development, Prologis Ventures</td><td>+1 (415) 394-9000 (Prologis HQ); media +1 (415) 733-9597</td><td>prologis.com contact</td></tr></table>
+</section>
+
+<section class="profile">
+<h2>Appendix 2 · Sources</h2>
+<p>All sources were accessed 14 Nov 2026. Aggregator databases (F4, vcbacked, privateequitylist and similar) are lower-confidence.</p>
+<ol class="src"><li>https://luma.com/9qyybpyn</li><li>https://www.roboticscenter.ai/en/about/</li><li>https://cn.roboticscenter.ai/news/svrc-is-now-open-in-palo-alto</li><li>https://www.roboticscenter.ai/events</li><li>https://alliance.roboticscenter.ai/about</li><li>https://www.roboticscenter.ai/state-of-robotics-india-2026</li><li>https://3dprint.com/317510/fictiv-sold-to-japans-misumi-for-350-million/</li><li>https://www.digitalengineering247.com/article/misumi-completes-acquisition-of-fictiv</li><li>https://www.freightwaves.com/news/misumi-group-taps-fictivs-dave-evans-to-lead-north-america-amid-global-sourcing-shift/</li><li>https://www.digitalengineering247.com/article/fictiv-launches-production-manufacturing-supply-chain-solutions</li><li>https://www.fictiv.com/articles/fictiv-receives-2026-supplytech-breakthrough-award</li><li>https://www.therobotreport.com/fictiv-misumi-report-state-manufacturing-supply-chain-digitalization/</li><li>https://www.digitalengineering247.com/article/fictiv-expands-global-manufacturing-network/news</li><li>https://www.freightwaves.com/news/flexports-latest-tech-rollout-comes-amid-and-alongside-global-freight-chaos</li><li>https://pymnts.com/supply-chain/2026/flexport-debuts-ai-tool-to-streamline-tariff-refunds</li><li>https://www.freightwaves.com/?p=584672</li><li>https://www.freightwaves.com/news/flexport-takes-fulfillment-network-international-with-canada-uk-expansion</li><li>https://www.freightwaves.com/?p=571341</li><li>https://www.stattimes.com/amp/leaders-speaker/flexport-founder-ceo-ryan-petersen-on-al-tariffs-india-the-state-of-global-trade-1358025</li><li>https://www.marketbeat.com/instant-alerts/sanmina-q1-earnings-call-highlights-2026-01-26/?.tsrc=rss</li><li>https://finance.yahoo.com/markets/stocks/articles/sanmina-q2-earnings-call-highlights-231349261.html</li><li>https://www.marketbeat.com/instant-alerts/sanmina-q2-earnings-call-highlights-2026-04-27/</li><li>https://stockanalysis.com/stocks/sanm/company</li><li>https://basic.10jqka.com.cn/ajax/usaph/pubDetail/118756191ee82802_pdf</li><li>https://exponent.com/capabilities/autonomous-vehicle-analysis-incident-response</li><li>https://exponent.com/capabilities/adas-research-testing-consulting</li><li>https://careers-exponent.icims.com/jobs/2359/us-az-phoenix/job</li><li>https://open.winmo.com/open/company/service-businesses-accounting-consulting-law-firms/ca/menlo-park/exponent-inc/16034</li><li>https://www.gunder.com/en/news-insights/client-news/deviation-capital-co-leads-walden-robotics-dollar300-million-seed-financing</li><li>https://www.gunder.com/en/news-insights/client-news/andreessen-horowitz-leads-atoms-financing</li><li>https://www.gunder.com/print/v2/content/29348/ultra-robotics-raises-dollar50-million-series-a.pdf</li><li>https://www.gunder.com/en/news-insights/client-news/dyna-robotics-raises-120-million-dollar-series-a</li><li>https://mergr.com/advisor/legal/gunderson-dettmer/offices</li><li>https://www.orrick.com/en/Practices/Drones-and-Other-Unmanned-Vehicles</li><li>https://www.orrick.com/en/Practices/Artificial-Intelligence</li><li>https://chambers.com/department/singapore-orrick-herrington-sutcliffe-projects-energy-international-firms-expertise-based-abroad-asia-pacific-8:2040:110:6:7290</li><li>https://www.jdsupra.com/profile/orrick_herrington_sutcliffe/</li><li>https://thenextweb.com/news/eclipse-fund-vi-early-growth-iii-1-3-billion</li><li>https://www.bloomberg.com/news/videos/2026-04-07/eclipse-raises-1-3b-to-back-manufacturing-robotics-video</li><li>https://techcrunch.com/?p=3023719</li><li>https://massinvestordatabase.com/Eclipse+Ventures/investmentfirm.php</li><li>https://app.dealroom.co/news/note/root-ventures-raises-190m-fund-to-back-the-builders-behind-the-code</li><li>https://aiwiki.ai/wiki/lux_capital/raw</li><li>https://newmarketpitch.com/blogs/news/robotics-top-investors</li><li>https://f4.fund/firms/lux-capital</li><li>https://luxcapital.com/team/brandon-reeves/</li><li>https://stocktwits.com/news-articles/markets/equity/khosla-ventures-partner-sees-robotics-have-gpt-3-moment-in-2026/cL7B4e1REzW</li><li>https://www.theinformation.com/articles/openai-shifts-strategy-as-rate-of-gpt-ai-improvements-slows?rc=c48ukx</li><li>https://techcrunch.com/2025/08/20/fieldai-raises-405m-to-build-universal-robot-brains</li><li>https://venture-evv.pages.dev/insights/rhoda-deep-dive</li><li>https://dealroom.co/news/141179-khosla-ventures-targets-record-5-5b-fund-most-for-early-stage-ai/</li><li>https://khoslaventures.com/contact</li><li>https://www.venturecapitaljournal.com/savant-launches-debut-fund-to-invest-in-early-stage-tech-start-ups/</li><li>https://f4.fund/firms/savant-ventures</li><li>https://luma.com/u0p5l40a</li><li>https://luma.com/djkge9ce</li><li>https://seedtable.com/investors/bosch/portfolio</li><li>https://app.dealroom.co/news/note/bosch-ventures-backs-asylon-robotics-for-ai-driven-security-systems</li><li>https://www.pulse.bot/robotics/news/struggling-german-auto-supplier-bosch-pivots-to-robots-9da7c93d-a165-4c76-a9ad-d9bd9ec575fd/</li><li>https://www.nvidia.com/en-us/startups/nventures/</li><li>https://dealroom.co/news/164126-nvidia-backs-germanys-agile-robots-in-late-stage-round/</li><li>https://globalventuring.com/people/powerlist-2026-mohamed-siddeek-nventures/</li><li>https://www.bvp.com/atlas/bessemer-predicts-robotics-and-physical-ai</li><li>https://www.bvp.com/news/bedrock-robotics-deploying-autonomous-equipment-for-the-built-world</li><li>https://massinvestordatabase.com/Bessemer+Venture+Partners/investmentfirm.php</li><li>https://inforcapital.com/funds/mfv-partners-fund-ii/</li><li>https://privateequitylist.com/investors/boost-vc</li><li>https://www.boost.vc/team</li><li>https://aum13f.com/firm/boost-vc-management-company-llc</li><li>https://www.scalevp.com/blog/teaching-robots-to-use-their-hands-announcing-our-investment-in-generalist</li><li>https://www.deep-tech-week.com/sf-2026/events/ramen-robots-physical-ai-founder-meetup-by-scale-venture-par</li><li>https://f4.fund/firms/scale-venture-partners</li><li>https://www.vcaonline.com/directory/invdir/188/scale-venture-partners/</li><li>https://www.siliconrepublic.com/business/intel-capital-venture-fund-separation</li><li>https://www.eweek.com/news/news-intel-spinoff-realsense-ai-humanoid-robots/</li><li>https://salesforceventures.com/sfv-2025</li><li>https://salesforceventures.com/perspectives/welcome-mujin/</li><li>https://salesforceventures.com/?p=11422</li><li>https://fortune.com/2025/09/08/2-salesforce-ventures-investors-see-risk-and-reward-in-the-robotics-space-after-a-7-billion-leap-forward-in-2024/</li><li>https://www.freightwaves.com/?p=573365</li><li>https://globalventuring.com/locus-moves-150m-into-series-e</li><li>https://globalventuring.com/corporate/industrial/the-best-bets-in-logistics-robotics-may-not-look-like-robots/</li><li>https://prologis.com/node/36906</li><li>https://beta.prologis.com/contact-us</li><li>https://news.crunchbase.com/robotics/startup-venture-funding-surges-2026-data/</li><li>https://runtimewire.com/article/robotics-startup-funding-q3-2026-physical-ai</li><li>https://aiweekly.co/alerts/physical-ai-startups-raised-474b-in-h1-quadrupling-h2-2025</li><li>https://www.peony.ink/blog/top-robotics-vcs-us</li><li>https://www.outlookbusiness.com/deeptech/india-china-manufacturing-goals-challenges-gaps-robotics-ai-humanoids-automation-industries</li><li>https://psa.gov.in/CMS/web/sites/default/files/2026-08/Vigyan%20Dhara%20-%20Physical%20AI%20%28August%202026%29.pdf</li><li>https://www.imarcgroup.com/india-robotics-market</li></ol>
+
+<h2>Gaps &amp; how to fill them</h2>
+<ul>
+<li><b>Names not found:</b> Embodied Collective organizers, the SVRC founder, MFV partners, Savant GP, and the robotics leads at Bosch Ventures, Intel Capital and Salesforce Ventures. Fill these from team pages and LinkedIn.</li>
+<li><b>Titles to re-verify:</b> Jure Sola (Sanmina), Catherine Corrigan (Exponent), Kanu Gulati (Khosla), and Bilal Zuberi (not found at Lux in 2026).</li>
+<li><b>Phone numbers from a single directory:</b> Eclipse, Bessemer and Boost. Confirm on the firms' own sites.</li>
+<li><b>Conflicting numbers:</b> Sanmina Q3 FY26, Neura and Rhoda round sizes, and India market size estimates.</li>
+<li><b>Ask on calls:</b> real robot BOM costs, RaaS pricing, pilot-to-production conversion rates, and how much supply could move to India.</li>
+<li><b>Next batches:</b> (2) generalist VCs and accelerators, (3) Parts &amp; compute, (4) Data/sim/software, (5–7) Bodies, (8) Brains, plus a final cross-batch synthesis.</li>
+</ul>
+</section>
+</body></html>
