@@ -35,3 +35,32 @@ Network notes:
 - Gupshup: founder signals 12–24-month listing window, considering redomicile to India; no filing. [https://inc42.com/features/gupshup-ai-rebuild-can-it-stay-ahead-of-the-platforms-it-runs-on/]
 - Qure.ai, Sarvam AI, Neysa: described as prospective candidates only; no filing found.
 - Jio Platforms DRHP (19 Jun 2026) mentions AI but is a telecom/digital conglomerate -> excluded (not AI-native). [https://www.medianama.com/2026/06/223-jio-drhp-ai-disclosures-ahead-ipo/]
+
+### Stage 2 (resumed after user allowed curl, 2026-11-16) — PRIMARY DOCUMENTS READ
+Fractal Analytics — VERIFIED from primary documents:
+- Prospectus dated 11 Feb 2026 (https://fractal.ai/docs/Investor-Relations/Offer-Documents/Fractal-Prospectus.pdf), cover page and "Objects of the Offer" (p.203-204):
+  - Offer price Rs 900 (price band Rs 857-900; Rs 85 discount for eligible employees).
+  - Total offer 31,557,305 shares = Rs 28,339 mn (Rs 2,833.9 cr): fresh issue 11,441,751 shares = Rs 10,235 mn; OFS 20,115,554 shares = Rs 18,104 mn.
+  - OFS sellers: Quinag Bidco Ltd (Apax) Rs 8,809 mn; TPG Fett Holdings Pte Ltd Rs 4,500 mn; GLM Family Trust Rs 4,500 mn; Satya Kumari Remala & Rao Venkateswara Remala Rs 295 mn.
+  - Anchor bid 6 Feb 2026; bid/offer 9-11 Feb 2026. Listing on BSE and NSE; NSE designated exchange. BRLMs: Kotak, Axis, Morgan Stanley, Goldman Sachs.
+  - Net proceeds Rs 9,593 mn (gross 10,235 less est. expenses 642): Fractal USA debt prepayment 2,649; laptops 571; new India offices 1,211; Fractal Alpha R&D + S&M 3,551; unidentified acquisitions + GCP 1,611.
+  - Restated consolidated (Rs mn): Revenue from ops FY23 19,854; FY24 21,963; FY25 27,654; H1FY25 13,007; H1FY26 15,590. Profit/(loss): FY23 1,944; FY24 (547); FY25 2,206; H1FY25 729; H1FY26 709.
+  - Self-description: "a globally recognized enterprise artificial intelligence ('AI') company (source: Everest Report)" (Business Overview).
+- CORRECTION: news coverage said proceeds go to "AI/GenAI R&D". The prospectus shows only Rs 355.1 cr (37% of net proceeds) is for R&D + sales & marketing under Fractal Alpha; the largest single item is Fractal USA debt repayment (Rs 264.9 cr).
+- CORRECTION: DRHP size Rs ~4,900 cr (news) vs final Rs 2,833.9 cr (prospectus) — offer was cut ~42%.
+- Listing date 16 Feb 2026 on BSE and NSE: Annual Report FY2025-26 (https://fractal.ai/docs/Investor-Relations/Annual-Reports-and-Postal-Ballot-Notice/Fractal-Annual-Report-FY-2025-26.pdf), Directors' report / notes ("listed on ... NSE ... w.e.f. February 16, 2026"). BSE scrip 544700, NSE symbol FRACTAL (exchange filing letterheads).
+- FY26 (audited, exchange filing dated 11 May 2026): revenue Rs 3,300 cr (+19%), net income Rs 287 cr (+30%). https://fractal.ai/docs/Investor-Relations/Stock-Exchange-Intimations/Fractal-PR-Audited-Consolidated-and-Standalone-Financial-Results-March-31-2026.pdf
+- Q2 FY27 (press release 3 Nov 2026): revenue Rs 956.5 cr (+20% YoY), net income Rs 79.2 cr (+139%). https://fractal.ai/docs/Investor-Relations/Financial-Statements-and-Annual-Reports/2027/Q2/Fractal-Press-release-Q2-27.pdf
+- Monitoring agency (CARE Ratings) report for qtr ended 31 Mar 2026: deviation Nil; Rs 43.3 cr used in Q4FY26 (Rs 2.6 cr Fractal USA; Rs 40.7 cr issue expenses); Rs 980.2 cr unutilised. https://fractal.ai/docs/Investor-Relations/Stock-Exchange-Intimations/Fractal-Monitoring-Agency-Report.pdf
+- Listing-day price (Rs 876 NSE / Rs 900 BSE) — secondary only (https://hdfcsky.com/news/fractal-analytics-lists-at-rs-876-on-nse-and-rs-900-on-bse). NSE archive PDFs (press release PR_LIST_13022026) refused plain curl (empty reply / HTTP2 error) — NOT verified.
+
+Blocked / not verifiable:
+- SEC EDGAR (Nidar/Yotta 424B3): HTTP 403 "undeclared automated tool" — SEC requires a User-Agent with a contact email; I did not send the user's email without permission. Yotta facts remain secondary.
+- NSE quote API: shell request denied by the permission classifier (browser-spoofing); not retried.
+- SEBI draft-offer listing: first page readable; paginated AJAX query blocked by SEBI's WAF ("Unauthorized Activity"); stopped. Meganet DRHP (filed 16 Nov 2026) not yet on SEBI's first listing page.
+- C5i: confidential pre-filing => no public document by design.
+
+Other exclusions:
+- Transline Technologies (DRHP Aug 2025, SEBI observation Jan 2026, OFS-only 1.62 cr shares): security/surveillance systems integrator with AI products -> not AI-native; excluded. [https://www.freepressjournal.in/business/transline-technologies-ipo-in-focus-ai-surveillance-firm-gets-sebi-nod-for-162-crore-share-offer]
+- Roadzen, Zoomcar: Nasdaq de-SPACs in 2023 (outside window; not AI-native) — from model knowledge, not checked.
+- No completed overseas listing of an India-based AI-native company found in Jan 2024–Nov 2026.
