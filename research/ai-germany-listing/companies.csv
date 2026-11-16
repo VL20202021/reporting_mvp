@@ -1,0 +1,7 @@
+company,category,exchange,stage,listing_or_filing_date,issue_size_eur_m,revenue,profit_loss,use_of_proceeds,primary_source_url,verification_status
+DeepL SE,AI-native (language AI),US exchange (considered),Advisers reportedly engaged (2025); CEO said not seeking IPO now (Jun 2026),n/a,"~US$5bn valuation reported",,,,none public,UNVERIFIED - no filing exists
+Celonis SE,Borderline (process intelligence / AI),US exchange (reported),Reported preparation for H2 2026; no filing found,n/a,"US$11-13bn valuation reported",,,,none public,UNVERIFIED - no filing exists
+Helsing GmbH,AI-native (defence AI),none announced,No IPO date; ~US$18bn valuation after Series E (Jul 2026) reported,n/a,,,,,none public,UNVERIFIED - no filing exists
+n8n GmbH,AI-native (AI workflow automation),Europe/Germany preferred by CEO (reported),No filing,n/a,,,,,none public,UNVERIFIED - no filing exists
+Aleph Alpha GmbH,AI-native (foundation models),n/a,Combining with Cohere (definitive agreement 2026-09-16) - no standalone listing,n/a,,,,,none public,UNVERIFIED - company announcements not fetched
+innoscripta SE,EXCLUDED - R&D tax-incentive SaaS (not AI-native),Frankfurt Scale,Listed,2025-05-23 (secondary),"EUR 120/share; secondary-only offer",,,n/a (no primary proceeds to company - secondary),https://www.deutsche-boerse.com/dbg-en/media/news-stories/press-releases/innoscripta-SE-joins-the-Scale-segment-of-the-Frankfurt-Stock-Exchange--4398522,VERIFIED business description and first price (Deutsche Börse release); listing date secondary
