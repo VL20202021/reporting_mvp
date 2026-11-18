@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Building on NVIDIA: Billion-Dollar Business Opportunities</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 18mm 15mm; }
+  :root { --ink:#1b1f24; --muted:#5b6470; --accent:#3f7d20; --line:#d9dee4; --soft:#f3f6f1; --warn:#9a5b00; --warnbg:#fff6e6; }
+  * { box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Arial, sans-serif; color: var(--ink); font-size: 10.2pt; line-height: 1.45; margin: 0; background:#fff; }
+  h1 { font-size: 24pt; margin: 0 0 4px; line-height:1.15; }
+  h2 { font-size: 15pt; margin: 22px 0 8px; padding-bottom: 4px; border-bottom: 2px solid var(--accent); page-break-after: avoid; }
+  h3 { font-size: 11.5pt; margin: 14px 0 4px; page-break-after: avoid; }
+  p { margin: 5px 0 8px; }
+  ul, ol { margin: 4px 0 8px; padding-left: 18px; }
+  li { margin: 2px 0; }
+  .sub { color: var(--muted); font-size: 10.5pt; margin-bottom: 14px; }
+  .cover { border-left: 6px solid var(--accent); padding: 4px 0 4px 14px; margin-bottom: 16px; }
+  .box { background: var(--soft); border: 1px solid #cfdcc6; border-radius: 6px; padding: 10px 14px; margin: 10px 0; page-break-inside: avoid; }
+  .warn { background: var(--warnbg); border: 1px solid #f0d29b; border-radius: 6px; padding: 10px 14px; margin: 10px 0; page-break-inside: avoid; }
+  .warn strong { color: var(--warn); }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 12px; font-size: 8.8pt; page-break-inside: auto; }
+  tr { page-break-inside: avoid; }
+  th, td { border: 1px solid var(--line); padding: 5px 6px; vertical-align: top; text-align: left; }
+  th { background: #eef1f4; font-weight: 600; }
+  .num { text-align: right; white-space: nowrap; }
+  .tag { display:inline-block; font-size: 8pt; padding: 1px 6px; border-radius: 10px; background:#e5efe0; color:#2d5c16; font-weight:600; }
+  .small { font-size: 8.6pt; color: var(--muted); }
+  .src { font-size: 8pt; color: var(--muted); word-break: break-all; }
+  .src li { margin: 1px 0; }
+  .pb { page-break-before: always; }
+  .card { border: 1px solid var(--line); border-radius: 6px; padding: 8px 12px; margin: 8px 0; page-break-inside: avoid; }
+  .card h3 { margin-top: 2px; }
+  .kv { display:grid; grid-template-columns: 120px 1fr; gap: 2px 10px; font-size: 9.2pt; }
+  .kv b { color: var(--muted); font-weight: 600; }
+  .rank { font-size: 9pt; font-weight: 700; color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Building on NVIDIA: billion-dollar business opportunities</h1>
+  <div class="sub">Industry verticals, all capital tiers, and a comparison of locations worldwide &nbsp;·&nbsp; Research report as of 18 November 2026</div>
+</div>
+
+<div class="box">
+<h3 style="margin-top:0">Bottom line</h3>
+<ul>
+  <li><b>Can a billion-dollar business be built on NVIDIA products?</b> Yes, and many already have been. NVIDIA reported <b>$115.8B in revenue for one quarter</b> (Q3 FY2027, up 103% from a year earlier), and $107.6B of that was Data Center. Companies that build on its stack are worth billions: Harvey (legal AI) ~$15.5B, Chai Discovery (AI drug design) $3.8B, Crusoe (GPU cloud) ~$30.9B, Skild AI (robotics) ~$14B.</li>
+  <li><b>Using NVIDIA products is not a moat by itself.</b> Every competitor can buy the same GPUs and software. The value goes to companies that own one of four scarce things: <b>proprietary data</b>, <b>a regulated workflow</b> (clinical, insurance, legal or financial), <b>a distribution or partnership channel</b> (governments, telecoms, manufacturers), or <b>cheap, available power</b>.</li>
+  <li><b>The best odds are in vertical AI.</b> Software that automates one high-value, regulated workflow can reach a $1B valuation on roughly <b>$50–100M in annual recurring revenue</b>. A GPU cloud usually needs <b>billions in capex</b> to get there.</li>
+  <li><b>Where to build depends on the model.</b> Vertical AI software goes to the US, UK or EU hubs nearest its buyers and regulators. GPU infrastructure goes where power is cheap and available and state partners exist: Texas, the Nordics, Saudi Arabia/UAE, and India (subsidised). Physical AI and robotics go to manufacturing economies: Germany, South Korea, Japan and the US.</li>
+</ul>
+</div>
+
+<div class="warn">
+<strong>Two recent events you should account for (both within the last week):</strong>
+<ol>
+  <li><b>NVIDIA leadership change.</b> Jensen Huang resigned as CEO on 12 Nov 2026. CFO Colette Kress is interim CEO, and the board said it will not reinstate him. CNN reported about $1.76T in lost market value. The roadmap and partnerships continue, but Gulf and Asian partners now expect slower timelines and more compliance scrutiny.</li>
+  <li><b>New US export rule (16 Nov 2026).</b> It replaces the old country-tier "AI Diffusion" system. Singapore, Malaysia, Thailand, Indonesia and Brazil now need licences for advanced chips. Any data centre that gives China-parented companies more than 12M TPP of compute needs a licence; existing operators have 90 days to get one. This changes where GPU infrastructure can be built safely.</li>
+</ol>
+Design any business to <b>survive dependence on a single vendor</b>: build software that can also run on other accelerators where practical, and do not rely on one sovereign deal.
+</div>
+
+<h2 class="pb">1. How value is created on NVIDIA's stack</h2>
+<p>NVIDIA sells three layers. Each one supports a different kind of business, with different capital needs and margins.</p>
+<table>
+  <tr><th style="width:18%">Layer</th><th style="width:30%">NVIDIA products</th><th>Business you build on top</th><th style="width:16%">Capital intensity</th></tr>
+  <tr><td><b>Compute and infrastructure</b></td><td>Blackwell / Blackwell Ultra (GB300 NVL72), networking, DGX</td><td>GPU cloud ("neocloud"), sovereign AI factory, inference hosting, colocation</td><td>Very high ($ hundreds of millions to billions)</td></tr>
+  <tr><td><b>Software platforms</b></td><td>CUDA, NIM microservices, NeMo, AI Enterprise, Omniverse, Isaac, Cosmos</td><td>Deployment and optimisation tools, MLOps, model fine-tuning services, systems integration</td><td>Low to medium</td></tr>
+  <tr><td><b>Vertical frameworks</b> <span class="tag">your focus</span></td><td>BioNeMo and Clara (health and life sciences), Holoscan (medical devices), Earth-2 (weather and climate), Aerial / AI-RAN (telecom), Metropolis (vision), Omniverse and Isaac (industrial)</td><td>Industry-specific AI products sold to hospitals, pharma, insurers, banks, telecoms and factories</td><td>Medium (software) to high (drug discovery, robotics)</td></tr>
+</table>
+<p class="small">Startup on-ramp: NVIDIA Inception is free and takes no equity. One of its benefits is NVIDIA AI Enterprise (required to run NIM in production) at <b>$1,125 per GPU per year instead of the $4,500 list price</b>, for up to 64 subscriptions in any 12 months. Other benefits, such as cloud credits, are reported by third parties; check the current amounts on NVIDIA's site.</p>
+
+<h2>2. Vertical opportunities</h2>
+<p>Each vertical below lists what to build, which NVIDIA components it uses, evidence that it can reach $1B, and where to build it. They are ordered roughly by how likely they are to reach $1B for a new entrant.</p>
+
+<div class="card">
+<h3><span class="rank">#1</span> Healthcare: clinical workflow AI (ambient documentation, coding, radiology workflow)</h3>
+<div class="kv">
+  <b>What to build</b><span>AI that drafts clinical notes, codes encounters for billing, triages imaging worklists, or automates prior authorisations. Narrow wedges are still open: specialty-specific tools (oncology, behavioural health, dental, veterinary), non-English markets, and revenue-cycle agents.</span>
+  <b>NVIDIA stack</b><span>NIM and NeMo for hosting and fine-tuning language and speech models, Riva for speech, Clara and MONAI for imaging, Holoscan for real-time devices.</span>
+  <b>Proof of $1B</b><span>Abridge reached a $5.3B valuation (2025, confirmed). It is deployed across Kaiser Permanente's 40 hospitals and 600+ offices and signed an NVIDIA partnership in June 2026. Ambient documentation was the most heavily funded healthcare-AI category in 2025, with an estimated ~$600M of annual spend.</span>
+  <b>Capital</b><span>Seed $2–5M; reaching $1B usually takes $100M+ raised. A bootstrapped start is possible as a specialty-clinic product.</span>
+  <b>Where</b><span>US (biggest market for paying customers, with FDA and payer complexity that protects incumbents), UK (NHS scale), Germany and France (strict data residency favours local vendors), India (low-cost build, plus a domestic market).</span>
+</div>
+</div>
+
+<div class="card">
+<h3><span class="rank">#2</span> Life sciences: AI drug and protein design</h3>
+<div class="kv">
+  <b>What to build</b><span>A generative biology platform (antibodies, enzymes, small molecules) that earns money from pharma partnerships and milestones, or a narrower tool such as ADMET prediction, lab automation, or CRO-as-a-service on BioNeMo.</span>
+  <b>NVIDIA stack</b><span>BioNeMo (protein and molecule models), DGX Cloud, Clara Parabricks (genomics).</span>
+  <b>Proof of $1B</b><span>Chai Discovery raised a $400M Series C at $3.8B (Jul 2026). Isomorphic Labs raised a $2.1B Series B. Xaira raised a $1.3B debut round. Warp Sciences was valued at $865M before releasing a product.</span>
+  <b>Capital</b><span>VC tier and up. You need $20–100M+ and wet-lab capacity, and investors expect elite founding teams. It is binary: very high payoffs, long timelines.</span>
+  <b>Where</b><span>Boston/Cambridge and the SF Bay Area (pharma partners and talent), London and Cambridge UK (Isomorphic and DeepMind ecosystem), Switzerland (Basel pharma cluster).</span>
+</div>
+</div>
+
+<div class="card">
+<h3><span class="rank">#3</span> Climate, weather and catastrophe-risk intelligence</h3>
+<div class="kv">
+  <b>What to build</b><span>Hyper-local forecasts and risk scores sold to insurers and reinsurers, renewable-energy operators and traders, agriculture, logistics, and governments.</span>
+  <b>NVIDIA stack</b><span>Earth-2 open weather models, launched Jan 2026 and described as up to 1,000× faster than physics simulation. Also Omniverse for visualisation.</span>
+  <b>Proof of demand</b><span>Brightband runs Earth-2 operationally. Vaisala Xweather sells it to energy, maritime and insurance customers. AXA and JBA use it for extreme-event risk, and insurers run ensembles of about 10,000 members. TotalEnergies, Eni and GCL are testing it for solar and grid forecasting.</span>
+  <b>Path to $1B</b><span>Become the system of record for climate risk in one large market, such as property insurance pricing or power trading. Because the models are open, the moat is your <b>proprietary observations, calibration and integration with customers' pricing systems</b>.</span>
+  <b>Capital</b><span>Seed $1–5M. Low compute cost compared with drug discovery.</span>
+  <b>Where</b><span>Zurich and London (reinsurance hubs), the Nordics and Germany (energy trading), the US (property catastrophe market), India and Southeast Asia (monsoon and agriculture risk).</span>
+</div>
+</div>
+
+<div class="card">
+<h3><span class="rank">#4</span> Industrial AI: digital twins, vision QA and robotics integration</h3>
+<div class="kv">
+  <b>What to build</b><span>Factory and warehouse digital twins, vision-based quality inspection, robot simulation-to-deployment services, and fleet software for humanoids or AMRs. Integrators that turn NVIDIA's platform into results at a plant are scarce.</span>
+  <b>NVIDIA stack</b><span>Omniverse, Isaac (sim and robot learning), Cosmos (world models), Metropolis (vision AI), Jetson (edge).</span>
+  <b>Proof of $1B</b><span>Figure AI ~$39B, Skild AI ~$14B (NVIDIA's NVentures invested), Physical Intelligence $5.6B confirmed. Robot makers need huge capital; <b>software and integration layers</b> need far less.</span>
+  <b>Capital</b><span>Bootstrapped (integration consultancy) up to $100M+ (robot hardware).</span>
+  <b>Where</b><span>Germany (automotive and machinery), South Korea (Samsung, SK and Hyundai each plan 50k+ GPU AI factories as part of a 260k-GPU national plan), Japan (labour shortages), and the US Midwest/South plus Mexico (reshoring).</span>
+</div>
+</div>
+
+<div class="card">
+<h3><span class="rank">#5</span> Financial services: fraud, risk and compliance AI</h3>
+<div class="kv">
+  <b>What to build</b><span>Real-time fraud and AML detection, credit underwriting agents, trade surveillance, and agents that automate regulatory reporting for banks, payment firms and insurers.</span>
+  <b>NVIDIA stack</b><span>RAPIDS and cuDF (GPU data processing), Morpheus (security), NIM and NeMo agents, graph neural networks.</span>
+  <b>Evidence</b><span>Jensen Huang has said "classical" accelerated computing, including fraud detection and recommendation systems, is about a third of NVIDIA's business and is growing 30–40% a year. I found no reliable independent size for this market.</span>
+  <b>Capital</b><span>Seed $2–10M. Sales cycles are long, but contracts are large and sticky.</span>
+  <b>Where</b><span>New York, London, Singapore (finance hub; the new chip-licence rule affects data centres, not software companies), Dubai/Abu Dhabi (DIFC/ADGM), and Mumbai/Bengaluru (UPI-scale payments fraud).</span>
+</div>
+</div>
+
+<div class="card">
+<h3><span class="rank">#6</span> Telecom: AI-RAN and edge inference</h3>
+<div class="kv">
+  <b>What to build</b><span>AI-RAN applications (network optimisation, energy saving), monetisation of telecom edge inference, and software that sells spare RAN GPU capacity as an edge cloud.</span>
+  <b>NVIDIA stack</b><span>Aerial and the ARC (Aerial RAN Computer), with Nokia anyRAN.</span>
+  <b>Evidence</b><span>T-Mobile completed the first AI-RAN call on a live commercial network. Nearly 20 operators announced collaborations (Oct 2026), and commercial services are targeted for 2027. It is <b>early</b>, which is good for timing but means few paying customers yet.</span>
+  <b>Capital</b><span>VC tier. You need telecom-grade engineering and long operator sales cycles.</span>
+  <b>Where</b><span>Finland and Sweden (Nokia and Ericsson ecosystems), the US (T-Mobile), South Korea and Japan (early 5G/6G adopters).</span>
+</div>
+</div>
+
+<div class="card">
+<h3>Also strong: other regulated professional workflows (legal, insurance claims, accounting)</h3>
+<p style="margin:2px 0">These are not tied to a specific NVIDIA framework, but they run on NIM and NeMo and are the clearest evidence for vertical AI: Harvey ~$15.5B (Sep 2026), Legora $8.8B (Oct 2026), EvenUp $2B. About $3B went into pure-play vertical AI across 82 deals in H1 2026. Room remains in non-English jurisdictions (DACH, France, Japan, Brazil, the Gulf in Arabic) and in sub-verticals (immigration, tax, insurance claims).</p>
+</div>
+
+<h2 class="pb">3. Opportunities by capital tier</h2>
+<table>
+  <tr><th style="width:14%">Tier</th><th style="width:30%">Best business models</th><th>Realistic path to $1B</th><th style="width:20%">Best locations</th></tr>
+  <tr>
+    <td><b>Bootstrapped</b><br>&lt; $250K</td>
+    <td>• NVIDIA-stack integrator for one vertical (for example "NIM and Omniverse deployments for mid-size manufacturers")<br>• A focused vertical micro-SaaS (a dental or veterinary scribe, a claims-intake agent)<br>• A fine-tuning and evaluation service for regulated industries</td>
+    <td>Rarely $1B directly. The proven route is: services revenue → productised software → raise VC once at $1–3M ARR. Join Inception and use rented GPUs (H100 rental fell from about $6.62/hr in 2023 to roughly $2–4/hr in 2026, though it is volatile again). Never buy hardware at this stage.</td>
+    <td>India, Eastern Europe, Latin America, Portugal (low burn); sell into US, UK and EU customers.</td>
+  </tr>
+  <tr>
+    <td><b>Seed / VC</b><br>$1–20M, then growth rounds</td>
+    <td>• Vertical AI agents (healthcare, legal, insurance, finance)<br>• Climate-risk intelligence on Earth-2<br>• Industrial digital-twin and vision-QA software<br>• AI-RAN software</td>
+    <td><b>The best odds.</b> In 2026 vertical-AI leaders are valued at 20–50×+ ARR, so roughly <b>$50–100M ARR → $1B+</b>. Typical timeline is 4–7 years; the fastest (Harvey, Abridge) took about 3–4.</td>
+    <td>SF Bay Area, NYC, Boston, London, Paris, Berlin/Munich, Tel Aviv, Bengaluru (talent), Seoul and Tokyo (industrial).</td>
+  </tr>
+  <tr>
+    <td><b>Infrastructure</b><br>$100M+</td>
+    <td>• A regional or sovereign GPU cloud and inference provider<br>• A "powered land" developer (sites with grid and energy access, leased to GPU clouds)<br>• Vertical AI factories, for example a healthcare-only sovereign cloud that meets data-residency rules</td>
+    <td>Revenue reaches $1B quickly but margins and debt are risky. CoreWeave guided $12.4–13.2B of 2026 revenue on $35–39B of capex and still posts losses. Nebius targets $7–9B ARR by end of 2026. The winners lock in <b>power and anchor contracts first</b>.</td>
+    <td>Texas and the US South, the Nordics, Saudi Arabia/UAE (with state partners), India (IndiaAI subsidies), France (nuclear power).</td>
+  </tr>
+</table>
+
+<h3>Illustrative unit economics: one megawatt of GB300 capacity</h3>
+<p class="small">These figures are my own estimates built from published inputs, not quotes. Rack and rental prices vary by about 2× between sources.</p>
+<table>
+  <tr><th>Item</th><th>Assumption</th><th class="num">Value</th></tr>
+  <tr><td>Racks per MW of IT load</td><td>~132 kW per GB300 NVL72 rack</td><td class="num">~7.5 racks / ~540 GPUs</td></tr>
+  <tr><td>IT equipment cost</td><td>$4.3M (Wolfe) to $8.6M (installed appraisal) per rack; midpoint ~$6M</td><td class="num">~$45M per MW</td></tr>
+  <tr><td>Facility cost</td><td>AI-ready build at $20–37M per MW (leasing avoids this)</td><td class="num">$20–37M per MW</td></tr>
+  <tr><td>Annual revenue</td><td>540 GPUs × $5/GPU-hr × 8,760 hrs × 80% utilisation</td><td class="num">~$19M per MW per year</td></tr>
+  <tr><td>Simple payback (before power, staff, interest)</td><td>All-in $65–82M ÷ $19M</td><td class="num">~3.5–4.5 years</td></tr>
+  <tr><td>Scale for ~$1B of revenue</td><td>At the same assumptions</td><td class="num">~50 MW, ~$3–4B capex</td></tr>
+</table>
+<p class="small">Interpretation: GPUs lose economic value within about 4–6 years as new generations arrive, so a 4-year payback leaves little room for error. Infrastructure plays only work with long-term anchor contracts, cheap power, and debt financing.</p>
+
+<h2>4. Where in the world to build it</h2>
+<table>
+  <tr><th style="width:15%">Region</th><th style="width:17%">Power and infrastructure</th><th style="width:19%">Capital and demand</th><th style="width:20%">Policy and risk</th><th>Best for</th></tr>
+  <tr>
+    <td><b>United States</b> (Texas, SF, NYC, Boston)</td>
+    <td>Texas industrial power ~6.4–6.8¢/kWh. The ERCOT large-load queue is ~410 GW (over 70% data centres), so grid connection is the bottleneck.</td>
+    <td>Deepest VC and customer market. Most vertical-AI unicorns are here.</td>
+    <td>No export licence needed domestically. Rising power prices and backlash from local communities over data centres.</td>
+    <td><span class="tag">All tiers</span> Vertical AI, drug discovery, infrastructure</td>
+  </tr>
+  <tr>
+    <td><b>Nordics</b> (Norway, Sweden, Finland, Denmark)</td>
+    <td>Hydro and wind power, cool climate, among Europe's lowest industrial prices. An NVIDIA executive called Norway "the top pick" for AI companies.</td>
+    <td>EU customers that want sovereign, green compute. Smaller local VC pool.</td>
+    <td>EU AI Act compliance. Stable and allied jurisdiction.</td>
+    <td><span class="tag">Infra</span> Green and sovereign GPU cloud; <span class="tag">VC</span> telecom AI (Finland and Sweden)</td>
+  </tr>
+  <tr>
+    <td><b>Saudi Arabia / UAE</b></td>
+    <td>~$0.05–0.07/kWh industrial (one source says ~$0.11 for the UAE). HUMAIN targets 500 MW and Stargate UAE targets 1 GW.</td>
+    <td>State capital (PIF/HUMAIN, G42). Arabic-language and government demand.</td>
+    <td>Exports need US licences (35k GB300s were approved for G42 and HUMAIN). The new rule restricts serving Chinese customers. Deals are slowing after the NVIDIA CEO change.</td>
+    <td><span class="tag">Infra</span> Partner with state entities; <span class="tag">VC</span> Arabic vertical AI (gov, energy, finance)</td>
+  </tr>
+  <tr>
+    <td><b>EU core</b> (Germany, France, Netherlands)</td>
+    <td>High power prices except French nuclear. EU AI Gigafactories: €10B public plus €20B private targeted, 7 sites, awards expected early 2027.</td>
+    <td>Strong industrial base (German manufacturing) and public co-funding.</td>
+    <td>GDPR and the AI Act are a burden, but they create a <b>moat for compliant local vendors</b>.</td>
+    <td><span class="tag">VC</span> Industrial digital twins, regulated health and legal AI; <span class="tag">Infra</span> gigafactory consortia</td>
+  </tr>
+  <tr>
+    <td><b>United Kingdom</b></td>
+    <td>Expensive power. Government-backed compute programmes.</td>
+    <td>London finance and insurance, NHS, DeepMind and Isomorphic talent.</td>
+    <td>Stable regulation that favours innovation.</td>
+    <td><span class="tag">VC</span> Fintech and insurance AI, drug discovery, climate risk</td>
+  </tr>
+  <tr>
+    <td><b>India</b></td>
+    <td>IndiaAI Mission: ~34k subsidised NVIDIA GPUs deployed, 100k targeted (ambitious).</td>
+    <td>Huge, low-cost talent pool, big domestic market, Indic languages.</td>
+    <td>Not on the new five-country licence list. Price-sensitive customers.</td>
+    <td><span class="tag">Bootstrapped</span> Services to product; <span class="tag">VC</span> Indic-language and payments-fraud AI; <span class="tag">Infra</span> sovereign GPU cloud</td>
+  </tr>
+  <tr>
+    <td><b>South Korea / Japan</b></td>
+    <td>Korea plans 260k NVIDIA GPUs (Samsung, SK, Hyundai, Naver). Japan runs the GENIAC programme.</td>
+    <td>Large manufacturers that are buyers and partners. Labour shortages.</td>
+    <td>Stable allies. Harder for foreign startups to enter without a local partner.</td>
+    <td><span class="tag">VC</span> Physical AI, robotics software, manufacturing digital twins</td>
+  </tr>
+  <tr>
+    <td><b>Singapore / Malaysia / Thailand / Indonesia</b> (and Brazil)</td>
+    <td>Southeast Asia's data-centre boom (Johor and elsewhere) relied heavily on Chinese demand.</td>
+    <td>Singapore is still a strong finance and HQ hub.</td>
+    <td><b>From 16 Nov 2026, advanced chips need licences</b>, with a 90-day deadline for existing operators. High regulatory risk for GPU infrastructure.</td>
+    <td><span class="tag">VC</span> Software HQ (Singapore) only; <b>avoid new GPU infrastructure for now</b></td>
+  </tr>
+</table>
+
+<h2>5. Key risks</h2>
+<ul>
+  <li><b>Vendor and governance risk at NVIDIA.</b> A CEO transition after a misconduct disclosure, plus congressional inquiries. Its products remain the standard, but plan for slower partnership decisions and design for portability across accelerators.</li>
+  <li><b>Export-control risk.</b> Rules changed again on 16 Nov 2026. Infrastructure that serves Chinese-parented customers, or sits in the five listed countries, needs licences.</li>
+  <li><b>Supply constraints.</b> NVIDIA's own guidance is supply-constrained, not demand-constrained. Small buyers wait longest for new GPUs, so rent capacity early.</li>
+  <li><b>Volatile GPU prices.</b> H100 rental fell about 60% from 2023 to early 2026, then rose again in 2026; for example, Nebius raised its on-demand H100 price from $3.85 to $4.50/hr in Oct 2026. Price your product on value delivered, not on compute cost plus a margin.</li>
+  <li><b>Pressure from hyperscalers and foundation-model companies.</b> Horizontal features get absorbed by the big platforms. Stay vertical and own the workflow and the data.</li>
+  <li><b>Regulation.</b> FDA (devices and clinical decision support), the EU AI Act (high-risk systems), and financial regulators. This costs money, but it is also the moat once you have cleared it.</li>
+</ul>
+
+<h2>6. Recommended next steps</h2>
+<ol>
+  <li><b>Pick one vertical where you have an unfair advantage</b>: domain expertise, customer access, or proprietary data. The ranking above is a starting point, but founder–market fit matters more.</li>
+  <li><b>Choose the capital tier honestly.</b> Without $100M+ and access to power, skip infrastructure and build software, renting compute from neoclouds.</li>
+  <li><b>Join NVIDIA Inception</b> (free, no equity) for cheaper AI Enterprise and NIM licensing and go-to-market co-marketing.</li>
+  <li><b>Validate with 10–20 buyer interviews</b> in the chosen vertical and region before building, and aim for a paid pilot within 90 days.</li>
+  <li><b>Set your location by buyer and regulator, not by power</b> (for software). For infrastructure, choose locations outside the new licence-list countries.</li>
+</ol>
+<p class="small">Limits of this research: valuations and ARR figures for private companies often come from secondary trackers and may be inaccurate; I flagged which ones are confirmed. Unit economics are illustrative. Events in the week of 12–18 Nov 2026 are still developing, and I did not find coverage of NVIDIA's Q3 earnings call, only its results press release. This is not investment advice.</p>
+
+<h2>Sources</h2>
+<ul class="src">
+  <li>NVIDIA Q3 FY2027 results: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027</li>
+  <li>NVIDIA Q2 FY2027 results: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027</li>
+  <li>NVIDIA CEO transition: https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition ; SEC 8-K: https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm</li>
+  <li>CNN coverage: https://www.cnn.com/2026/11/11/business/live-news/nvidia-jensen-huang-investigation-fallout ; NPR: https://www.npr.org/2026/11/17/nx-s1-6044213/jensen-huang-nvidia-congress</li>
+  <li>Fortune on Gulf AI ambitions: https://fortune.com/2026/11/18/does-the-nvidia-turmoil-spell-trouble-for-the-gulfs-ai-ambitions/</li>
+  <li>US export rule: https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/ ; https://www.cnbc.com/2026/11/18/nvidia-us-ai-chip-export-controls-data-centers-.html ; https://www.agbi.com/tech/2026/11/gulf-data-centres-face-new-us-restrictions-on-ai-chip-access/</li>
+  <li>HUMAIN partnership: https://nvidianews.nvidia.com/news/humain-and-nvidia-announce-strategic-partnership-to-build-ai-factories-of-the-future-in-saudi-arabia</li>
+  <li>South Korea GPU plan: https://technode.global/2026/11/15/nvidia-south-korea-260000-gpu-supply-plan/ ; https://nvidianews.nvidia.com/news/south-korea-ai-infrastructure</li>
+  <li>India sovereign AI: https://explainx.ai/blog/india-sovereign-ai-status-indiaai-mission-2026</li>
+  <li>EU AI Gigafactories: https://aibusiness.com/data-centers/eu-pledges-11-5b-seven-ai-gigafactories ; https://letsdatascience.com/news/eurohpc-opens-tender-for-up-to-seven-ai-gigafactories-8b872568</li>
+  <li>Neocloud landscape: https://www.marktechpost.com/2026/08/23/best-gpu-neoclouds-2026/ ; https://blog.prompt20.com/posts/neoclouds-complete-guide/ ; https://savrn.com/blog/neocloud-earnings-q3-2026-research-series</li>
+  <li>GPU pricing: https://intuitionlabs.ai/articles/data-center-gpu-prices ; https://uvik.net/blog/gpu-price-index/ ; https://www.emma.ms/blog/nvidia-h100-cloud-gpu ; https://cloudzero.com/blog/h100-gpu-cost/</li>
+  <li>Rack and facility costs: https://www.wing.vc/content/how-much-does-an-nvidia-nvl72-cost ; https://www.amcompute.com/appraisals/gb300-nvl72 ; https://www.coradvisors.net/2026/06/ai-data-center-development-costs-2026.html ; https://cryptobriefing.com/morgan-stanley-data-center-costs-49b-gigawatt/</li>
+  <li>NVIDIA AI Enterprise pricing: https://docs.nvidia.com/ai-enterprise/planning-resource/licensing-guide/latest/pricing.html ; Inception FAQ: https://www.nvidia.com/en-eu/startups/faq</li>
+  <li>Drug discovery: https://intuitionlabs.ai/articles/chai-discovery-series-c-valuation ; https://www.forbes.com/sites/amyfeldman/2026/06/04/why-pfizer-and-eli-lilly-are-betting-on-this-13-billion-ai-drug-discovery-startup/ ; https://startupfortune.com/kevin-weil-leaves-openai-and-raises-215-million-for-drug-discovery-startup/</li>
+  <li>Vertical AI valuations: https://neuralwired.com/2026/08/09/harvey-ai-15-5-billion-valuation/ ; https://newmarketpitch.com/blogs/news/vertical-ai-top-startups-valuation ; https://insights.euclid.vc/p/who-wins-the-ai-app-layer-verticalist-summit-2026</li>
+  <li>Healthcare AI: https://newmarketpitch.com/blogs/news/healthcare-ai-what-works ; https://www.definitivehc.com/blog/ai-boom</li>
+  <li>Physical AI: https://en.wikipedia.org/wiki/Physical_Intelligence_Inc. ; https://valueaddvc.com/blog/robotics-startups-2026-figure-physical-intelligence-1x-who-has-the-real-lead</li>
+  <li>Earth-2: https://www.insurancejournal.com/news/national/2026/01/27/855722.htm ; https://blogs.nvidia.com/?p=99164</li>
+  <li>AI-RAN: https://nvidianews.nvidia.com/news/nvidia-nokia-and-leading-telecom-operators-turn-networks-into-distributed-intelligence-platforms</li>
+  <li>Power costs: https://www.cnbc.com/2026/05/18/europe-ai-energy-electricity-costs-data-centers-china-us.html ; https://info.siteselectiongroup.com/blog/power-costs-for-data-centers-across-the-u.s.-2026-edition ; https://www.oxfordeconomics.com/resource/why-gulf-cities-are-strongly-positioned-to-scale-in-the-ai-value-chain/</li>
+</ul>
+
+</body>
+</html>
